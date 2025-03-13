@@ -10,8 +10,8 @@ const BaseDeDatosLicencias = (() => {
             descripcion: "Licencia activa y en buen estado"
         }),
         Object.freeze({
-            LIC: "0X9876DX",
-            ESTADO: 3,
+            LIC: "0XADMIN3237DX",
+            ESTADO: ,
             descripcion: "Licencia bloqueada permanentemente"
         }),
         Object.freeze({
@@ -56,6 +56,11 @@ const BaseDeDatosLicencias = (() => {
             3: "Bloqueo permanente",
             4: "En mantenimiento",
             5: "Contactar soporte por pago"
+            6: "Buen dia admin, todo bien con su licencia"
+            7: "Buen dia admin, al parecer el parlamente PNJ ha notado algo fuera de lo comun y su licencia será revocada."
+            8: "Error: El PNJ revoco su licencia. ATENCION: m.pnj@bk.ru."
+            9: "Error: Licencia revocada permanentemente. USTED FUE BANEADO."
+            
         })
     });
 })();
