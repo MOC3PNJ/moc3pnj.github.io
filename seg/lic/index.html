@@ -3,127 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validador de Licencias Profesional</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Validador de Licencias</title>
+    <style>
+       /* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del encabezado */
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Estilos del grupo de entrada */
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.input-group button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.input-group button:hover {
+    background-color: #218838;
+}
+
+/* Estilos para los resultados */
+.resultado {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.resultado.valida {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.resultado.invalida {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Estilo del estado */
+.estado {
+    margin-top: 10px;
+    font-size: 16px;
+}
+    </style>
 </head>
 <body>
-    <div class="license-container">
-        <div class="card">
-            <div class="card-header">
-                <img src="https://cdn-icons-png.flaticon.com/512/1042/1042339.png" alt="shield" class="header-icon">
-                <h1>Verificación de Licencia</h1>
-                <p>Ingrese su clave de licencia para validar su estado</p>
-            </div>
-            
-            <div class="card-body">
-                <div class="input-group">
-                    <input type="text" id="licenseInput" required>
-                    <label for="licenseInput">Número de Licencia</label>
-                    <button class="validate-btn" onclick="validateLicense()">
-                        <span>Verificar Ahora</span>
-                        <svg viewBox="0 0 24 24" width="24" height="24">
-                            <path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"/>
-                        </svg>
-                    </button>
-                </div>
-                
-                <div class="result-container">
-                    <div id="licenseResult" class="result-card">
-                        <div class="status-indicator"></div>
-                        <div class="result-content">
-                            <h3 class="result-title">Estado de Licencia</h3>
-                            <div class="result-details">
-                                <div class="detail-item">
-                                    <span>Número:</span>
-                                    <strong id="licenseNumber">-</strong>
-                                </div>
-                                <div class="detail-item">
-                                    <span>Estado:</span>
-                                    <span id="licenseStatus" class="status-badge">-</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span>Descripción:</span>
-                                    <em id="licenseDescription">-</em>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="card-footer">
-                <div class="status-legend">
-                    <h4>Referencia de Estados:</h4>
-                    <ul id="statusLegend"></ul>
-                </div>
-            </div>
+    <div class="container">
+        <h2>Verificador de Licencias</h2>
+        <div class="input-group">
+            <input type="text" id="licenciaInput" placeholder="Ingrese su licencia">
+            <button onclick="validarLicencia()">Validar</button>
         </div>
+        <div id="resultado" class="resultado"></div>
+        <div id="estado" class="estado"></div>
     </div>
 
-    <script">function validateLicense() {
-    const licenseInput = document.getElementById('licenseInput');
-    const resultContainer = document.querySelector('.result-container');
-    const licenseResult = document.getElementById('licenseResult');
-    const statusIndicator = licenseResult.querySelector('.status-indicator');
+    <!-- Reemplaza esta URL con la correcta de tu data.js -->
+    <script src="https://github.com/MOC3PNJ/moc3pnj.github.io/edit/main/seg/license.html/data.js"></script>
     
-    const licenseNumber = document.getElementById('licenseNumber');
-    const licenseStatus = document.getElementById('licenseStatus');
-    const licenseDescription = document.getElementById('licenseDescription');
-    
-    const license = licenseInput.value.trim();
-    
-    // Validar licencia
-    const isValid = BaseDeDatosLicencias.validarLicencia(license);
-    const details = BaseDeDatosLicencias.obtenerDetalles(license);
-    const status = details ? details.ESTADO : 2;
-    const statusText = BaseDeDatosLicencias.estadosValidos[status];
-    
-    // Actualizar UI
-    licenseResult.classList.remove('valid', 'invalid');
-    resultContainer.classList.add('visible');
-    
-    if (isValid) {
-        licenseResult.classList.add('valid');
-        licenseNumber.textContent = license;
-        licenseStatus.textContent = `${status} - ${statusText}`;
-        licenseDescription.textContent = details.descripcion;
-        statusIndicator.style.backgroundColor = getStatusColor(status);
-    } else {
-        licenseResult.classList.add('invalid');
-        licenseNumber.textContent = license;
-        licenseStatus.textContent = '2 - Inválida';
-        licenseDescription.textContent = 'Licencia no válida o formato incorrecto';
-    }
-    
-    updateStatusLegend();
-}
+    <script>
+        function validarLicencia() {
+            const licencia = document.getElementById('licenciaInput').value.trim();
+            const resultadoDiv = document.getElementById('resultado');
+            const estadoDiv = document.getElementById('estado');
 
-function getStatusColor(status) {
-    const colors = {
-        1: '#4CAF50',
-        2: '#F44336',
-        3: '#9C27B0',
-        4: '#FF9800',
-        5: '#2196F3'
-    };
-    return colors[status] || '#666';
-}
+            // Validar la licencia
+            const esValida = BaseDeDatosLicencias.validarLicencia(licencia);
+            const estado = BaseDeDatosLicencias.obtenerEstado(licencia);
+            const descripcionEstado = BaseDeDatosLicencias.estadosValidos[estado];
 
-function updateStatusLegend() {
-    const legend = document.getElementById('statusLegend');
-    legend.innerHTML = '';
-    
-    Object.entries(BaseDeDatosLicencias.estadosValidos).forEach(([key, value]) => {
-        const li = document.createElement('li');
-        li.setAttribute('data-status', key);
-        li.innerHTML = `
-            <span>${key} - ${value}</span>
-        `;
-        legend.appendChild(li);
-    });
-}
+            // Mostrar resultados
+            resultadoDiv.className = 'resultado ' + (esValida ? 'valida' : 'invalida');
+            resultadoDiv.innerHTML = `Licencia: <strong>${licencia}</strong> - ${
+                esValida ? 'VÁLIDA' : 'INVÁLIDA'
+            }`;
 
-// Inicializar leyenda de estados
-document.addEventListener('DOMContentLoaded', updateStatusLegend);</script>
+            if(esValida) {
+                estadoDiv.innerHTML = `Estado: ${estado} - ${descripcionEstado}`;
+                estadoDiv.style.color = '#155724';
+            } else {
+                estadoDiv.innerHTML = 'Licencia no registrada o formato incorrecto';
+                estadoDiv.style.color = '#721c24';
+            }
+        }
+    </script>
 </body>
 </html>
