@@ -5,23 +5,49 @@ const BaseDeDatosLicencias = (() => {
 
     const datos = Object.freeze([
         Object.freeze({
-            LIC: "0X1234DX",
+            LIC: "0X0001X",
             ESTADO: 1,
             descripcion: "Licencia activa y en buen estado"
         }),
         Object.freeze({
-            LIC: "0XADMIN3237DX",
-            ESTADO: ,
+            LIC: "0X0002DX",
+            ESTADO: 2,
             descripcion: "Licencia bloqueada permanentemente"
         }),
         Object.freeze({
-            LIC: "0X5555DX",
-            ESTADO: 5,
+            LIC: "0X0003DX",
+            ESTADO: 3,
             descripcion: "Licencia suspendida por falta de pago"
         }),
         Object.freeze({
-            LIC: "0X0000DX",
+            LIC: "0X0004DX",
             ESTADO: 4,
+            descripcion: "Licencia en mantenimiento técnico"
+       }),
+        Object.freeze({
+            LIC: "0X0005DX",
+            ESTADO: 5,
+            descripcion: "Licencia en mantenimiento técnico"
+        }),
+        Object.freeze({
+            LIC: "0X0006DX",
+            ESTADO: 6,
+            descripcion: "Licencia en mantenimiento técnico"
+
+       }),
+        Object.freeze({
+            LIC: "0X0007DX",
+            ESTADO: 7,
+            descripcion: "Licencia en mantenimiento técnico"
+        }),
+        Object.freeze({
+            LIC: "0X0008DX",
+            ESTADO: 8,
+            descripcion: "Licencia en mantenimiento técnico"
+        }),
+        Object.freeze({
+            LIC: "0X0009DX",
+            ESTADO: 9,
             descripcion: "Licencia en mantenimiento técnico"
         })
     ]);
