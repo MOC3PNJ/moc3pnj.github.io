@@ -60,7 +60,32 @@
         </div>
     </div>
 
-    <script src="js/data.js"></script>
+     <script>
+        function validarLicencia() {
+            const licencia = document.getElementById('licenciaInput').value.trim();
+            const resultadoDiv = document.getElementById('resultado');
+            const estadoDiv = document.getElementById('estado');
+
+            // Validar la licencia
+            const esValida = BaseDeDatosLicencias.validarLicencia(licencia);
+            const estado = BaseDeDatosLicencias.obtenerEstado(licencia);
+            const descripcionEstado = BaseDeDatosLicencias.estadosValidos[estado];
+
+            // Mostrar resultados
+            resultadoDiv.className = 'resultado ' + (esValida ? 'valida' : 'invalida');
+            resultadoDiv.innerHTML = `Licencia: <strong>${licencia}</strong> - ${
+                esValida ? 'VÁLIDA' : 'INVÁLIDA'
+            }`;
+
+            if(esValida) {
+                estadoDiv.innerHTML = `Estado: ${estado} - ${descripcionEstado}`;
+                estadoDiv.style.color = '#155724';
+            } else {
+                estadoDiv.innerHTML = 'Licencia no registrada o formato incorrecto';
+                estadoDiv.style.color = '#721c24';
+            }
+        }
+    </script>
     <script src="js/app.js"></script>
 </body>
 </html>
