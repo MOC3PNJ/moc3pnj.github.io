@@ -78,10 +78,10 @@ const BaseDeDatosLicencias = (() => {
 
         estadosValidos: Object.freeze({
             1: "Activa - Todo en orden",
-            2: "Inhabilitada",
-            3: "Bloqueo permanente",
-            4: "En mantenimiento",
-            5: "Contactar soporte por pago"
+            2: "Error: Cuenta Inhabilitada",
+            3: "Error al inciar: Bloqueo permanente",
+            4: "Error: Sistema o cuenta en mantenimiento",
+            5: "Atencion: Contactar soporte por pago"
             6: "Buen dia admin, todo bien con su licencia"
             7: "Buen dia admin, al parecer el parlamente PNJ ha notado algo fuera de lo comun y su licencia será revocada."
             8: "Error: El PNJ revoco su licencia. ATENCION: m.pnj@bk.ru."
