@@ -14,7 +14,7 @@ document.getElementById('registerForm').addEventListener('submit', function(e) {
         password: document.getElementById('password').value
     };
 
-    fetch('../private/php/register.php', {
+    fetch('php/register.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
