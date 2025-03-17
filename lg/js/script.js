@@ -14,7 +14,7 @@ document.getElementById('registerForm').addEventListener('submit', function(e) {
         password: document.getElementById('password').value
     };
 
-    fetch('php/register.php', {
+    fetch('http://moc3base.ct.ws/reg/php/register.php', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
