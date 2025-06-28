@@ -1,54 +1,48 @@
-Estimados usuarios de Vertise TV y titulares de derechos de autor,
+Aviso Legal y Política de Derechos de Autor de Vertise TV
+Fecha de Última Actualización: 28 de junio de 2025
 
-En nuestra calidad de profesionales especializados en derecho y tecnología, y actuando en representación de Vertise TV (una iniciativa del Proyecto No Judicial - PNJ), nos dirigimos a ustedes para esclarecer la naturaleza de nuestro servicio y nuestra posición respecto a la Ley de Derechos de Autor del Milenio Digital (DMCA) y normativas análogas.
+En Vertise TV, entendemos la importancia de la propiedad intelectual y operamos con la máxima transparencia. Este documento aclara la naturaleza de nuestros servicios y nuestra posición frente a las leyes de derechos de autor, incluyendo la Ley de Derechos de Autor del Milenio Digital (DMCA) y normativas similares a nivel global.
 
-Declaración sobre la DMCA y la Operación de Vertise TV
-Vertise TV es una aplicación innovadora que emplea un sistema de inteligencia artificial (IA) diseñado internamente, cuyo propósito fundamental es funcionar como un motor de búsqueda y agregador de contenido. Es crucial entender que Vertise TV no aloja, modifica, publica ni distribuye contenido protegido por derechos de autor. Nuestra tecnología se limita a rastrear y recopilar enlaces y/o videos que ya se encuentran publicados de forma pública en páginas web alternas, las cuales no guardan ninguna relación con nuestra organización.
+El Rol de Vertise TV: Un Motor de Búsqueda y Agregador de Enlaces
+Vertise TV es una plataforma tecnológica que funciona exclusivamente como un motor de búsqueda y agregador de enlaces. Hemos desarrollado un sistema de inteligencia artificial (IA) diseñado específicamente para indexar y facilitar el acceso a contenido audiovisual que ya se encuentra disponible públicamente en la internet abierta. Este contenido reside en sitios web de terceros que no tienen ninguna relación ni afiliación con Vertise TV.
 
-Nuestra IA opera de manera similar a un "iframe" o una "ventana", actuando como un intermediario técnico. Su función es presentar al usuario los resultados de su búsqueda, es decir, enlaces a contenido que ya existe y es accesible públicamente en la web. En este sentido, Vertise TV facilita el acceso a material ya disponible, sin intervenir en su creación, almacenamiento o titularidad.
+Es fundamental entender que Vertise TV no aloja, almacena, reproduce, distribuye, modifica ni controla contenido protegido por derechos de autor. Nuestra función se limita a la recolección y presentación de hipervínculos a material ya existente, actuando únicamente como un intermediario técnico pasivo. No tenemos acceso a los servidores de estas páginas de terceros, ni la capacidad de editar, modificar o eliminar el contenido que allí se aloja.
 
-Queremos dejar constancia expresa de que no tenemos relación alguna con las páginas de terceros que alojan dicho contenido, ya sean lícitas o ilícitas. No tenemos la capacidad de acceder a sus servidores, ni de editar, modificar o eliminar el material que estas plataformas albergan.
+Exención de Responsabilidad por Contenido de Terceros
+Dado que Vertise TV solo enlaza a contenido que ya es accesible públicamente en la red, no asumimos responsabilidad alguna por el contenido accesible a través de los enlaces que indexamos. El material audiovisual, así como sus respectivos derechos de autor, son responsabilidad exclusiva de las plataformas de terceros que lo alojan y de los usuarios que originalmente lo cargaron en dichas plataformas.
 
-Exención de Responsabilidad y Proceso de Notificación DMCA
-Conforme a lo expuesto, Vertise TV no puede ser considerado responsable de ninguna infracción de derechos de autor derivada del contenido al que se accede a través de nuestra aplicación. Esto se debe a que:
+Nuestra operatividad se fundamenta en principios legales que otorgan protección a los proveedores de servicios intermediarios, tal como lo establecen legislaciones clave como la Ley de Derechos de Autor del Milenio Digital (DMCA) en los Estados Unidos y otras normativas análogas en diversas jurisdicciones. Estas leyes reconocen y protegen a las plataformas que no alojan contenido y actúan meramente como conductos o herramientas de búsqueda, sin intervenir en la infracción de derechos.
 
-No somos los alojadores del contenido: El material visualizado por los usuarios reside en servidores de terceros, sobre los cuales no ejercemos control.
+Política de Derechos de Autor y Proceso de Notificación DMCA
+Vertise TV respeta rigurosamente los derechos de propiedad intelectual. Aunque no alojamos contenido, proporcionamos un mecanismo claro para que los titulares de derechos puedan notificarnos sobre enlaces que consideren infractores.
 
-Actuamos como un mero buscador: Nuestra función se limita a indexar y enlazar contenido ya existente en la esfera pública de internet.
+Procedimiento de Notificación (DMCA Takedown Notice):
 
-Sin embargo, reconocemos la importancia de los derechos de propiedad intelectual y estamos comprometidos con el cumplimiento de las leyes aplicables, incluyendo la DMCA.
+Si usted es el titular de derechos de autor o un agente autorizado y cree de buena fe que un enlace indexado por Vertise TV apunta a material que infringe sus derechos, le instamos a enviar una notificación completa a m.pnj@bk.ru con la siguiente información esencial:
 
-Procedimiento para Notificaciones de Infracción de Derechos de Autor
-Si usted es el titular de los derechos de autor de una obra (serie, película, etc.) o el representante legal de una organización a la que pertenece dicho material, y considera que un enlace o video accesible a través de Vertise TV infringe sus derechos, le instamos a seguir el siguiente procedimiento:
+Identificación del Material Infractor: La URL específica o identificador de contenido dentro de Vertise TV que enlaza al material presuntamente infractor.
 
-Envío de Notificación: Por favor, envíe un correo electrónico a m.pnj@bk.ru con la siguiente información:
+Identificación de la Obra Protegida: Una descripción detallada de la obra protegida por derechos de autor que se alega ha sido infringida (por ejemplo, título exacto, nombre del autor/creador, número de registro si aplica, etc.).
 
-Identificación del material infractor: Proporcione la URL específica dentro de la aplicación Vertise TV donde se encuentra el enlace al material presuntamente infractor.
+Declaración de Buena Fe: Una declaración jurada (bajo pena de perjurio) de que la información proporcionada en la notificación es precisa y que usted es el titular de los derechos de autor o está legalmente autorizado para actuar en nombre del titular de un derecho exclusivo que supuestamente se ha infringido.
 
-Prueba de titularidad: Adjunte o describa de forma detallada la evidencia que demuestre su titularidad de los derechos de autor (por ejemplo, números de registro de derechos, documentos de autorización, enlaces a fuentes oficiales, etc.).
+Datos de Contacto: Su nombre completo, dirección postal, número de teléfono y una dirección de correo electrónico válida.
 
-Declaración de buena fe: Incluya una declaración en la que afirme, bajo pena de perjurio, que usted cree de buena fe que el uso del material no está autorizado por el titular de los derechos de autor, su agente o la ley.
+Firma: Una firma física o electrónica del titular de los derechos de autor o de la persona autorizada para actuar en su nombre.
 
-Datos de contacto: Proporcione su nombre completo, dirección, número de teléfono y una dirección de correo electrónico válida.
+Nuestra Respuesta a Notificaciones Válidas:
 
-Firma: Una firma física o electrónica del titular de los derechos de autor o de una persona autorizada para actuar en su nombre.
+Una vez recibida y verificada una notificación DMCA válida y completa, Vertise TV se compromete a:
 
-Nuestra Respuesta y Compromiso: Una vez recibida su notificación completa, nos comprometemos a:
+Verificación y Reenvío: Nuestro equipo procesará diligentemente su notificación para verificar su validez. En un plazo de hasta 72 horas hábiles, le facilitaremos la URL directa del sitio web de terceros donde el contenido infractor está efectivamente alojado.
 
-Verificar la reclamación: Nuestro equipo revisará la información proporcionada para verificar la validez de su reclamo.
+Acciones Posteriores: El único fin de facilitar esta URL es permitirle a usted, como titular de los derechos, dirigir su reclamo y solicitud de eliminación directamente al proveedor de alojamiento o al operador del sitio web que alberga el contenido. Es crucial reiterar que Vertise TV no tiene la capacidad técnica ni la autoridad legal para eliminar el contenido de sitios web de terceros.
 
-Compartir el enlace de origen: En un plazo de 24 a 72 horas hábiles (dado nuestro alto volumen de trabajo), le compartiremos el enlace o URL directa de la página externa donde se encuentra alojado el contenido infractor.
+Limitación de Responsabilidad y Términos de Uso para Usuarios
+El uso de Vertise TV implica la aceptación por parte del usuario de que el acceso a cualquier contenido a través de los enlaces proporcionados se realiza bajo su propio y exclusivo riesgo y responsabilidad. Los usuarios son los únicos responsables de asegurar que su uso del contenido cumpla con todas las leyes de derechos de autor aplicables y con los términos de servicio de los sitios web de origen a los que son redirigidos.
 
-Acciones ulteriores: El propósito de compartir este enlace es facilitarle a usted la posibilidad de presentar la denuncia directamente ante la entidad o plataforma que aloja el contenido. Es importante reiterar que no podemos eliminar el contenido de estas páginas de terceros, ya que no tenemos control sobre ellas.
+Jurisdicción y Legislación Aplicable
+Vertise TV opera y se rige por las leyes de la República Bolivariana de Venezuela. Cualquier disputa legal relacionada con nuestra plataforma se resolverá exclusivamente de acuerdo con las leyes de Venezuela. Rechazamos cualquier competencia legal extraterritorial que no reconozca nuestra función como intermediario técnico pasivo, conforme a los principios de responsabilidad limitada aplicables a los proveedores de servicios en línea.
 
-Advertencia a Usuarios y Alcance del Proyecto
-Los usuarios de Vertise TV deben ser conscientes de que el acceso a cualquier contenido a través de nuestra aplicación se realiza bajo su propio riesgo y responsabilidad. Es deber de cada usuario respetar las leyes de derechos de autor y los términos de uso de las plataformas de origen del contenido.
-
-Vertise TV, como parte del Proyecto No Judicial (PNJ), se adhiere a la filosofía de un proyecto libre y abierto en el que cualquier persona puede participar. Nos regimos por las leyes de Venezuela y la legislación internacional pertinente en lo que respecta a la exención de responsabilidad de intermediarios técnicos.
-
-Nos reservamos el derecho de actualizar este aviso legal para adaptarnos a los cambios normativos u operativos. Le recomendamos revisar periódicamente esta declaración.
-
-Atentamente,
-
-El Equipo de Vertise TV (PNJ)
-[m.pnj@bk.ru]
+Modificaciones a este Aviso Legal
+Nos reservamos el derecho de modificar este Aviso Legal en cualquier momento para adaptarlo a cambios en nuestras prácticas operativas o a nuevas exigencias legales. La versión más reciente y vigente estará siempre disponible en nuestra plataforma. Le recomendamos revisarlo periódicamente.
