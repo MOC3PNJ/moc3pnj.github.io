@@ -1,0 +1,45 @@
+
+    .containerbus {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.highlight-title {
+    background-image: linear-gradient(to bottom, yellow 75%, transparent 75%);
+    background-position: 0 1.05em;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+    padding-bottom: 0.2em;
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+.error404{
+  max-width: 80%;
+  border: 5px ;
+  border-radius: 3px ;
+  font-size: 15px;
+  
+}
