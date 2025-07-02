@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reglamento SEA-M - Vertice TV</title>
+    <style>
+        /* --- CSS --- */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #f8f9fa;
+            --text-color: #333;
+            --background-color: #e9ecef;
+            --border-color: #dee2e6;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px var(--shadow-color);
+            overflow: hidden;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        main {
+            padding: 30px;
+        }
+
+        .preambulo {
+            background-color: var(--secondary-color);
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            border-left: 5px solid var(--primary-color);
+            font-style: italic;
+        }
+
+        .article {
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .article-header {
+            background-color: var(--secondary-color);
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color 0.3s ease;
+        }
+        
+        .article-header:hover {
+            background-color: #e2e6ea;
+        }
+
+        .article-header h2 {
+            margin: 0;
+            font-size: 1.5em;
+            color: var(--primary-color);
+        }
+
+        .toggle-icon {
+            font-size: 1.5em;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .article-content {
+            padding: 20px;
+            display: none; /* Oculto por defecto */
+        }
+        
+        .article.open .article-content {
+            display: block; /* Visible cuando está abierto */
+        }
+        
+        .article.open .toggle-icon {
+            transform: rotate(180deg); /* Gira la flecha */
+        }
+
+        h3 {
+            font-size: 1.2em;
+            color: #555;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        strong {
+            color: #0056b3;
+            font-weight: 700;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #6c757d;
+            background-color: var(--secondary-color);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Reglamento SEA-M de Vertice TV</h1>
+        </header>
+
+        <main>
+            <div class="preambulo">
+                <p>El presente reglamento establece los protocolos, fases y procedimientos que rigen el <strong>Sistema de Accionamiento ante Emergencias y Mantenimiento (SEA-M)</strong> de la plataforma Vertice TV. Su objetivo es salvaguardar la integridad de la infraestructura, proteger los datos y garantizar la continuidad del servicio.</p>
+            </div>
+
+            <div class="article">
+                <div class="article-header">
+                    <h2>Artículo 1: Definiciones Clave</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="article-content">
+                    <ul>
+                        <li><strong>Vertice TV:</strong> La aplicación y plataforma de servicio objeto de este reglamento.</li>
+                        <li><strong>SEA-M:</strong> Acrónimo de "Sistema de Accionamiento ante Emergencias y Mantenimiento".</li>
+                        <li><strong>Incidente de Seguridad:</strong> Cualquier evento que amenace la confidencialidad, integridad o disponibilidad de los servicios.</li>
+                        <li><strong>Equipo de Seguridad:</strong> Personal interno y externo responsable de la ejecución de este protocolo.</li>
+                        <li><strong>Resguardo Físico de Datos:</strong> Copia de seguridad íntegra y aislada de la red (air-gapped).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-header">
+                    <h2>Artículo 2: Fases de Activación</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="article-content">
+                    <h3>Fase I: Modo de Mantenimiento Preventivo (0-48h)</h3>
+                    <ol>
+                        <li><strong>Activación:</strong> Inmediata ante la detección de un incidente para aislar la amenaza.</li>
+                        <li><strong>Acciones:</strong>
+                            <ul>
+                                <li>Aislamiento de servidores ("congelamiento").</li>
+                                <li>Restricción de acceso a usuarios mostrando una pantalla de mantenimiento.</li>
+                                <li>Intervención del Equipo de Seguridad para análisis y neutralización.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Objetivo:</strong> Solucionar el incidente en menos de 48 horas.</li>
+                    </ol>
+
+                    <h3>Fase II: Activación del SEA (Post 48h)</h3>
+                    <ol>
+                        <li><strong>Activación:</strong> Si el incidente persiste o es de gran magnitud.</li>
+                        <li><strong>Acciones Críticas:</strong>
+                            <ul>
+                                <li>Ejecución del <strong>Protocolo de Resguardo Físico</strong>.</li>
+                                <li>Desconexión total de los servidores de Internet.</li>
+                                <li>Revocación criptográfica de las claves de acceso de la app.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    
+                    <h3>Fase III: Protocolo "Mano Negra" (Último Recurso)</h3>
+                     <ol>
+                        <li><strong>Activación:</strong> Si se confirma un compromiso irreparable del sistema.</li>
+                        <li><strong>Acción Definitiva:</strong> Purga completa y certificada de los datos en los servidores afectados para garantizar una eliminación total de la amenaza.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="article">
+                <div class="article-header">
+                    <h2>Artículo 3: Restauración del Servicio</h2>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="article-content">
+                    <ol>
+                        <li><strong>Plazo de Recuperación:</strong> Compromiso de restablecer el servicio en un plazo máximo de <strong>72 horas</strong> desde el inicio del incidente.</li>
+                        <li><strong>Proceso de Restauración:</strong>
+                            <ul>
+                                <li>Despliegue de una infraestructura de servidores nueva y segura.</li>
+                                <li>Restauración de datos desde el <strong>Resguardo Físico</strong>.</li>
+                                <li>Generación de nuevas claves de acceso y posible actualización de la app.</li>
+                            </ul>
+                        </li>
+                         <li><strong>Comunicación y Transparencia:</strong> Se mantendrá a los usuarios informados a través de canales oficiales durante y después del incidente.</li>
+                    </ol>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Este reglamento entra en vigor a partir de la fecha de su publicación. &copy; Vertice TV.</p>
+        </footer>
+    </div>
+
+    <script>
+        // --- JavaScript ---
+        document.addEventListener('DOMContentLoaded', function() {
+            const articleHeaders = document.querySelectorAll('.article-header');
+
+            articleHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    // Obtiene el elemento padre .article
+                    const article = this.parentElement;
+                    
+                    // Alterna la clase 'open' para mostrar/ocultar el contenido
+                    article.classList.toggle('open');
+                });
+            });
+
+            // Opcional: Abrir el primer artículo por defecto
+            const firstArticle = document.querySelector('.article');
+            if (firstArticle) {
+                firstArticle.classList.add('open');
+            }
+        });
+    </script>
+
+</body>
+</html>
