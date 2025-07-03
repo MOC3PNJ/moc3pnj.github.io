@@ -1,105 +1,288 @@
+/* General Body Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
+    padding: 0;
+    background-color: #e0e6ed; /* Light bluish-gray */
     color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+/* Header Styles */
 header {
+    background: linear-gradient135deg, #2c3e50 0%, #34495e 100%); /* Dark blue-gray gradient */
+    color: #fff;
     text-align: center;
+    padding: 25px 20px;
     margin-bottom: 30px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
 }
 
+header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: fadeInDown 1s ease-out;
+}
+
+/* Main Content Area */
+main {
+    flex-grow: 1;
+    padding: 0 20px 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Filter Section Styles */
 .filters {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-bottom: 30px;
+    gap: 25px;
+    margin-bottom: 40px;
     flex-wrap: wrap;
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    align-items: center;
 }
 
 .filters label {
-    font-weight: bold;
+    font-weight: 600;
+    color: #555;
+    font-size: 1.1em;
+    margin-right: 5px;
 }
 
 .filters select {
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-    min-width: 120px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid #cdd4da;
+    min-width: 150px;
+    background-color: #f9f9f9;
+    font-size: 1em;
+    color: #333;
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20256%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M128%20192L0%2064h256z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
+.filters select:hover {
+    border-color: #9cb1c5;
+}
+
+.filters select:focus {
+    outline: none;
+    border-color: #5a7d9a;
+    box-shadow: 0 0 0 3px rgba(90, 125, 154, 0.3);
+}
+
+/* Content Grid Styles */
 .content-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 4 columnas */
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Smaller default size for more items */
+    gap: 25px;
     justify-content: center;
+    padding: 10px;
 }
 
+/* Content Item Styles */
 .content-item {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
     cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Para que el título esté abajo */
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
 }
 
 .content-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .content-item img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 250px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures image covers the area, cropping if necessary */
     display: block;
     border-bottom: 1px solid #eee;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .content-item h3 {
-    margin: 15px 10px;
-    font-size: 1.1em;
+    margin: 15px 10px 0;
+    font-size: 1em; /* Smaller font size for titles */
     color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit title to 2 lines */
+    -webkit-box-orient: vertical;
+    min-height: 2.4em; /* Ensure consistent height for titles */
 }
 
-/* Responsive adjustments */
+/* No results message */
+.content-grid p {
+    grid-column: 1 / -1; /* Center message across all columns */
+    text-align: center;
+    font-size: 1.2em;
+    color: #777;
+    padding: 50px 0;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+
+/* For larger tablets and small desktops */
 @media (max-width: 1200px) {
     .content-grid {
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+        gap: 20px;
+    }
+    .content-item img {
+        height: 230px;
     }
 }
 
+/* For tablets */
 @media (max-width: 992px) {
+    header h1 {
+        font-size: 2.4em;
+    }
+    .filters {
+        gap: 20px;
+        padding: 20px;
+    }
     .content-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 18px;
+    }
+    .content-item img {
+        height: 210px;
+    }
+    .content-item h3 {
+        font-size: 0.95em;
     }
 }
 
+/* For large phones and small tablets */
 @media (max-width: 768px) {
-    .content-grid {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    body {
+        padding: 0 10px;
+    }
+    header {
+        padding: 20px 15px;
+        margin-bottom: 25px;
+    }
+    header h1 {
+        font-size: 2em;
     }
     .filters {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
+        gap: 15px;
+        padding: 15px;
+    }
+    .filters label {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    .filters select {
+        width: 100%;
+        min-width: unset;
+    }
+    .content-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); /* More items per row */
+        gap: 15px;
+    }
+    .content-item img {
+        height: 190px; /* Reduced height for phone view */
+    }
+    .content-item h3 {
+        font-size: 0.9em;
     }
 }
 
+/* For small phones (Android optimization) */
 @media (max-width: 576px) {
+    header h1 {
+        font-size: 1.8em;
+        letter-spacing: 1px;
+    }
+    main {
+        padding: 0 10px 30px;
+    }
+    .filters {
+        padding: 15px 10px;
+    }
     .content-grid {
-        grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Even smaller items, more per row */
+        gap: 10px; /* Reduced gap */
+    }
+    .content-item {
+        border-radius: 8px;
+        box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+    }
+    .content-item img {
+        height: 160px; /* Significantly reduced height for compact view */
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+    .content-item h3 {
+        margin: 10px 8px 0;
+        font-size: 0.8em; /* Smaller font for very small screens */
+        min-height: unset; /* Allow title to wrap naturally without fixed height */
+        -webkit-line-clamp: 3; /* Allow more lines if needed for small titles */
+    }
+    .content-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    }
+}
+
+/* Further optimization for very small screens */
+@media (max-width: 400px) {
+    .content-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Smallest items */
+        gap: 8px;
+    }
+    .content-item img {
+        height: 140px;
+    }
+    .content-item h3 {
+        font-size: 0.75em;
     }
 }
