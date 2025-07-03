@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Directorio de Contenido</title>
+    <link rel="stylesheet" href="https://moc3pnj.github.io/bd/style.css">
+</head>
+<body>
+    <header>
+        <h1>Mi Directorio de Contenido</h1>
+    </header>
+
+    <main>
+        <section class="filters">
+            <label for="category-filter">Categoría:</label>
+            <select id="category-filter">
+                <option value="all">Todas</option>
+                </select>
+
+            <label for="year-filter">Año:</label>
+            <select id="year-filter">
+                <option value="all">Todos</option>
+                </select>
+
+            <label for="type-filter">Tipo:</label>
+            <select id="type-filter">
+                <option value="all">Todos</option>
+                <option value="Película">Película</option>
+                <option value="Serie">Serie</option>
+            </select>
+        </section>
+
+        <section class="content-grid" id="content-grid">
+            </section>
+    </main>
+
+    <script type="module" src="https://moc3pnj.github.io/bd/script.js"></script>
+</body>
+</html>
