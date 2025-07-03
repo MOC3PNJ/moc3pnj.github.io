@@ -1,5 +1,5 @@
 // Importa la base de datos directamente desde la URL
-import { peliculas } from 'https://moc3pnj.github.io/bd/data.js';
+import { peliculas } from 'https://cdn.jsdelivr.net/gh/MOC3PNJ/moc3pnj.github.io@latest/bd/data.js';
 
 const contentGrid = document.getElementById('content-grid');
 const categoryFilter = document.getElementById('category-filter');
