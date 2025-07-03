@@ -57,7 +57,8 @@ function displayContent(items) {
         contentItem.dataset.id = item.id; // Para futura referencia si se necesita
 
         // Asegúrate de que la URL de la portada sea válida, si no, usa una por defecto
-        const imageUrl = item.portada && item.portada.startsWith('http') ? item.portada : 'https://via.placeholder.com/250x350?text=No+Cover';
+        const imageUrl = item.portada && item.portada.startsWith('http') ? item.portada : 'moc3pnj.github.io/bd
+/error.jpg';
 
         contentItem.innerHTML = `
             <img src="${imageUrl}" alt="Portada de ${item.nombre}">
