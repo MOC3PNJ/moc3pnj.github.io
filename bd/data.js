@@ -15,7 +15,7 @@ const peliculas = [
     categoria: "Horror",
     tipo: "Película",
     portada: "https://img.onfilom.com/cover/20250410/1744273562545_37289de07017d297262e891c659f80f2%E6%AD%BB%E7%A5%9E1.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
-    link: "go:0002"
+    link: "https://h5.onfilom.com/es/detail/movie/UsNJzqxwgH0onKw3tlHJT-Final-Destination-Bloodlines"
   },
   {
     id: "0003",
@@ -24,7 +24,7 @@ const peliculas = [
     categoria: "Ciencia Ficción, Terror, Grabada en cines",
     tipo: "Película",
     portada: "https://img.onfilom.com/cover/20250527/1748338320708_47d6086832f1621bfcf91092b6d2ae6fhVKHzr4GwSw0FepqhqQ0DDiYHNY%20(1).webp?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
-    link: "go:0003"
+    link: "https://h5.onfilom.com/es/detail/movie/5UKunplRip3dYHlxZt5lv-28-Years-Later"
   },
   {
     id: "0004",
@@ -33,7 +33,7 @@ const peliculas = [
     categoria: "Comedia",
     tipo: "Película",
     portada: "https://img.onfilom.com/cover/20250407/1743992284274_bff8d2802591f1667c9277f62b13c9deyFHHfHcUgGAxziP1C3lLt0q2T4s.webp?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
-    link: "go:0004"
+    link: "https://h5.onfilom.com/es/detail/movie/PI97tF4VKHGs7NkDVVnLR-A-Minecraft-Movie"
   },
   {
     id: "pelicula-004",
