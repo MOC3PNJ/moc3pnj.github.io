@@ -8,6 +8,13 @@ const typeFilter = document.getElementById('type-filter');
 
 let allContent = []; // Variable para almacenar la base de datos una vez cargada
 
+// Elementos del iframe overlay
+const iframeOverlay = document.getElementById('iframe-overlay');
+const videoPlayer = document.getElementById('video-player');
+const closeIframeButton = document.getElementById('close-iframe-button');
+const iframeTitle = document.getElementById('iframe-title');
+
+
 // Función para obtener los datos de la base de datos
 async function fetchData() {
     try {
@@ -30,12 +37,15 @@ function populateFilters() {
         item.categoria.split(',').forEach(cat => categories.add(cat.trim()));
     });
 
-    categoryFilter.innerHTML = '<option value="all">Todas</option>'; // Limpia opciones existentes y añade "Todas"
+    // Limpia opciones existentes y añade "Todas"
+    categoryFilter.innerHTML = '<option value="all">Todas</option>';
     categories.forEach(category => {
-        const option = document.createElement('option');
-        option.value = category;
-        option.textContent = category;
-        categoryFilter.appendChild(option);
+        if (category) { // Asegura que no se añadan categorías vacías
+            const option = document.createElement('option');
+            option.value = category;
+            option.textContent = category;
+            categoryFilter.appendChild(option);
+        }
     });
 
     // Años
@@ -64,7 +74,7 @@ function displayContent(items) {
         contentItem.dataset.id = item.id; // Para futura referencia si se necesita
 
         // Asegúrate de que la URL de la portada sea válida, si no, usa una por defecto
-        const imageUrl = item.portada && item.portada.startsWith('http') ? item.portada : 'https://i.ibb.co/MkfkNDtT/Sin-t-tulo-3.png';
+        const imageUrl = item.portada && item.portada.startsWith('http') ? item.portada : 'https://i.ibb.co/svVpzwrL/error.png';
 
         contentItem.innerHTML = `
             <img src="${imageUrl}" alt="Portada de ${item.nombre}">
@@ -73,7 +83,7 @@ function displayContent(items) {
 
         contentItem.addEventListener('click', () => {
             if (item.link) {
-                window.open(item.link, '_blank'); // Abre el enlace en una nueva pestaña
+                openVideoPlayer(item.link, item.nombre); // Llama a la nueva función
             } else {
                 alert('Lo siento, no hay un enlace disponible para este contenido.');
             }
@@ -82,6 +92,52 @@ function displayContent(items) {
         contentGrid.appendChild(contentItem);
     });
 }
+
+// Nueva función para abrir el reproductor de video en un iframe
+function openVideoPlayer(videoUrl, title) {
+    videoPlayer.src = videoUrl;
+    iframeTitle.textContent = title; // Establece el título en el header del iframe
+    iframeOverlay.style.display = 'flex'; // Muestra el overlay
+
+    // Intentar solicitar pantalla completa para el iframe
+    // Esto generalmente requiere interacción del usuario O que el iframe lo permita explícitamente.
+    // No podemos forzar la pantalla completa de un video externo desde aquí sin control sobre el iframe.
+    if (videoPlayer.requestFullscreen) {
+        videoPlayer.requestFullscreen().catch(err => {
+            console.warn("No se pudo entrar en pantalla completa automáticamente. El usuario debe hacerlo manualmente.", err);
+            // Opcional: mostrar un mensaje al usuario para que presione el botón de pantalla completa en el video
+        });
+    } else if (videoPlayer.mozRequestFullScreen) { /* Firefox */
+        videoPlayer.mozRequestFullScreen();
+    } else if (videoPlayer.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+        videoPlayer.webkitRequestFullscreen();
+    } else if (videoPlayer.msRequestFullscreen) { /* IE/Edge */
+        videoPlayer.msRequestFullscreen();
+    }
+}
+
+// Función para cerrar el reproductor de video
+function closeVideoPlayer() {
+    videoPlayer.src = ''; // Detiene el video al limpiar el src
+    iframeOverlay.style.display = 'none'; // Oculta el overlay
+
+    // Salir de pantalla completa si el navegador está en modo de pantalla completa
+    if (document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement) {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) { /* Firefox */
+            document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) { /* IE/Edge */
+            document.msExitFullscreen();
+        }
+    }
+}
+
+// Event listener para el botón de cerrar iframe
+closeIframeButton.addEventListener('click', closeVideoPlayer);
+
 
 // Función para filtrar el contenido
 function filterContent() {
