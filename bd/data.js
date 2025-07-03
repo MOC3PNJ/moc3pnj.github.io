@@ -27,13 +27,13 @@ const peliculas = [
     link: "go:0003"
   },
   {
-    id: "pelicula-003",
-    nombre: "Interestelar",
-    año: 2014,
-    categoria: "Ciencia Ficción",
+    id: "0004",
+    nombre: "Película de Minecraft",
+    año: 2025,
+    categoria: "Comedia",
     tipo: "Película",
-    portada: "https://ejemplo.com/portada-interestelar.jpg",
-    link: "https://ejemplo.com/interestelar"
+    portada: "https://img.onfilom.com/cover/20250407/1743992284274_bff8d2802591f1667c9277f62b13c9deyFHHfHcUgGAxziP1C3lLt0q2T4s.webp?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "go:0004"
   },
   {
     id: "pelicula-004",
@@ -266,7 +266,7 @@ const peliculas = [
     año: 2021,
     categoria: "Acción",
     tipo: "Película",
-    portada: "https://ejemplo.com/portada-no-time-to-die.jpg",
+    portada: "",
     link: "https://ejemplo.com/no-time-to-die"
   }
 ];
