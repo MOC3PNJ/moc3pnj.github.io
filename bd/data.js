@@ -1,12 +1,12 @@
 const peliculas = [
   {
-    id: "pelicula-001",
-    nombre: "El Padrino",
-    año: 1972,
+    id: "0001",
+    nombre: "El Juego del Calamar 3",
+    año: 2025,
     categoria: "Drama",
     tipo: "Película",
-    portada: "https://ejemplo.com/portada-el-padrino.jpg",
-    link: "https://ejemplo.com/el-padrino"
+    portada: "https://img.onfilom.com/cover/20250626/1750904539638_ab8aa265f1b4639cca11f9bb996fcb66%E4%B8%8B%E8%BD%BD.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "go:0001"
   },
   {
     id: "pelicula-002",
