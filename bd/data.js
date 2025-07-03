@@ -21,8 +21,8 @@ const peliculas = [
     id: "0003",
     nombre: "Exterminio: La evolución (⚠️ Grabada)",
     año: 2025,
-    categoria: "Ciencia Ficción, Terror",
-    tipo: "⚠️Grabada en cines⚠️",
+    categoria: "Ciencia Ficción, Terror, Grabada en cines",
+    tipo: "Película",
     portada: "https://img.onfilom.com/cover/20250527/1748338320708_47d6086832f1621bfcf91092b6d2ae6fhVKHzr4GwSw0FepqhqQ0DDiYHNY%20(1).webp?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
     link: "go:0003"
   },
