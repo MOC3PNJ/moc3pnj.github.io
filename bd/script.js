@@ -64,7 +64,7 @@ function displayContent(items) {
         contentItem.dataset.id = item.id; // Para futura referencia si se necesita
 
         // Asegúrate de que la URL de la portada sea válida, si no, usa una por defecto
-        const imageUrl = item.portada && item.portada.startsWith('http') ? item.portada : 'https://i.ibb.co/svVpzwrL/error.png';
+        const imageUrl = item.portada && item.portada.startsWith('http') ? item.portada : 'https://i.ibb.co/MkfkNDtT/Sin-t-tulo-3.png';
 
         contentItem.innerHTML = `
             <img src="${imageUrl}" alt="Portada de ${item.nombre}">
