@@ -1,23 +1,23 @@
 // Importa la base de datos directamente desde la URL
-[span_0](start_span)import { peliculas } from 'https://raw.githack.com/MOC3PNJ/moc3pnj.github.io/refs/heads/main/bd/data.js';[span_0](end_span)
+import { peliculas } from 'https://raw.githack.com/MOC3PNJ/moc3pnj.github.io/refs/heads/main/bd/data.js';
 
 const contentGrid = document.getElementById('content-grid');
-[span_1](start_span)const categoryFilter = document.getElementById('category-filter');[span_1](end_span)
-[span_2](start_span)const yearFilter = document.getElementById('year-filter');[span_2](end_span)
-[span_3](start_span)const typeFilter = document.getElementById('type-filter');[span_3](end_span)
+const categoryFilter = document.getElementById('category-filter');
+const yearFilter = document.getElementById('year-filter');
+const typeFilter = document.getElementById('type-filter');
 
-let allContent = []; [span_4](start_span)// Variable para almacenar la base de datos una vez cargada[span_4](end_span)
+let allContent = []; // Variable para almacenar la base de datos una vez cargada
 
 // Función para obtener los datos de la base de datos
 async function fetchData() {
     try {
         // La base de datos ya se importa directamente, solo la asignamos
         allContent = peliculas;
-        [span_5](start_span)populateFilters();[span_5](end_span)
-        [span_6](start_span)displayContent(allContent);[span_6](end_span)
+        populateFilters();
+        displayContent(allContent);
     } catch (error) {
-        [span_7](start_span)console.error('Error al cargar la base de datos:', error);[span_7](end_span)
-        contentGrid.innerHTML = '<p>Error al cargar el contenido. [span_8](start_span)Por favor, inténtalo de nuevo más tarde.</p>';[span_8](end_span)
+        console.error('Error al cargar la base de datos:', error);
+        contentGrid.innerHTML = '<p>Error al cargar el contenido. Por favor, inténtalo de nuevo más tarde.</p>';
     }
 }
 
@@ -26,11 +26,11 @@ function populateFilters() {
     // Categorías
     const categories = new Set();
     allContent.forEach(item => {
-        // Handle multiple categories separated by comma
+        // Maneja múltiples categorías separadas por coma
         item.categoria.split(',').forEach(cat => categories.add(cat.trim()));
     });
 
-    categoryFilter.innerHTML = '<option value="all">Todas</option>'; // Clear existing options and add "Todas"
+    categoryFilter.innerHTML = '<option value="all">Todas</option>'; // Limpia opciones existentes y añade "Todas"
     categories.forEach(category => {
         const option = document.createElement('option');
         option.value = category;
@@ -39,8 +39,8 @@ function populateFilters() {
     });
 
     // Años
-    [span_9](start_span)const years = new Set(allContent.map(item => item.año).sort((a, b) => b - a));[span_9](end_span) [span_10](start_span)// Ordenar de más reciente a más antiguo[span_10](end_span)
-    yearFilter.innerHTML = '<option value="all">Todos</option>'; // Clear existing options and add "Todos"
+    const years = new Set(allContent.map(item => item.año).sort((a, b) => b - a)); // Ordenar de más reciente a más antiguo
+    yearFilter.innerHTML = '<option value="all">Todos</option>'; // Limpia opciones existentes y añade "Todos"
     years.forEach(year => {
         const option = document.createElement('option');
         option.value = year;
@@ -51,11 +51,11 @@ function populateFilters() {
 
 // Función para mostrar el contenido en la cuadrícula
 function displayContent(items) {
-    contentGrid.innerHTML = ''; [span_11](start_span)// Limpiar el contenido actual[span_11](end_span)
+    contentGrid.innerHTML = ''; // Limpiar el contenido actual
 
     if (items.length === 0) {
-        [span_12](start_span)contentGrid.innerHTML = '<p>No se encontraron resultados para los filtros seleccionados.</p>';[span_12](end_span)
-        [span_13](start_span)return;[span_13](end_span)
+        contentGrid.innerHTML = '<p>No se encontraron resultados para los filtros seleccionados.</p>';
+        return;
     }
 
     items.forEach(item => {
@@ -67,7 +67,7 @@ function displayContent(items) {
         const imageUrl = item.portada && item.portada.startsWith('http') ? item.portada : 'https://i.ibb.co/svVpzwrL/error.png';
 
         contentItem.innerHTML = `
-            [span_14](start_span)<img src="${imageUrl}" alt="Portada de ${item.nombre}">[span_14](end_span)
+            <img src="${imageUrl}" alt="Portada de ${item.nombre}">
             <h3>${item.nombre}</h3>
         `;
 
@@ -75,7 +75,7 @@ function displayContent(items) {
             if (item.link) {
                 window.open(item.link, '_blank'); // Abre el enlace en una nueva pestaña
             } else {
-                [span_15](start_span)alert('Lo siento, no hay un enlace disponible para este contenido.');[span_15](end_span)
+                alert('Lo siento, no hay un enlace disponible para este contenido.');
             }
         });
 
@@ -87,15 +87,16 @@ function displayContent(items) {
 function filterContent() {
     const selectedCategory = categoryFilter.value;
     const selectedYear = yearFilter.value;
-    [span_16](start_span)const selectedType = typeFilter.value;[span_16](end_span)
+    const selectedType = typeFilter.value;
 
     const filteredContent = allContent.filter(item => {
+        // Comprueba si la categoría del ítem incluye la categoría seleccionada (manejando múltiples categorías)
         const matchesCategory = selectedCategory === 'all' || item.categoria.split(',').map(cat => cat.trim()).includes(selectedCategory);
         const matchesYear = selectedYear === 'all' || item.año.toString() === selectedYear;
         const matchesType = selectedType === 'all' || item.tipo === selectedType;
         return matchesCategory && matchesYear && matchesType;
     });
-    [span_17](start_span)displayContent(filteredContent);[span_17](end_span)
+    displayContent(filteredContent);
 }
 
 // Event Listeners para los filtros
