@@ -3,19 +3,19 @@ const peliculas = [
     id: "0001",
     nombre: "El Juego del Calamar 3",
     año: 2025,
-    categoria: "Drama",
+    categoria: "Accion Drama",
     tipo: "Película",
     portada: "https://img.onfilom.com/cover/20250626/1750904539638_ab8aa265f1b4639cca11f9bb996fcb66%E4%B8%8B%E8%BD%BD.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
     link: "go:0001"
   },
   {
-    id: "pelicula-002",
-    nombre: "Pulp Fiction",
-    año: 1994,
-    categoria: "Crimen",
+    id: "0002",
+    nombre: "Destino Final: Lazos De Sangre",
+    año: 2025,
+    categoria: "Accion Horror",
     tipo: "Película",
-    portada: "https://ejemplo.com/portada-pulp-fiction.jpg",
-    link: "https://ejemplo.com/pulp-fiction"
+    portada: "https://img.onfilom.com/cover/20250410/1744273562545_37289de07017d297262e891c659f80f2%E6%AD%BB%E7%A5%9E1.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "go:0002"
   },
   {
     id: "serie-001",
