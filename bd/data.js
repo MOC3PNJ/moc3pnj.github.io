@@ -36,22 +36,22 @@ const peliculas = [
     link: "https://h5.onfilom.com/es/detail/movie/PI97tF4VKHGs7NkDVVnLR-A-Minecraft-Movie"
   },
   {
-    id: "pelicula-004",
+    id: "0005",
     nombre: "El Señor de los Anillos: La Comunidad del Anillo",
-    año: 2001,
-    categoria: "Fantasía",
+    año: 2025,
+    categoria: "Aventura, Comedia, Ciencia Ficción",
     tipo: "Película",
-    portada: "https://ejemplo.com/portada-señor-anillos1.jpg",
-    link: "https://ejemplo.com/señor-anillos1"
+    portada: "https://www.imdb.com/es/title/tt26743210/mediaviewer/rm2977005826/?ref_=tt_ov_i",
+    link: "https://h5.onfilom.com/es/detail/movie/NwQbr5TuyP7tKadQaEb9w-How-to-Train-Your-Dragon-2025"
   },
   {
-    id: "pelicula-005",
-    nombre: "La Matriz",
-    año: 1999,
-    categoria: "Ciencia Ficción",
+    id: "0006",
+    nombre: "Lilo y Stitch",
+    año: 2025,
+    categoria: "Comedia, Aventura, Drama",
     tipo: "Película",
-    portada: "https://ejemplo.com/portada-la-matriz.jpg",
-    link: "https://ejemplo.com/la-matriz"
+    portada: "https://www.imdb.com/es/title/tt11655566/mediaviewer/rm2690156034/?ref_=tt_ov_i",
+    link: "https://h5.onfilom.com/es/detail/movie/sGjUfpdoJGTD6IIKbBtZG-Lilo--Stitch-2025"
   },
   {
     id: "pelicula-006",
