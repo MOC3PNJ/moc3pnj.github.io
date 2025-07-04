@@ -41,7 +41,7 @@ const peliculas = [
     año: 2025,
     categoria: "Aventura, Comedia, Ciencia Ficción",
     tipo: "Película",
-    portada: "https://www.imdb.com/es/title/tt26743210/mediaviewer/rm2977005826/?ref_=tt_ov_i",
+    portada: "https://pics.filmaffinity.com/how_to_train_your_dragon-978767756-large.jpg",
     link: "https://h5.onfilom.com/es/detail/movie/NwQbr5TuyP7tKadQaEb9w-How-to-Train-Your-Dragon-2025"
   },
   {
@@ -50,7 +50,7 @@ const peliculas = [
     año: 2025,
     categoria: "Comedia, Aventura, Drama",
     tipo: "Película",
-    portada: "https://www.imdb.com/es/title/tt11655566/mediaviewer/rm2690156034/?ref_=tt_ov_i",
+    portada: "https://pics.filmaffinity.com/lilo_stitch-929032428-large.jpg",
     link: "https://h5.onfilom.com/es/detail/movie/sGjUfpdoJGTD6IIKbBtZG-Lilo--Stitch-2025"
   },
   {
