@@ -1,4 +1,3 @@
-<script>
     // --- Deshabilitar Copiar, Pegar y Menú Contextual ---
     document.addEventListener('contextmenu', event => event.preventDefault());
 
@@ -54,4 +53,3 @@
     //
     //     setInterval(checkDevTools, 1000);
     // })();
-</script>
