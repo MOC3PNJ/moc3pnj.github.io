@@ -3,8 +3,8 @@ body {
     font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e0e6ed; /* Light bluish-gray */
-    color: #333;
+    background-color: #1a1a2e; /* Dark background */
+    color: #e0e0e0; /* Light text for dark theme */
     line-height: 1.6;
     display: flex;
     flex-direction: column;
@@ -13,12 +13,12 @@ body {
 
 /* Header Styles */
 header {
-    background: linear-gradient135deg, #2c3e50 0%, #34495e 100%); /* Dark blue-gray gradient */
+    background: linear-gradient(135deg, #16213e 0%, #0f3460 100%); /* Darker blue-gray gradient */
     color: #fff;
     text-align: center;
     padding: 25px 20px;
     margin-bottom: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow for depth */
     position: relative;
     overflow: hidden;
 }
@@ -48,16 +48,16 @@ main {
     gap: 25px;
     margin-bottom: 40px;
     flex-wrap: wrap;
-    background-color: #ffffff;
+    background-color: #2a2a4a; /* Darker background for filters */
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow */
     align-items: center;
 }
 
 .filters label {
     font-weight: 600;
-    color: #555;
+    color: #bbbbbb; /* Lighter color for labels */
     font-size: 1.1em;
     margin-right: 5px;
 }
@@ -65,15 +65,15 @@ main {
 .filters select {
     padding: 10px 15px;
     border-radius: 6px;
-    border: 1px solid #cdd4da;
+    border: 1px solid #4a4a6a; /* Darker border */
     min-width: 150px;
-    background-color: #f9f9f9;
+    background-color: #3a3a5a; /* Darker background for selects */
     font-size: 1em;
-    color: #333;
-    appearance: none; /* Remove default arrow */
+    color: #e0e0e0; /* Light text for select options */
+    appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20256%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M128%20192L0%2064h256z%22%2F%3E%3C%2Fsvg%3E');
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20256%22%3E%3Cpath%20fill%3D%22%23cccccc%22%20d%3D%22M128%20192L0%2064h256z%22%2F%3E%3C%2Fsvg%3E'); /* Lighter arrow for dark theme */
     background-repeat: no-repeat;
     background-position: right 12px center;
     background-size: 12px;
@@ -82,19 +82,19 @@ main {
 }
 
 .filters select:hover {
-    border-color: #9cb1c5;
+    border-color: #6a6a8a; /* Lighter border on hover */
 }
 
 .filters select:focus {
     outline: none;
     border-color: #5a7d9a;
-    box-shadow: 0 0 0 3px rgba(90, 125, 154, 0.3);
+    box-shadow: 0 0 0 3px rgba(90, 125, 154, 0.5); /* Stronger glow on focus */
 }
 
 /* Content Grid Styles */
 .content-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Smaller default size for more items */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 25px;
     justify-content: center;
     padding: 10px;
@@ -102,9 +102,9 @@ main {
 
 /* Content Item Styles */
 .content-item {
-    background-color: #ffffff;
+    background-color: #2a2a4a; /* Darker background for items */
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow */
     overflow: hidden;
     text-align: center;
     cursor: pointer;
@@ -118,37 +118,37 @@ main {
 
 .content-item:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25); /* More pronounced hover shadow */
 }
 
 .content-item img {
     width: 100%;
-    height: 250px; /* Fixed height for uniformity */
-    object-fit: cover; /* Ensures image covers the area, cropping if necessary */
+    height: 250px;
+    object-fit: cover;
     display: block;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #3a3a5a; /* Darker border */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
 .content-item h3 {
     margin: 15px 10px 0;
-    font-size: 1em; /* Smaller font size for titles */
-    color: #333;
+    font-size: 1em;
+    color: #e0e0e0; /* Light text for titles */
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* Limit title to 2 lines */
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    min-height: 2.4em; /* Ensure consistent height for titles */
+    min-height: 2.4em;
 }
 
 /* No results message */
 .content-grid p {
-    grid-column: 1 / -1; /* Center message across all columns */
+    grid-column: 1 / -1;
     text-align: center;
     font-size: 1.2em;
-    color: #777;
+    color: #aaaaaa; /* Lighter gray for message */
     padding: 50px 0;
 }
 
@@ -213,26 +213,32 @@ main {
     .filters {
         flex-direction: column;
         align-items: stretch;
-        gap: 15px;
-        padding: 15px;
+        gap: 10px; /* Reduced gap for a more compact look */
+        padding: 10px; /* Reduced padding for smaller filters */
+        /* width: 80%; /* Optional: Make filter section narrower */
+        /* margin-left: auto; */
+        /* margin-right: auto; */
     }
     .filters label {
         text-align: center;
-        margin-bottom: 5px;
+        margin-bottom: 2px; /* Reduced margin */
+        font-size: 1em; /* Slightly smaller font for labels */
     }
     .filters select {
         width: 100%;
         min-width: unset;
+        padding: 8px 12px; /* Smaller padding for select boxes */
+        font-size: 0.9em; /* Smaller font for select options */
     }
     .content-grid {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); /* More items per row */
-        gap: 15px;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Smaller items, more per row for better utilization */
+        gap: 12px; /* Reduced gap */
     }
     .content-item img {
-        height: 190px; /* Reduced height for phone view */
+        height: 160px; /* Reduced height for phone view */
     }
     .content-item h3 {
-        font-size: 0.9em;
+        font-size: 0.85em; /* Slightly smaller font */
     }
 }
 
@@ -246,43 +252,57 @@ main {
         padding: 0 10px 30px;
     }
     .filters {
-        padding: 15px 10px;
+        padding: 8px 5px; /* Further reduced padding for filters */
+        gap: 8px; /* Further reduced gap */
+    }
+    .filters select {
+        padding: 6px 10px; /* Even smaller padding for select boxes */
+        font-size: 0.85em; /* Even smaller font for select options */
     }
     .content-grid {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Even smaller items, more per row */
-        gap: 10px; /* Reduced gap */
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Even smaller items, more per row */
+        gap: 8px; /* Reduced gap */
     }
     .content-item {
         border-radius: 8px;
-        box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2); /* Adjusted shadow */
     }
     .content-item img {
-        height: 160px; /* Significantly reduced height for compact view */
+        height: 130px; /* Significantly reduced height for compact view */
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
     }
     .content-item h3 {
-        margin: 10px 8px 0;
-        font-size: 0.8em; /* Smaller font for very small screens */
-        min-height: unset; /* Allow title to wrap naturally without fixed height */
-        -webkit-line-clamp: 3; /* Allow more lines if needed for small titles */
+        margin: 8px 5px 0; /* Reduced margin */
+        font-size: 0.75em; /* Smaller font for very small screens */
+        min-height: unset;
+        -webkit-line-clamp: 3;
     }
     .content-item:hover {
         transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     }
 }
 
 /* Further optimization for very small screens */
 @media (max-width: 400px) {
     .content-grid {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Smallest items */
-        gap: 8px;
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); /* Smallest items */
+        gap: 6px;
     }
     .content-item img {
-        height: 140px;
+        height: 110px;
     }
     .content-item h3 {
-        font-size: 0.75em;
+        font-size: 0.7em;
+        margin: 5px 3px 0;
+    }
+    .filters {
+        padding: 5px 3px;
+        gap: 5px;
+    }
+    .filters select {
+        padding: 5px 8px;
+        font-size: 0.8em;
     }
 }
