@@ -37,7 +37,7 @@ const peliculas = [
   },
   {
     id: "0005",
-    nombre: "El Señor de los Anillos: La Comunidad del Anillo",
+    nombre: "Cómo entrenar a tu dragón",
     año: 2025,
     categoria: "Aventura, Comedia, Ciencia Ficción",
     tipo: "Película",
@@ -55,12 +55,12 @@ const peliculas = [
   },
   {
     id: "0007",
-    nombre: "Pequeñas mentirosas: Perfeccionistas",
+    nombre: "Pequeñas Mentirosas: Perfeccionista",
     año: 2019,
     categoria: "Crimen, Drama, Horror, Suspense, Thriller",
     tipo: "Serie",
     portada: "https://img.onfilom.com/cover/20211228/1640679778103_8c54296618ded2e1dbe0c2cf7cced582xIpqBtVpu9bUq05dT3VTRYPjBP7.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
-    link: "#Buscar#"
+    link: "https://h5.onfilom.com/es/detail/drama/OUO4gFFNjHoK3eaY07TPW-Pretty-Little-Liars-The-Perfectionists"
   },
   {
     id: "0008",
@@ -69,7 +69,7 @@ const peliculas = [
     categoria: "Drama, Fantasía, Música, Romance",
     tipo: "Serie",
     portada: "https://img.onfilom.com/cover/20230630/1688125486942_af70e2a9afc3a07b90e596fe0250abda%E5%BD%93%E6%81%B6%E9%AD%94%E5%91%BC%E5%96%8A%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E6%97%B6.png?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
-    link: "#BUscar#"
+    link: "https://h5.qbplayer.com/es/detail/drama/LxXhNBodjGwtEh4VnU9lp-When-the-Devil-Calls-Your-Name"
   },
   {
     id: "0009",
@@ -78,7 +78,7 @@ const peliculas = [
     categoria: "Drama, Romance",
     tipo: "Película",
     portada: "https://img.onfilom.com/cover/20211228/1640673838249_16750b11fb3409ce792cccdefe50ae19AedH7kQttLVgqd260IXevTK0Mek.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
-    link: "#Buscar#"
+    link: "https://h5.onfilom.com/es/detail/movie/NLsdnmI5gjFqPgzGwkDJU-Words-on-Bathroom-Walls"
   },
   {
     id: "0010",
@@ -87,7 +87,7 @@ const peliculas = [
     categoria: "Comedia, Romance",
     tipo: "Película",
     portada: "https://img.onfilom.com/cover/20211228/1640673163627_d6359923c0e00266357e9342248058baOyKfblQX6SR2rL6R26g5eYCLHq.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
-    link: "#Buscar#"
+    link: "https://h5.onfilom.com/es/detail/movie/AqHmGDNxMbMQxpJ2Dsdb6-Long-Weekend"
   },
   {
     id: "0011",
