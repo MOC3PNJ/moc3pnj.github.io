@@ -54,94 +54,94 @@ const peliculas = [
     link: "https://h5.onfilom.com/es/detail/movie/sGjUfpdoJGTD6IIKbBtZG-Lilo--Stitch-2025"
   },
   {
-    id: "pelicula-006",
-    nombre: "Forrest Gump",
-    año: 1994,
-    categoria: "Drama",
-    tipo: "Película",
-    portada: "https://ejemplo.com/portada-forrest-gump.jpg",
-    link: "https://ejemplo.com/forrest-gump"
-  },
-  {
-    id: "serie-002",
-    nombre: "The Crown",
-    año: 2016,
-    categoria: "Drama Histórico",
-    tipo: "Serie",
-    portada: "https://ejemplo.com/portada-the-crown.jpg",
-    link: "https://ejemplo.com/the-crown"
-  },
-  {
-    id: "pelicula-007",
-    nombre: "Origen",
-    año: 2010,
-    categoria: "Ciencia Ficción",
-    tipo: "Película",
-    portada: "https://ejemplo.com/portada-origen.jpg",
-    link: "https://ejemplo.com/origen"
-  },
-  {
-    id: "pelicula-008",
-    nombre: "Gladiador",
-    año: 2000,
-    categoria: "Acción",
-    tipo: "Película",
-    portada: "https://ejemplo.com/portada-gladiador.jpg",
-    link: "https://ejemplo.com/gladiador"
-  },
-  {
-    id: "pelicula-009",
-    nombre: "Titanic",
-    año: 1997,
-    categoria: "Romance",
-    tipo: "Película",
-    portada: "https://ejemplo.com/portada-titanic.jpg",
-    link: "https://ejemplo.com/titanic"
-  },
-  {
-    id: "serie-003",
-    nombre: "Breaking Bad",
-    año: 2008,
-    categoria: "Drama",
-    tipo: "Serie",
-    portada: "https://ejemplo.com/portada-breaking-bad.jpg",
-    link: "https://ejemplo.com/breaking-bad"
-  },
-  {
-    id: "pelicula-010",
-    nombre: "El Caballero Oscuro",
-    año: 2008,
-    categoria: "Acción",
-    tipo: "Película",
-    portada: "https://ejemplo.com/portada-caballero-oscuro.jpg",
-    link: "https://ejemplo.com/caballero-oscuro"
-  },
-  {
-    id: "pelicula-011",
-    nombre: "Parásitos",
+    id: "0007",
+    nombre: "Pequeñas mentirosas: Perfeccionistas",
     año: 2019,
-    categoria: "Thriller",
-    tipo: "Película",
-    portada: "https://ejemplo.com/portada-parasitos.jpg",
-    link: "https://ejemplo.com/parasitos"
-  },
-  {
-    id: "pelicula-012",
-    nombre: "Amelie",
-    año: 2001,
-    categoria: "Comedia Romántica",
-    tipo: "Película",
-    portada: "https://ejemplo.com/portada-amelie.jpg",
-    link: "https://ejemplo.com/amelie"
-  },
-  {
-    id: "serie-004",
-    nombre: "Juego de Tronos",
-    año: 2011,
-    categoria: "Fantasía",
+    categoria: "Crimen, Drama, Horror, Suspense, Thriller",
     tipo: "Serie",
-    portada: "https://ejemplo.com/portada-juego-tronos.jpg",
-    link: "https://ejemplo.com/juego-tronos"
+    portada: "https://img.onfilom.com/cover/20211228/1640679778103_8c54296618ded2e1dbe0c2cf7cced582xIpqBtVpu9bUq05dT3VTRYPjBP7.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "#Buscar#"
+  },
+  {
+    id: "0008",
+    nombre: "Cuando el Diablo Llama a Tu Puerta",
+    año: 2019,
+    categoria: "Drama, Fantasía, Música, Romance",
+    tipo: "Serie",
+    portada: "https://img.onfilom.com/cover/20230630/1688125486942_af70e2a9afc3a07b90e596fe0250abda%E5%BD%93%E6%81%B6%E9%AD%94%E5%91%BC%E5%96%8A%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E6%97%B6.png?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "#BUscar#"
+  },
+  {
+    id: "0009",
+    nombre: "Palabras en las paredes del baño",
+    año: 2020,
+    categoria: "Drama, Romance",
+    tipo: "Película",
+    portada: "https://img.onfilom.com/cover/20211228/1640673838249_16750b11fb3409ce792cccdefe50ae19AedH7kQttLVgqd260IXevTK0Mek.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "#Buscar#"
+  },
+  {
+    id: "0010",
+    nombre: "Un fin de semana inesperado",
+    año: 2021,
+    categoria: "Comedia, Romance",
+    tipo: "Película",
+    portada: "https://img.onfilom.com/cover/20211228/1640673163627_d6359923c0e00266357e9342248058baOyKfblQX6SR2rL6R26g5eYCLHq.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "#Buscar#"
+  },
+  {
+    id: "0011",
+    nombre: "La matanza de Texas el origen",
+    año: 1974,
+    categoria: "Horror, Thriller",
+    tipo: "Película",
+    portada: "https://img.onfilom.com/cover/20250612/1749720573941_2b830758971bad3ce87571cffce8f6ff6.webp?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "https://h5.onfilom.com/es/detail/movie/vNDNHkmPOi1YEXTBub66b-The-Texas-Chainsaw-Massacre-The-Beginning"
+  },
+  {
+    id: "0012",
+    nombre: "La masacre de Texas 2",
+    año: 1986,
+    categoria: "Horror",
+    tipo: "Película",
+    portada: "https://img.onfilom.com/cover/20250612/1749719742905_3aa1a501000c4d8e0975e17fcf5666d81.webp?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "https://h5.onfilom.com/es/detail/movie/hWR8gRJTXAQOyXQrp4Pov-The-Texas-Chainsaw-Massacre-2"
+  },
+  {
+    id: "0013",
+    nombre: "La matanza de Texas 3",
+    año: 1990,
+    categoria: "Horror, Thriller",
+    tipo: "Película",
+    portada: "https://img.onfilom.com/cover/20250612/1749720045464_4d184f8f871cd7f1a9cd97c89dceb24d3.webp?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "https://h5.onfilom.com/es/detail/movie/30wfPlm0wDyAhOcNm86BD-Leatherface-Texas-Chainsaw-Massacre-3"
+  },
+  {
+    id: "0014",
+    nombre: "La matanza de Texas : La nueva generación",
+    año: 1994,
+    categoria: "Comedia, Horror, Thriller",
+    tipo: "Película",
+    portada: "https://img.onfilom.com/cover/20250612/1749720128937_6110c2f9e2316f5bf20071b6d297cf9c4.webp?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "https://h5.onfilom.com/es/detail/movie/5CS3TsKlVKkIvtaEM7uaz-Texas-Chainsaw-Massacre-4-The-Next-Generation"
+  },
+  {
+    id: "0015",
+    nombre: "La masacre de Texas",
+    año: 2003,
+    categoria: "Crimen, Horror",
+    tipo: "Película",
+    portada: "https://img.onfilom.com/cover/20250612/1749720480273_defc6ff065f2535f0f81c9a9671b60145.webp?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "https://h5.onfilom.com/es/detail/movie/XfVMCeunk3oyGhAnX9eWe-The-Texas-Chainsaw-Massacre"
+  },
+  {
+    id: "0016",
+    nombre: "Masacre en Texas: herencia maldita",
+    año: 2013,
+    categoria: "Horror, Thriller",
+    tipo: "Serie",
+    portada: "https://img.onfilom.com/cover/20250612/1749720730871_f4c532ea730b8e2c7bbc6272012b8a887.webp?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "https://h5.onfilom.com/es/detail/movie/AgIwttURYwnx1XVnqOyA8-Texas-Chainsaw-3D"
   },
   {
     id: "pelicula-013",
