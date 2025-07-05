@@ -144,6 +144,141 @@ const peliculas = [
     link: "https://h5.onfilom.com/es/detail/movie/AgIwttURYwnx1XVnqOyA8-Texas-Chainsaw-3D"
   },
   {
+    id: "0017",
+    nombre: "Culpa tuya",
+    año: 2025,
+    categoria: "Drama, Romance",
+    tipo: "Película",
+    portada: "https://img.onfilom.com/cover/20241119/1731993395066_ac56c8f6c65e9bf3d8c0a94685824bba6kYDG8Imfhph2duBYZeYksHgx7L.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "https://h5.onfilom.com/es/detail/movie/70350-Your-Fault"
+  },
+  {
+    id: "0018",
+    nombre: "Kraven el cazador (X)",
+    año: 2024,
+    categoria: "Acción, Suspense",
+    tipo: "Película",
+    portada: "https://img.onfilom.com/cover/20241217/1734402993750_3ac90622e71b62469fc34f8c1144ed741GvBhRxY6MELDfxFrete6BNhBB5.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "#buscar#"
+  },
+  {
+    id: "0019",
+    nombre: "Sonic 3: La película",
+    año: 2025,
+    categoria: "Acción, Animación, Comedia, Ciencia ficción",
+    tipo: "Película",
+    portada: "https://img.onfilom.com/cover/20250211/1739255674749_afa3feba0a15d34c6eab355445966ed81734866466731_c88e0b49ec7a74d8a1893c29e37a9377Sonic%20the%20Hedgehog.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "https://h5.onfilom.com/es/detail/movie/65165-Sonic-the-Hedgehog-3"
+  },
+  {
+    id: "0020",
+    nombre: "Moana 2",
+    año: 2025,
+    categoria: "Aventura, Animación, Comedia, Familiares, Fantasía, Música",
+    tipo: "Película",
+    portada: "https://img.onfilom.com/cover/20250211/1739258257114_3126784b01aed6ae4ef9eb644e8b27651730863227964_a41068c9a321bed5e48bc8e4749cc7b8yh64qw9mgXBvlaWDi7Q9tpUBAvH.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "https://h5.onfilom.com/es/detail/movie/57374-Moana-2"
+  },
+  {
+    id: "0021",
+    nombre: "Moana",
+    año: 2016,
+    categoria: "Aventura, Animación, Comedia, Familiares, Fantasía, Música",
+    tipo: "Película",
+    portada: "https://img.onfilom.com/cover/20250619/1750314796151_3c0fdb46c4827b2f63ffd57da55f19881666059717999_62d8288899b652513586dea90e9599f61631781085995_f0d85e0f3f8419f908fd4c4117613808vNJFiwtsl7Twww7C0uM4qPnygNw.png?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "https://h5.onfilom.com/es/detail/movie/Wt0CMHAnaGOZ7RxIiqdcY-Moana"
+  },
+  {
+    id: "0022",
+    nombre: "Mufasa: El rey Leon (X)",
+    año: 2025,
+    categoria: "Aventura, Animación, Drama, Fantasía, Musicales",
+    tipo: "Película",
+    portada: "https://img.onfilom.com/cover/20241220/1734684128836_681de0709f561769d63d8fa2c9350a73%E6%9C%A8%E6%B3%95%E6%B2%991.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "#Buscar#"
+  },
+  {
+    id: "0023",
+    nombre: "Estado Electrico",
+    año: 2025,
+    categoria: "Acción, Aventura, Comedia, Drama, Ciencia ficción",
+    tipo: "Película",
+    portada: "https://img.onfilom.com/cover/20250620/1750407482313_d6ce0a55b8014e304594bfc0a97a31ec%E8%A5%BF%E7%AB%96.webp?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "https://h5.onfilom.com/es/detail/movie/rDsRksl88pPaM6o3LQUZ2-The-Electric-State"
+  },
+  {
+    id: "0024",
+    nombre: "El mono (X)",
+    año: 2025,
+    categoria: "Comedia, Horror",
+    tipo: "Película",
+    portada: "https://img.onfilom.com/cover/20250408/1744097375221_e220ef4f5254fd953d2651eaa64cd9fa1742972859207_aafc798846d61177403f37085d1691b1yYa8Onk9ow7ukcnfp2QWVvjWYel.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "#Buscar#"
+  },
+  {
+    id: "0025",
+    nombre: "Capitan America: Un nuevo Mundo",
+    año: 2025,
+    categoria: "Acción, Aventura, Ciencia ficción",
+    tipo: "Película",
+    portada: "https://img.onfilom.com/cover/20250207/1738897718023_c6149cc49f5a75cfff8e3d0c43657f57%E7%BE%8E%E9%98%9F41.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "https://h5.onfilom.com/es/detail/movie/pHO6pykCvPU4HQqX7dWz4-Captain-America-Brave-New-World"
+  },
+  {
+    id: "0026",
+    nombre: "Rescate Implacable (X)",
+    año: 2025,
+    categoria: "Acción, Thriller",
+    tipo: "Película",
+    portada: "https://img.onfilom.com/cover/20250331/1743402358443_c06909fd283c7b9bf0ed0d2c13c1d3dfyy.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "#Buscar#"
+  },
+  {
+    id: "0027",
+    nombre: "Warfare: Tiempo de guerra",
+    año: 2025,
+    categoria: "Acción, Drama, Bélicas",
+    tipo: "Película",
+    portada: "https://img.onfilom.com/cover/20250421/1745206615449_a1aa8e33ea3f10ae65966f15ea113b92srj9rYrjefyWqkLc6l2xjTGeBGO.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "#Buscar#"
+  },
+  {
+    id: "0028",
+    nombre: "Love me",
+    año: 2025,
+    categoria: "Drama",
+    tipo: "Película",
+    portada: "https://img.onfilom.com/cover/20250117/1737083122035_824a655b20305aaa07f11383fa983ff4uX8Z3qWJ5OjV1uP7yT6yRlw9UL9.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "https://h5.onfilom.com/es/detail/movie/68359-Love-Me"
+  },
+  {
+    id: "0029",
+    nombre: "Dora y la Busqueda del Sol Dorado (X)",
+    año: 2025,
+    categoria: "Aventura, Familiares",
+    tipo: "Película",
+    portada: "https://img.onfilom.com/cover/20250703/1751520835345_70d9a747f4382d5b77845dc08371f2d4mA3gfnhD67be14L5JhvNCtetUz8.webp?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "#Buscar#"
+  },
+  {
+    id: "0030",
+    nombre: "Ballerina (⚠️ Grabada)",
+    año: 2025,
+    categoria: "Acción, Thriller",
+    tipo: "Película",
+    portada: "https://img.onfilom.com/cover/20250620/1750390331363_7061caf4ef869a8a33183fc545ec08db1748338537840_f5fd9b9bad5e24c8841b21408cb80355mKp4euM5Cv3m2U1Vmby3OGwcD5y.png?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "https://h5.onfilom.com/es/detail/movie/95751-Ballerina-2025"
+  },
+ {
+    id: "0031",
+    nombre: "Jefes de estado",
+    año: 2025,
+    categoria: "Acción, Thriller",
+    tipo: "Película",
+    portada: "https://img.onfilom.com/cover/20250702/1751424031606_fcc51c10ee325f63eb7024aae52bf3delVgE5oLzf7ABmzyASEVcjYyHI41.webp?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+    link: "https://h5.onfilom.com/es/detail/movie/koqO1bebLKozaarZ1gnRk-Heads-of-State"
+  },
+ {
     id: "pelicula-013",
     nombre: "El Gran Hotel Budapest",
     año: 2014,
@@ -152,122 +287,644 @@ const peliculas = [
     portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
     link: "https://ejemplo.com/gran-hotel-budapest"
   },
-  {
-    id: "pelicula-014",
-    nombre: "Coco",
-    año: 2017,
-    categoria: "Animación",
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
     tipo: "Película",
-    portada: "https://ejemplo.com/portada-coco.jpg",
-    link: "https://ejemplo.com/coco"
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
   },
-  {
-    id: "pelicula-015",
-    nombre: "Spider-Man: Un Nuevo Universo",
-    año: 2018,
-    categoria: "Animación",
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
     tipo: "Película",
-    portada: "https://ejemplo.com/portada-spiderman-universo.jpg",
-    link: "https://ejemplo.com/spiderman-universo"
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
   },
-  {
-    id: "serie-005",
-    nombre: "The Mandalorian",
-    año: 2019,
-    categoria: "Ciencia Ficción",
-    tipo: "Serie",
-    portada: "https://ejemplo.com/portada-mandalorian.jpg",
-    link: "https://ejemplo.com/mandalorian"
-  },
-  {
-    id: "pelicula-016",
-    nombre: "La La Land",
-    año: 2016,
-    categoria: "Musical",
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
     tipo: "Película",
-    portada: "https://ejemplo.com/portada-la-la-land.jpg",
-    link: "https://ejemplo.com/la-la-land"
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
   },
-  {
-    id: "pelicula-017",
-    nombre: "Vengadores: Endgame",
-    año: 2019,
-    categoria: "Acción",
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
     tipo: "Película",
-    portada: "https://ejemplo.com/portada-vengadores-endgame.jpg",
-    link: "https://ejemplo.com/vengadores-endgame"
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
   },
-  {
-    id: "pelicula-018",
-    nombre: "Joker",
-    año: 2019,
-    categoria: "Drama",
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
     tipo: "Película",
-    portada: "https://ejemplo.com/portada-joker.jpg",
-    link: "https://ejemplo.com/joker"
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
   },
-  {
-    id: "serie-006",
-    nombre: "Ozark",
-    año: 2017,
-    categoria: "Crimen",
-    tipo: "Serie",
-    portada: "https://ejemplo.com/portada-ozark.jpg",
-    link: "https://ejemplo.com/ozark"
-  },
-  {
-    id: "pelicula-019",
-    nombre: "Blade Runner 2049",
-    año: 2017,
-    categoria: "Ciencia Ficción",
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
     tipo: "Película",
-    portada: "https://ejemplo.com/portada-blade-runner-2049.jpg",
-    link: "https://ejemplo.com/blade-runner-2049"
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
   },
-  {
-    id: "pelicula-020",
-    nombre: "Top Gun: Maverick",
-    año: 2022,
-    categoria: "Acción",
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
     tipo: "Película",
-    portada: "https://ejemplo.com/portada-top-gun-maverick.jpg",
-    link: "https://ejemplo.com/top-gun-maverick"
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
   },
-  {
-    id: "pelicula-021",
-    nombre: "Duna",
-    año: 2021,
-    categoria: "Ciencia Ficción",
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
     tipo: "Película",
-    portada: "https://ejemplo.com/portada-duna.jpg",
-    link: "https://ejemplo.com/duna"
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
   },
-  {
-    id: "serie-007",
-    nombre: "Squid Game",
-    año: 2021,
-    categoria: "Thriller",
-    tipo: "Serie",
-    portada: "https://ejemplo.com/portada-squid-game.jpg",
-    link: "https://ejemplo.com/squid-game"
-  },
-  {
-    id: "pelicula-022",
-    nombre: "Encanto",
-    año: 2021,
-    categoria: "Animación",
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
     tipo: "Película",
-    portada: "https://ejemplo.com/portada-encanto.jpg",
-    link: "https://ejemplo.com/encanto"
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
   },
-  {
-    id: "pelicula-023",
-    nombre: "Sin tiempo para morir",
-    año: 2021,
-    categoria: "Acción",
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
     tipo: "Película",
-    portada: "",
-    link: "https://ejemplo.com/no-time-to-die"
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+   {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
+  },
+ {
+    id: "pelicula-013",
+    nombre: "El Gran Hotel Budapest",
+    año: 2014,
+    categoria: "Comedia",
+    tipo: "Película",
+    portada: "https://ejemplo.com/portada-gran-hotel-budapest.jpg",
+    link: "https://ejemplo.com/gran-hotel-budapest"
   }
 ];
 
