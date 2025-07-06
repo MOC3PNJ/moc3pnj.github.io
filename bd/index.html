@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Directorio de Contenido</title>
-    <link rel="stylesheet" href="https://raw.githack.com/MOC3PNJ/moc3pnj.github.io/refs/heads/main/bd/style.css">
+    [span_26](start_span)<link rel="stylesheet" href="https://raw.githack.com/MOC3PNJ/moc3pnj.github.io/refs/heads/main/bd/style.css">[span_26](end_span)
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -16,7 +17,7 @@
             <label for="category-filter">Categoría:</label>
             <select id="category-filter">
                 <option value="all">Todas</option>
-                </select>
+            [span_27](start_span)</select>[span_27](end_span)
 
             <label for="year-filter">Año:</label>
             <select id="year-filter">
@@ -25,73 +26,75 @@
 
             <label for="type-filter">Tipo:</label>
             <select id="type-filter">
-                <option value="all">Todos</option>
+                [span_28](start_span)<option value="all">Todos</option>[span_28](end_span)
                 <option value="Película">Película</option>
                 <option value="Serie">Serie</option>
             </select>
         </section>
 
         <section class="content-grid" id="content-grid">
+            </section>
+
+        <section class="pagination-controls">
+            <button id="prev-page-btn" aria-label="Página anterior"><i class="fas fa-chevron-left"></i> Atrás</button>
+            <button id="next-page-btn" aria-label="Página siguiente">Siguiente <i class="fas fa-chevron-right"></i></button>
         </section>
     </main>
 
     <script type="module" src="https://raw.githack.com/MOC3PNJ/moc3pnj.github.io/refs/heads/main/bd/script.js"></script>
     <script>
-            // --- Deshabilitar Copiar, Pegar y Menú Contextual ---
-    document.addEventListener('contextmenu', event => event.preventDefault());
+        [span_29](start_span)// --- Disable Copy, Paste, and Context Menu ---[span_29](end_span)
+        [span_30](start_span)document.addEventListener('contextmenu', event => event.preventDefault());[span_30](end_span)
+        [span_31](start_span)document.addEventListener('copy', (event) => {[span_31](end_span)
+            [span_32](start_span)event.preventDefault();[span_32](end_span)
+            alert("¡Copiar contenido está deshabilitado en este sitio!");
+        });
+        [span_33](start_span)document.addEventListener('selectstart', event => event.preventDefault());[span_33](end_span)
 
-    document.addEventListener('copy', (event) => {
-        event.preventDefault();
-        alert("¡Copiar contenido está deshabilitado en este sitio!");
-    });
+        [span_34](start_span)// --- Disable Developer Tools ---[span_34](end_span)
+        [span_35](start_span)document.onkeydown = function(e) {[span_35](end_span)
+            // F12
+            [span_36](start_span)if (e.keyCode == 123) {[span_36](end_span)
+                [span_37](start_span)return false;[span_37](end_span)
+            }
+            // Ctrl+Shift+I
+            [span_38](start_span)if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {[span_38](end_span)
+                [span_39](start_span)return false;[span_39](end_span)
+            }
+            // Ctrl+Shift+J
+            [span_40](start_span)if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {[span_40](end_span)
+                [span_41](start_span)return false;[span_41](end_span)
+            }
+            // Ctrl+C
+            [span_42](start_span)if (e.ctrlKey && e.keyCode == 'C'.charCodeAt(0)) {[span_42](end_span)
+                [span_43](start_span)return false;[span_43](end_span)
+            }
+            // Ctrl+V
+            [span_44](start_span)if (e.ctrlKey && e.keyCode == 'V'.charCodeAt(0)) {[span_44](end_span)
+                [span_45](start_span)return false;[span_45](end_span)
+            }
+            // Ctrl+U
+            [span_46](start_span)if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {[span_46](end_span)
+                [span_47](start_span)return false;[span_47](end_span)
+            }
+        }
 
-    document.addEventListener('selectstart', event => event.preventDefault());
-
-    // --- Deshabilitar Herramientas de Desarrollador ---
-    document.onkeydown = function(e) {
-        // F12
-        if (e.keyCode == 123) {
-            return false;
-        }
-        // Ctrl+Shift+I
-        if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-            return false;
-        }
-        // Ctrl+Shift+J
-        if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-            return false;
-        }
-        // Ctrl+C
-        if (e.ctrlKey && e.keyCode == 'C'.charCodeAt(0)) {
-            return false;
-        }
-        // Ctrl+V
-        if (e.ctrlKey && e.keyCode == 'V'.charCodeAt(0)) {
-            return false;
-        }
-        // Ctrl+U
-        if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-            return false;
-        }
-    }
-
-    // --- Detección de Herramientas de Desarrollador Abiertas ---
-    // Este método es más agresivo y puede afectar el rendimiento.
-    // (function() {
-    //     const checkDevTools = () => {
-    //         const widthThreshold = window.outerWidth - window.innerWidth > 160;
-    //         const heightThreshold = window.outerHeight - window.innerHeight > 160;
-    //
-    //         if (widthThreshold || heightThreshold) {
-    //             // Redirigir o mostrar un mensaje si las herramientas están abiertas.
-    //             document.body.innerHTML = "<h1>Las herramientas de desarrollador están deshabilitadas.</h1>";
-    //         }
-    //
-    //         'debugger';
-    //     };
-    //
-    //     setInterval(checkDevTools, 1000);
-    // })();
+        [span_48](start_span)// --- Developer Tools Detection (commented out as per original) ---[span_48](end_span)
+        // (function() {
+        //     const checkDevTools = () => {
+        //         const widthThreshold = window.outerWidth - window.innerWidth > 160;
+        //         const heightThreshold = window.outerHeight - window.innerHeight > 160;
+        //
+        //         if (widthThreshold || heightThreshold) {
+        [span_49](start_span)//             // Redirect or show a message if tools are open.[span_49](end_span)
+        //             document.body.innerHTML = "<h1>Las herramientas de desarrollador están deshabilitadas.</h1>";
+        //         }
+        //
+        //         'debugger';
+        //     };
+        //
+        //     setInterval(checkDevTools, 1000);
+        // })();
     </script>
 </body>
 </html>
