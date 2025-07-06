@@ -1,225 +1,225 @@
 body {
-    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1a1a2e;
-    color: #e0e0e0;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; /* cite: 10 */
+    margin: 0; /* cite: 10 */
+    padding: 0; /* cite: 10 */
+    background-color: #1a1a2e; /* cite: 10 */
+    color: #e0e0e0; /* cite: 11 */
+    line-height: 1.6; /* cite: 11 */
+    display: flex; /* cite: 11 */
+    flex-direction: column; /* cite: 11 */
+    min-height: 100vh; /* cite: 11 */
 }
 
 header {
-    /* Existing styles */
-    background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
-    color: #fff;
-    text-align: center;
-    padding: 25px 20px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    position: relative;
-    overflow: hidden;
-
-    /* Added for cohesive background effect */
-    background-image: url('https://via.placeholder.com/1920x400/0f3460/16213e?text=Header+Background'); /* Placeholder image, replace with a relevant one */
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: overlay; /* Blends the gradient with the image */
-    backdrop-filter: blur(8px); /* Apply blur to the background behind the content [span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span) */
-    -webkit-backdrop-filter: blur(8px); /* For Webkit browsers [span_2](start_span)[span_2](end_span) */
+    background: linear-gradient(135deg, #16213e 0%, #0f3460 100%); /* cite: 12 */
+    color: #fff; /* cite: 13 */
+    text-align: center; /* cite: 13 */
+    padding: 25px 20px; /* cite: 13 */
+    margin-bottom: 30px; /* cite: 13 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4); /* cite: 13 */
+    position: relative; /* cite: 13 */
+    overflow: hidden; /* cite: 13 */
+    background-image: url('https://via.placeholder.com/1920x400/0f3460/16213e?text=Header+Background'); /* cite: 14, 15 */
+    background-size: cover; /* cite: 15 */
+    background-position: center; /* cite: 15 */
+    background-blend-mode: overlay; /* cite: 16 */
+    backdrop-filter: blur(8px); /* cite: 17 */
+    -webkit-backdrop-filter: blur(8px); /* cite: 18 */
 }
 
 header h1 {
-    margin: 0;
-    /* Original: font-size: 2.2em; */
-    /* Modern responsive sizing with clamp() [span_3](start_span)[span_3](end_span) */
-    font-size: clamp(1.8rem, 4vw + 0.5rem, 2.8rem); /* Min, Preferred, Max */
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    animation: fadeInDown 1s ease-out;
+    margin: 0; /* cite: 19 */
+    font-size: clamp(1.8rem, 4vw + 0.5rem, 2.8rem); /* cite: 20 */
+    font-weight: 700; /* cite: 20 */
+    letter-spacing: 2px; /* cite: 20 */
+    text-transform: uppercase; /* cite: 20 */
+    animation: fadeInDown 1s ease-out; /* cite: 21 */
 }
 
 main {
-    flex-grow: 1;
-    padding: 0 10px 30px;
-    max-width: 1150px;
-    margin: 0 auto;
-    width: 100%;
+    flex-grow: 1; /* cite: 22 */
+    padding: 0 10px 30px; /* cite: 22 */
+    max-width: 1150px; /* cite: 22 */
+    margin: 0 auto; /* cite: 22 */
+    width: 100%; /* cite: 22 */
 }
 
 .filters {
-    display: flex;
-    justify-content: center;
-    /* Original: gap: 18px; */
-    gap: min(18px, 3vw); /* Responsive gap [span_4](start_span)[span_4](end_span) */
-    margin-bottom: 32px;
-    flex-wrap: wrap;
-    background-color: #232345;
-    /* Original: padding: 16px; */
-    padding: min(16px, 4vw); /* Responsive padding [span_5](start_span)[span_5](end_span) */
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.18);
-    align-items: center;
+    display: flex; /* cite: 22 */
+    justify-content: center; /* cite: 22 */
+    gap: min(18px, 3vw); /* cite: 23 */
+    margin-bottom: 32px; /* cite: 23 */
+    flex-wrap: wrap; /* cite: 23 */
+    background-color: #232345; /* cite: 23 */
+    padding: min(16px, 4vw); /* cite: 24 */
+    border-radius: 12px; /* cite: 25 */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.18); /* cite: 25 */
+    align-items: center; /* cite: 25 */
 }
 
 .filters label {
-    font-weight: 600;
-    color: #bbbbbb;
-    font-size: 1em;
-    margin-right: 4px;
+    font-weight: 600; /* cite: 26 */
+    color: #bbbbbb; /* cite: 26 */
+    font-size: 1em; /* cite: 26 */
+    margin-right: 4px; /* cite: 26 */
 }
 
 .filters select {
-    padding: 7px 12px;
-    border-radius: 6px;
-    border: 1px solid #42426a;
-    min-width: 110px;
-    background-color: #30305a;
-    font-size: 0.95em;
-    color: #e0e0e0;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    padding: 7px 12px; /* cite: 27 */
+    border-radius: 6px; /* cite: 27 */
+    border: 1px solid #42426a; /* cite: 27 */
+    min-width: 110px; /* cite: 27 */
+    background-color: #30305a; /* cite: 27 */
+    font-size: 0.95em; /* cite: 27 */
+    color: #e0e0e0; /* cite: 27 */
+    cursor: pointer; /* cite: 27 */
+    transition: all 0.3s ease; /* cite: 28 */
 }
 
-.filters select:hover,.filters select:focus {
-    border-color: #5a7d9a;
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(90, 125, 154, 0.16);
+.filters select:hover,
+.filters select:focus {
+    border-color: #5a7d9a; /* cite: 29 */
+    outline: none; /* cite: 29 */
+    box-shadow: 0 0 0 2px rgba(90, 125, 154, 0.16); /* cite: 29 */
 }
 
 .content-grid {
-    display: grid;
-    /* Original: grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); */
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Adjusted min-width for slightly larger covers [span_8](start_span)[span_8](end_span)[span_9](start_span)[span_9](end_span) */
-    /* Original: gap: 15px; */
-    gap: min(20px, 4vw); /* Responsive gap [span_6](start_span)[span_6](end_span) */
-    justify-content: center;
-    padding: 10px;
+    display: grid; /* cite: 30 */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); [span_0](start_span)/* Adjusted min-width for slightly larger covers[span_0](end_span) */
+    gap: min(20px, 4vw); [span_1](start_span)/* Responsive gap[span_1](end_span) */
+    justify-content: center; /* cite: 31 */
+    padding: 10px; /* cite: 32 */
 }
 
 .content-item {
-    background-color: #232345;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.13);
-    overflow: hidden;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.15s, box-shadow 0.15s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 10px;
-    min-height: 260px;
+    background-color: #232345; /* cite: 33 */
+    border-radius: 10px; /* cite: 33 */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.13); /* cite: 33 */
+    overflow: hidden; /* cite: 33 */
+    text-align: center; /* cite: 33 */
+    cursor: pointer; /* cite: 33 */
+    transition: transform 0.15s, box-shadow 0.15s; /* cite: 33 */
+    display: flex; /* cite: 33 */
+    flex-direction: column; /* cite: 33 */
+    align-items: center; /* cite: 34 */
+    padding-bottom: 10px; /* cite: 34 */
+    min-height: 260px; /* cite: 34 */
 }
 
 .content-item:hover {
-    transform: translateY(-4px) scale(1.03);
-    box-shadow: 0 8px 22px rgba(0,0,0,0.22);
+    transform: translateY(-4px) scale(1.03); /* cite: 35 */
+    box-shadow: 0 8px 22px rgba(0,0,0,0.22); /* cite: 35 */
 }
 
 .content-item img {
-    width: 100%;
-    max-width: 150px; /* Adjusted to be slightly larger [span_7](start_span)[span_7](end_span) */
-    height: auto; /* Let aspect-ratio handle height [span_10](start_span)[span_10](end_span)[span_11](start_span)[span_11](end_span)[span_12](start_span)[span_12](end_span) */
-    aspect-ratio: 2 / 3; /* Assuming a 2:3 aspect ratio for movie covers [span_13](start_span)[span_13](end_span)[span_14](start_span)[span_14](end_span)[span_15](start_span)[span_15](end_span) */
-    object-fit: contain; /* Ensures full image is visible [span_16](start_span)[span_16](end_span)[span_17](start_span)[span_17](end_span) */
-    background: #181828;
-    border-radius: 8px;
-    margin: 16px auto 8px auto;
-    display: block;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.11);
-    transition: transform 0.2s;
+    width: 100%; /* cite: 36 */
+    max-width: 150px; [span_2](start_span)/* Adjusted to be slightly larger[span_2](end_span) */
+    height: auto; [span_3](start_span)/* Let aspect-ratio handle height[span_3](end_span) */
+    aspect-ratio: 2 / 3; [span_4](start_span)/* Assuming a 2:3 aspect ratio for movie covers[span_4](end_span) */
+    object-fit: contain; [span_5](start_span)/* Ensures full image is visible[span_5](end_span) */
+    background: #181828; /* cite: 39 */
+    border-radius: 8px; /* cite: 39 */
+    margin: 16px auto 8px auto; /* cite: 40 */
+    display: block; /* cite: 40 */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.11); /* cite: 40 */
+    transition: transform 0.2s; /* cite: 40 */
 }
 
 .content-item:hover img {
-    transform: scale(1.055);
+    transform: scale(1.055); /* cite: 41 */
 }
 
 .content-item h3 {
-    font-size: 0.97em;
-    margin: 0 8px 0 8px;
-    font-weight: 500;
-    color: #e0e0e0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 0.97em; /* cite: 42 */
+    margin: 0 8px 0 8px; /* cite: 42 */
+    font-weight: 500; /* cite: 42 */
+    color: #e0e0e0; /* cite: 42 */
+    white-space: nowrap; /* cite: 42 */
+    overflow: hidden; /* cite: 42 */
+    text-overflow: ellipsis; /* cite: 42 */
 }
 
 .content-grid p {
-    grid-column: 1 / -1;
-    text-align: center;
-    font-size: 1.1em;
-    color: #aaaaaa;
-    padding: 38px 0;
+    grid-column: 1 / -1; /* cite: 43 */
+    text-align: center; /* cite: 43 */
+    font-size: 1.1em; /* cite: 43 */
+    color: #aaaaaa; /* cite: 43 */
+    padding: 38px 0; /* cite: 43 */
 }
 
 .pagination-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 28px;
+    display: flex; /* cite: 44 */
+    justify-content: center; /* cite: 44 */
+    align-items: center; /* cite: 44 */
+    gap: 10px; /* cite: 44 */
+    margin-top: 28px; /* cite: 44 */
 }
 
 .pagination-controls button {
-    background-color: #30305a;
-    color: #e0e0e0;
-    border: 1px solid #42426a;
-    border-radius: 7px;
-    padding: 7px 16px;
-    font-size: 1em;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
+    background-color: #30305a; /* cite: 45 */
+    color: #e0e0e0; /* cite: 45 */
+    border: 1px solid #42426a; /* cite: 45 */
+    border-radius: 7px; /* cite: 45 */
+    padding: 7px 16px; /* cite: 45 */
+    font-size: 1em; /* cite: 45 */
+    font-weight: 600; /* cite: 45 */
+    cursor: pointer; /* cite: 45 */
+    transition: all 0.3s; /* cite: 45 */
 }
 
 .pagination-controls button:hover:not(:disabled) {
-    background-color: #42426a;
-    border-color: #7a7ab8;
+    background-color: #42426a; /* cite: 46 */
+    border-color: #7a7ab8; /* cite: 46 */
 }
 
 .pagination-controls button:disabled {
-    background-color: #232345;
-    color: #6a6a8a;
-    cursor: not-allowed;
-    opacity: 0.7;
+    background-color: #232345; /* cite: 47 */
+    color: #6a6a8a; /* cite: 47 */
+    cursor: not-allowed; /* cite: 47 */
+    opacity: 0.7; /* cite: 47 */
 }
 
 /* Responsive for mobile */
 @media (max-width: 768px) {
     main {
-        max-width: 97vw;
-        padding: 0 2vw 25px 2vw;
+        max-width: 97vw; /* cite: 48 */
+        padding: 0 2vw 25px 2vw; /* cite: 48 */
     }
-   .filters {
-        flex-direction: column;
-        align-items: stretch;
-        /* Original: gap: 7px; padding: 10px; */
-        gap: min(7px, 2vw); /* Adjusted responsive gap */
-        padding: min(10px, 3vw); /* Adjusted responsive padding */
+    .filters {
+        flex-direction: column; /* cite: 49 */
+        align-items: stretch; /* cite: 49 */
+        gap: min(7px, 2vw); [span_6](start_span)/* Adjusted responsive gap[span_6](end_span) */
+        padding: min(10px, 3vw); [span_7](start_span)/* Adjusted responsive padding[span_7](end_span) */
     }
-   .content-grid {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adjusted min-width for mobile */
-        gap: min(7px, 2vw); /* Adjusted responsive gap */
+    .content-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjusted min-width for 3 items per line on mobile */
+        gap: min(7px, 2vw); [span_8](start_span)/* Adjusted responsive gap[span_8](end_span) */
     }
-   .content-item img {
-        /* Original: max-width: 95px; height: 135px; */
-        max-width: 110px; /* Slightly increased for mobile */
-        height: auto; /* Maintain aspect-ratio handling */
+    .content-item img {
+        max-width: 100px; /* Adjusted for mobile */
+        height: auto; [span_9](start_span)/* Maintain aspect-ratio handling[span_9](end_span) */
     }
 }
+
+/* Responsive for larger screens (laptops/desktops) */
+@media (min-width: 769px) {
+    .content-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusted min-width for 4 items per line on desktop */
+    }
+    .content-item img {
+        max-width: 160px; /* Adjusted for desktop */
+    }
+}
+
 
 /* Animación fadeInDown para el título */
 @keyframes fadeInDown {
     0% {
-        opacity: 0;
-        transform: translateY(-30px);
+        opacity: 0; /* cite: 57 */
+        transform: translateY(-30px); /* cite: 57 */
     }
     100% {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 1; /* cite: 57 */
+        transform: translateY(0); /* cite: 57 */
     }
 }
-
