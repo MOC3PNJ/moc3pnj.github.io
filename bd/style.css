@@ -1,15 +1,17 @@
+/* General Body Styles */
 body {
     font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1a1a2e;
-    color: #e0e0e0;
+    background-color: #1a1a2e; /* Dark background */
+    color: #e0e0e0; /* Light text for dark theme */
     line-height: 1.6;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
+/* Header Styles */
 header {
     background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
     color: #fff;
@@ -20,6 +22,7 @@ header {
     position: relative;
     overflow: hidden;
 }
+
 header h1 {
     margin: 0;
     font-size: 2.8em;
@@ -29,6 +32,7 @@ header h1 {
     animation: fadeInDown 1s ease-out;
 }
 
+/* Main Content Area */
 main {
     flex-grow: 1;
     padding: 0 20px 40px;
@@ -37,7 +41,7 @@ main {
     width: 100%;
 }
 
-/* Filtros: igual que tu estilo original */
+/* Filter Section Styles */
 .filters {
     display: flex;
     justify-content: center;
@@ -50,12 +54,14 @@ main {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     align-items: center;
 }
+
 .filters label {
     font-weight: 600;
     color: #bbbbbb;
     font-size: 1.1em;
     margin-right: 5px;
 }
+
 .filters select {
     padding: 10px 15px;
     border-radius: 6px;
@@ -74,23 +80,27 @@ main {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.filters select:hover { border-color: #6a6a8a; }
+
+.filters select:hover {
+    border-color: #6a6a8a;
+}
+
 .filters select:focus {
     outline: none;
     border-color: #5a7d9a;
     box-shadow: 0 0 0 3px rgba(90, 125, 154, 0.5);
 }
 
-/* ======= PELÍCULAS (Bloque central) ======= */
+/* Content Grid Styles */
 .content-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 en escritorio */
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en laptops/PC */
     gap: 28px 22px;
     justify-content: center;
     padding: 10px;
-    margin-bottom: 0;
 }
 
+/* Content Item Styles */
 .content-item {
     background-color: #2a2a4a;
     border-radius: 12px;
@@ -107,6 +117,7 @@ main {
     margin: 0;
     min-height: 0;
 }
+
 .content-item:hover {
     transform: translateY(-8px) scale(1.03);
     box-shadow: 0 8px 28px rgba(0, 0, 0, 0.27);
@@ -115,14 +126,15 @@ main {
 
 .content-item img {
     width: 100%;
-    height: 300px; /* Portada más grande y protagonista */
-    object-fit: cover;
+    max-width: 180px;
+    height: 260px;
+    object-fit: contain; /* Portada nunca se recorta */
+    background: #181828;
     display: block;
     border-bottom: 1.5px solid #3a3a5a;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     margin: 0;
-    background: #181828;
     transition: transform 0.18s;
 }
 .content-item:hover img {
@@ -131,7 +143,7 @@ main {
 
 .content-item h3 {
     margin: 12px 10px 0;
-    font-size: 0.93em; /* Título más pequeño */
+    font-size: 0.85em; /* Título pequeño */
     color: #e0e0e0;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -154,37 +166,7 @@ main {
     padding: 50px 0;
 }
 
-/* Botón de abajo y demás elementos igual que tu estilo actual */
-.pagination-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 28px;
-}
-.pagination-controls button {
-    background-color: #30305a;
-    color: #e0e0e0;
-    border: 1px solid #42426a;
-    border-radius: 7px;
-    padding: 7px 16px;
-    font-size: 1em;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-.pagination-controls button:hover:not(:disabled) {
-    background-color: #42426a;
-    border-color: #7a7ab8;
-}
-.pagination-controls button:disabled {
-    background-color: #232345;
-    color: #6a6a8a;
-    cursor: not-allowed;
-    opacity: 0.7;
-}
-
-/* Animación título principal */
+/* Animations */
 @keyframes fadeInDown {
     from {
         opacity: 0;
@@ -196,23 +178,62 @@ main {
     }
 }
 
-/* ==== RESPONSIVE ==== */
-/* Laptops y tablets grandes */
-@media (max-width: 1100px) {
-    main { max-width: 97vw; }
-    .content-grid { grid-template-columns: repeat(3, 1fr); }
-    .content-item img { height: 240px; }
+/* Pagination Controls Styles */
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 28px;
 }
-/* Tablets medianos y móviles grandes */
+
+.pagination-controls button {
+    background-color: #30305a;
+    color: #e0e0e0;
+    border: 1px solid #42426a;
+    border-radius: 7px;
+    padding: 7px 16px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.pagination-controls button:hover:not(:disabled) {
+    background-color: #42426a;
+    border-color: #7a7ab8;
+}
+
+.pagination-controls button:disabled {
+    background-color: #232345;
+    color: #6a6a8a;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Responsive: 3 columnas en móviles/tabletas (menos de 700px) */
 @media (max-width: 700px) {
-    .content-grid { grid-template-columns: repeat(2, 1fr); }
-    .content-item img { height: 170px; }
-    .content-item h3 { font-size: 0.87em; }
+    .content-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px 10px;
+    }
+    .content-item img {
+        max-width: 110px;
+        height: 160px;
+    }
+    .content-item h3 {
+        font-size: 0.74em;
+    }
 }
-/* Teléfonos pequeños */
-@media (max-width: 450px) {
-    main { max-width: 99vw; padding: 0 2vw 18px 2vw; }
-    .content-grid { grid-template-columns: 1fr; }
-    .content-item img { height: 135px; }
-    .filters { gap: 7px; padding: 7px 3px; }
+
+/* Para pantallas muy pequeñas (opcional, para evitar desbordes) */
+@media (max-width: 400px) {
+    .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px 5px;
+    }
+    .content-item img {
+        max-width: 70px;
+        height: 100px;
+    }
 }
