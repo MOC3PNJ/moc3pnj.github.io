@@ -89,10 +89,12 @@ main {
     border-radius: 20px;
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.17), 0 1.5px 4px rgba(50, 50, 80, 0.11);
     padding: 14px 10px;
-    min-height: 238px;
+    min-height: 250px; /* Aumentar la altura mínima para un mejor ajuste */
+    width: 150px; /* Definir un ancho fijo */
     transition: box-shadow 0.18s, transform 0.14s;
     cursor: pointer;
     position: relative;
+    overflow: hidden; /* Para evitar que el texto se desborde */
 }
 
 .content-item:hover {
@@ -103,7 +105,6 @@ main {
 
 .content-item img {
     width: 100%;
-    max-width: 105px;
     height: 148px;
     object-fit: contain;
     background: #181828;
@@ -120,10 +121,10 @@ main {
     text-align: center;
     max-width: 100%;
     padding: 0 4px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    letter-spacing: 0.01em;
+    white-space: normal; /* Permitir que el texto se divida en varias líneas */
+    overflow: hidden; /* Evitar desbordamientos */
+    text-overflow: ellipsis; /* Mostrar puntos suspensivos si hay desbordamiento */
+    line-height: 1.2; /* Ajustar la altura de línea para mejorar la legibilidad */
 }
 
 .content-grid p {
@@ -200,7 +201,7 @@ main {
 /* Teléfonos pequeños: 2 columnas */
 @media (max-width: 480px) {
     .content-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 10px; /* Espacio reducido entre películas */
         max-width: 97vw;
         padding: 8px 1vw;
