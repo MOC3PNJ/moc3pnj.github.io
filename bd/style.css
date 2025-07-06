@@ -8,6 +8,7 @@
     --spacing-unit: 1rem;
     --grid-gap-desktop: 1.5rem;
     --grid-gap-mobile: 0.75rem;
+    --poster-aspect-ratio: 0.67; /* Aproximadamente 2:3, común para pósters de películas */
 }
 
 /* Estilos generales del cuerpo */
@@ -37,6 +38,7 @@ header h1 {
     font-size: 2.5rem;
     letter-spacing: 2px;
     text-transform: uppercase;
+    font-weight: 700; /* Un poco más de peso para el título */
 }
 
 /* Contenedor principal */
@@ -64,6 +66,7 @@ main {
     font-size: 1.1rem;
     margin-right: 0.5rem;
     color: var(--text-color);
+    white-space: nowrap; /* Evita que el label se rompa en varias líneas */
 }
 
 .filters select {
@@ -79,6 +82,12 @@ main {
     cursor: pointer;
     outline: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    /* Agrega un icono de flecha personalizada para el select */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23e0e0e0" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.7rem center;
+    background-size: 1.2em;
+    padding-right: 2.5rem; /* Espacio para el icono de flecha */
 }
 
 .filters select:hover,
@@ -90,8 +99,8 @@ main {
 /* Rejilla de contenido (Películas/Series) */
 .content-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Base para móvil */
-    gap: var(--grid-gap-mobile); /* Espaciado para móvil */
+    /* Usaremos media queries para definir las columnas */
+    gap: var(--grid-gap-mobile); /* Espaciado por defecto para móvil */
     padding: var(--spacing-unit) 0;
 }
 
@@ -101,34 +110,54 @@ main {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: box-shadow 0.2s ease; /* Quitamos el transform para evitar el zoom */
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra el contenido horizontalmente */
+    align-items: center;
     text-align: center;
 }
 
 .content-item:hover {
-    transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
 }
 
-.content-item img {
+/* Contenedor para la imagen para mantener el aspecto y alinearla */
+.content-item .image-container {
     width: 100%;
-    height: 250px; /* Altura fija para las portadas en móvil */
-    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsión */
+    /* Padding-top truco para mantener el aspect ratio */
+    padding-top: calc(100% / var(--poster-aspect-ratio)); /* Calcula la altura basándose en el ancho y el aspect ratio */
+    position: relative;
+    background-color: #000; /* Fondo negro para el espacio si la imagen no llena */
+    display: flex; /* Para centrar la imagen dentro del padding-top */
+    justify-content: center;
+    align-items: center;
     border-bottom: 1px solid var(--border-color);
 }
 
+.content-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* ¡Clave! Asegura que la imagen se vea completa, sin recortar */
+    /* object-position: center top;  Si quieres que la imagen se alinee más hacia arriba */
+}
+
 .content-item h3 {
-    font-size: 1.1rem; /* Tamaño de título ajustado para móvil */
+    font-size: 1.05rem; /* Ajuste ligeramente el tamaño base */
     color: var(--text-color);
-    margin: 0.75rem 0.5rem; /* Margen para el título */
-    text-overflow: ellipsis;
+    margin: 0.75rem 0.5rem 1rem; /* Más margen inferior para separar del borde */
+    white-space: normal; /* Permitimos que el título se rompa */
+    height: 3.2em; /* Altura fija para 2 líneas de texto */
+    line-height: 1.6em; /* Altura de línea para que quepan 2 líneas */
     overflow: hidden;
-    white-space: nowrap; /* Evita que el título se rompa en varias líneas */
-    width: calc(100% - 1rem); /* Ancho del título para evitar desbordamiento */
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limita el texto a 2 líneas */
+    -webkit-box-orient: vertical;
+    font-weight: 500; /* Un peso de fuente agradable */
 }
 
 /* Paginación */
@@ -171,20 +200,10 @@ main {
         gap: var(--grid-gap-mobile);
     }
 
-    .content-item img {
-        height: 180px; /* Ajuste de altura para portadas en 3 columnas de teléfono */
-    }
-
     .content-item h3 {
-        font-size: 0.95rem; /* Título un poco más pequeño en móvil */
-        white-space: normal; /* Permite que el título se rompa en varias líneas */
-        height: 2.8em; /* Altura fija para 2 líneas de texto */
-        line-height: 1.4em;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 2; /* Limita el texto a 2 líneas */
-        -webkit-box-orient: vertical;
+        font-size: 0.9rem; /* Título un poco más pequeño en móvil */
+        height: 3.2em; /* Mantenemos las 2 líneas para el título */
+        line-height: 1.6em;
     }
 
     .filters {
@@ -203,25 +222,19 @@ main {
         grid-template-columns: repeat(4, 1fr); /* 4 columnas para tabletas */
         gap: var(--grid-gap-desktop);
     }
-    .content-item img {
-        height: 280px; /* Ajuste de altura para portadas en tabletas */
-    }
     .content-item h3 {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 }
 
-/* Computadoras y TVs (más de 1024px) */
+/* Computadoras y TVs (más de 1025px) */
 @media (min-width: 1025px) {
     .content-grid {
         grid-template-columns: repeat(4, 1fr); /* 4 columnas para desktop */
         gap: var(--grid-gap-desktop);
     }
-    .content-item img {
-        height: 320px; /* Altura de portada más grande para desktop */
-    }
     .content-item h3 {
-        font-size: 1.2rem; /* Título un poco más grande en desktop */
+        font-size: 1.15rem; /* Título un poco más grande en desktop */
     }
 }
 
@@ -234,4 +247,5 @@ main {
     padding: calc(var(--spacing-unit) * 2);
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 8px;
+    margin-top: calc(var(--spacing-unit) * 2);
 }
