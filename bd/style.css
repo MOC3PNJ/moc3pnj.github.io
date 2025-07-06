@@ -216,7 +216,7 @@ main {
     }
 }
 
-/* Tabletas y pantallas pequeñas (más de 768px y menos de 1024px) */
+/* Tabletas y pantallas pequeñas (más de 769px y menos de 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
     .content-grid {
         grid-template-columns: repeat(4, 1fr); /* 4 columnas para tabletas */
