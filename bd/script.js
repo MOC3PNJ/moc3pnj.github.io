@@ -1,8 +1,8 @@
-[span_93](start_span)import { peliculas } from 'https://raw.githack.com/MOC3PNJ/moc3pnj.github.io/refs/heads/main/bd/data.js';[span_93](end_span)
+import { peliculas } from 'https://raw.githack.com/MOC3PNJ/moc3pnj.github.io/refs/heads/main/bd/data.js';
 
 // --- Elementos del DOM ---
 const contentGrid = document.getElementById('content-grid');
-[span_94](start_span)const categoryFilter = document.getElementById('category-filter');[span_94](end_span)
+const categoryFilter = document.getElementById('category-filter');
 const yearFilter = document.getElementById('year-filter');
 const typeFilter = document.getElementById('type-filter');
 const prevButton = document.getElementById('prev-button');
@@ -34,8 +34,8 @@ async function initializeApp() {
         populateFilters();
         displayPaginatedContent();
     } catch (error) {
-        [span_95](start_span)console.error('Error al cargar la base de datos:', error);[span_95](end_span)
-        contentGrid.innerHTML = '<p>Error al cargar el contenido. [span_96](start_span)Por favor, inténtalo de nuevo más tarde.</p>';[span_96](end_span)
+        console.error('Error al cargar la base de datos:', error);
+        contentGrid.innerHTML = '<p>Error al cargar el contenido. Por favor, inténtalo de nuevo más tarde.</p>';
     }
 }
 
@@ -43,9 +43,9 @@ async function initializeApp() {
 function populateFilters() {
     const categories = new Set();
     allContent.forEach(item => {
-        [span_97](start_span)item.categoria.split(',').forEach(cat => categories.add(cat.trim()));[span_97](end_span)
+        item.categoria.split(',').forEach(cat => categories.add(cat.trim()));
     });
-    [span_98](start_span)categoryFilter.innerHTML = '<option value="all">Todas</option>';[span_98](end_span)
+    categoryFilter.innerHTML = '<option value="all">Todas</option>';
     categories.forEach(category => {
         const option = document.createElement('option');
         option.value = category;
@@ -54,7 +54,7 @@ function populateFilters() {
     });
 
     const years = new Set(allContent.map(item => item.año));
-    [span_99](start_span)yearFilter.innerHTML = '<option value="all">Todos</option>';[span_99](end_span)
+    yearFilter.innerHTML = '<option value="all">Todos</option>';
     years.forEach(year => {
         const option = document.createElement('option');
         option.value = year;
@@ -65,10 +65,10 @@ function populateFilters() {
 
 // Muestra el contenido de la página actual
 function displayPaginatedContent() {
-    [span_100](start_span)contentGrid.innerHTML = '';[span_100](end_span)
+    contentGrid.innerHTML = '';
     
     if (currentFilteredItems.length === 0) {
-        [span_101](start_span)contentGrid.innerHTML = '<p>No se encontraron resultados para los filtros seleccionados.</p>';[span_101](end_span)
+        contentGrid.innerHTML = '<p>No se encontraron resultados para los filtros seleccionados.</p>';
         paginationControls.style.display = 'none'; // Oculta los controles si no hay resultados
         return;
     }
@@ -87,14 +87,14 @@ function displayPaginatedContent() {
         const imageUrl = item.portada && item.portada.startsWith('http') ? item.portada : 'https://i.ibb.co/MkfkNDtT/Sin-t-tulo-3.png';
 
         contentItem.innerHTML = `
-            [span_102](start_span)<img src="${imageUrl}" alt="Portada de ${item.nombre}">[span_102](end_span)
+            <img src="${imageUrl}" alt="Portada de ${item.nombre}">
             <h3>${item.nombre}</h3>
         `;
         contentItem.addEventListener('click', () => {
             if (item.link) {
                 window.open(item.link, '_blank');
             } else {
-                [span_103](start_span)alert('Lo siento, no hay un enlace disponible para este contenido.');[span_103](end_span)
+                alert('Lo siento, no hay un enlace disponible para este contenido.');
             }
         });
         contentGrid.appendChild(contentItem);
@@ -122,7 +122,7 @@ function updatePaginationButtons() {
 function filterContent() {
     const selectedCategory = categoryFilter.value;
     const selectedYear = yearFilter.value;
-    [span_104](start_span)const selectedType = typeFilter.value;[span_104](end_span)
+    const selectedType = typeFilter.value;
 
     currentFilteredItems = allContent.filter(item => {
         const matchesCategory = selectedCategory === 'all' || item.categoria.split(',').map(cat => cat.trim()).includes(selectedCategory);
