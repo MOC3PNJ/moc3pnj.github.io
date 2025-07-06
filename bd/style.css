@@ -2,10 +2,12 @@ body {
     font-family: 'Segoe UI', Roboto, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #1a1a2e;
+    background: #1a1a2e; /* Darker background for depth */
     color: #e0e0e0;
     line-height: 1.6;
     min-height: 100vh;
+    display: flex; /* For sticky footer or overall layout if needed */
+    flex-direction: column;
 }
 
 header {
@@ -15,6 +17,7 @@ header {
     padding: 24px 12px 18px 12px;
     margin-bottom: 18px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    /* No significant changes here, looks good. */
 }
 
 header h1 {
@@ -28,10 +31,10 @@ header h1 {
 
 main {
     flex-grow: 1;
-    max-width: 1100px;
+    max-width: 1200px; /* Slightly wider max-width for more columns */
     margin: 0 auto;
     width: 100%;
-    padding: 0 8px 30px 8px;
+    padding: 0 15px 30px 15px; /* Adjusted padding */
 }
 
 .filters {
@@ -45,6 +48,7 @@ main {
     border-radius: 12px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.13);
     align-items: center;
+    /* No significant changes here, looks good. */
 }
 
 .filters label {
@@ -74,8 +78,9 @@ main {
 
 .content-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 32px 22px;
+    /* Adjusted to 5 columns for larger screens, as per the image */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 25px 18px; /* Slightly adjusted gap */
     justify-content: center;
     padding: 18px 0 10px 0;
     margin: 0 auto;
@@ -85,16 +90,15 @@ main {
 .content-item {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Center content within the item */
     background: #232345;
-    border-radius: 16px;
+    border-radius: 12px; /* Slightly smaller border-radius for a cleaner look */
     box-shadow: 0 4px 18px rgba(0,0,0,0.18);
-    padding: 0 0 12px 0;
+    padding: 0; /* Remove padding from the item itself, the image and text will space themselves */
     margin: 0;
-    min-height: 0;
     transition: box-shadow 0.17s, transform 0.14s;
     cursor: pointer;
-    position: relative;
+    overflow: hidden; /* Ensure content within doesn't overflow the rounded corners */
 }
 
 .content-item:hover {
@@ -104,16 +108,15 @@ main {
 }
 
 .content-item img {
-    width: 100%;
-    max-width: 185px;
-    height: 277px;
-    object-fit: contain;
-    background: #181828;
-    border-radius: 12px 12px 8px 8px;
+    width: 100%; /* Make image fill the width of its container */
+    height: auto; /* Allow height to adjust based on aspect ratio */
+    aspect-ratio: 2 / 3; /* Set a consistent aspect ratio for movie posters (width / height) */
+    object-fit: cover; /* This is crucial: covers the area, cropping if necessary */
+    border-radius: 12px 12px 0 0; /* Rounded top corners, sharp bottom to meet text */
     margin: 0;
-    box-shadow: 0 1px 7px rgba(0,0,0,0.09);
     display: block;
     transition: transform 0.15s;
+    /* Removed max-width and fixed height to allow for responsive scaling with aspect-ratio and object-fit */
 }
 
 .content-item:hover img {
@@ -121,19 +124,21 @@ main {
 }
 
 .content-item h3 {
-    font-size: 0.89em;
-    margin: 9px 6px 0 6px;
+    font-size: 0.9em; /* Slightly adjusted font size */
+    margin: 10px 8px 12px 8px; /* Adjusted margins for better spacing below image */
     font-weight: 500;
     color: #e0e0e0;
     text-align: center;
-    max-width: 95%;
-    padding: 0 2px;
-    white-space: nowrap;
+    max-width: calc(100% - 16px); /* Max width considering horizontal margins */
+    padding: 0; /* No padding needed here, margin handles spacing */
+    white-space: normal; /* Allow text to wrap */
     overflow: hidden;
     text-overflow: ellipsis;
+    display: -webkit-box; /* For multiline ellipsis */
+    -webkit-line-clamp: 2; /* Show up to 2 lines */
+    -webkit-box-orient: vertical;
+    line-height: 1.3; /* Adjusted line height for wrapped text */
     letter-spacing: 0.01em;
-    background: none;
-    border-radius: 0;
 }
 
 .content-grid p {
@@ -176,57 +181,80 @@ main {
     opacity: 0.7;
 }
 
-/* Laptops y tablets grandes */
-@media (max-width: 1100px) {
-    main {
-        max-width: 96vw;
-    }
+/* Laptops y tablets grandes (adjusting grid for consistency) */
+@media (max-width: 1200px) {
     .content-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 22px 14px;
-    }
-    .content-item img {
-        max-width: 155px;
-        height: 230px;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* 4 columns for typical laptops */
+        gap: 20px 15px;
     }
 }
-/* Tabletas medianas y móviles grandes: 2 columnas */
-@media (max-width: 700px) {
+
+@media (max-width: 992px) {
     .content-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 17px 5vw;
-        padding: 12px 0 6px 0;
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); /* 3-4 columns for smaller laptops/large tablets */
+        gap: 18px 12px;
     }
-    .content-item img {
-        max-width: 115px;
-        height: 170px;
+}
+
+/* Tabletas medianas y móviles grandes: 2 columnas */
+@media (max-width: 768px) {
+    main {
+        padding: 0 10px 25px 10px;
+    }
+    .content-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* More compact 2-3 columns */
+        gap: 15px 10px;
     }
     .content-item h3 {
-        font-size: 0.83em;
+        font-size: 0.85em;
     }
 }
-/* Teléfonos pequeños: 1 columna */
-@media (max-width: 420px) {
+
+/* Teléfonos pequeños: 2 columnas compactas o 1 grande */
+@media (max-width: 576px) {
     main {
-        max-width: 99vw;
-        padding: 0 2vw 18px 2vw;
+        padding: 0 8px 20px 8px;
     }
     .content-grid {
-        grid-template-columns: 1fr;
-        gap: 12px 0;
-        padding: 4px 0 2px 0;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* 2 columns for smaller phones */
+        gap: 12px 8px;
+    }
+    .content-item h3 {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 400px) {
+    .content-grid {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+        gap: 10px;
+    }
+    .content-item {
+        flex-direction: row; /* Stack horizontally for single column */
+        align-items: center;
+        padding: 10px;
+        border-radius: 8px;
     }
     .content-item img {
-        max-width: 80vw;
-        height: auto;
-        min-width: 140px;
-        min-height: 110px;
+        width: 80px; /* Fixed small width for horizontal layout */
+        height: 120px; /* Fixed height for horizontal layout */
+        object-fit: cover;
+        border-radius: 8px;
+        margin-right: 10px; /* Space between image and text */
+        flex-shrink: 0; /* Prevent image from shrinking */
+    }
+    .content-item h3 {
+        text-align: left;
+        margin: 0; /* Remove internal margins as flex handles spacing */
+        max-width: unset; /* No max-width for text in horizontal layout */
+        -webkit-line-clamp: 3; /* Allow more lines for text in horizontal layout */
     }
     .filters {
         gap: 7px;
         padding: 7px 3px;
     }
 }
+
 
 @keyframes fadeInDown {
     0% {
