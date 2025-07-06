@@ -1,239 +1,237 @@
-/* General Body Styles */
-body {
-    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1a1a2e; /* Dark background */
-    color: #e0e0e0; /* Light text for dark theme */
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+/* Variables para colores y espaciado */
+:root {
+    --primary-bg-color: #141414; /* Fondo muy oscuro */
+    --secondary-bg-color: #222222; /* Fondo de elementos */
+    --text-color: #e0e0e0; /* Color de texto claro */
+    --accent-color: #e50914; /* Rojo Netflix */
+    --border-color: #444444; /* Borde sutil */
+    --spacing-unit: 1rem;
+    --grid-gap-desktop: 1.5rem;
+    --grid-gap-mobile: 0.75rem;
 }
 
-/* Header Styles */
+/* Estilos generales del cuerpo */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Encabezado */
 header {
-    background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
-    color: #fff;
+    background-color: var(--secondary-bg-color);
+    padding: var(--spacing-unit) calc(var(--spacing-unit) * 2);
     text-align: center;
-    padding: 25px 20px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    position: relative;
-    overflow: hidden;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
+    color: var(--accent-color);
     margin: 0;
-    font-size: 2.8em;
-    font-weight: 700;
+    font-size: 2.5rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    animation: fadeInDown 1s ease-out;
 }
 
-/* Main Content Area */
+/* Contenedor principal */
 main {
-    flex-grow: 1;
-    padding: 0 20px 40px;
-    max-width: 1100px;
+    padding: var(--spacing-unit);
+    max-width: 1400px; /* Ancho máximo para el contenido */
     margin: 0 auto;
-    width: 100%;
 }
 
-/* Filter Section Styles */
+/* Sección de filtros */
 .filters {
     display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-bottom: 40px;
     flex-wrap: wrap;
-    background-color: #2a2a4a;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    gap: var(--spacing-unit);
+    justify-content: center;
     align-items: center;
+    background-color: var(--secondary-bg-color);
+    padding: var(--spacing-unit);
+    border-radius: 8px;
+    margin-bottom: calc(var(--spacing-unit) * 2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .filters label {
-    font-weight: 600;
-    color: #bbbbbb;
-    font-size: 1.1em;
-    margin-right: 5px;
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+    color: var(--text-color);
 }
 
 .filters select {
-    padding: 10px 15px;
-    border-radius: 6px;
-    border: 1px solid #4a4a6a;
-    min-width: 150px;
-    background-color: #3a3a5a;
-    font-size: 1em;
-    color: #e0e0e0;
-    appearance: none;
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: #333333;
+    color: var(--text-color);
+    font-size: 1rem;
+    appearance: none; /* Elimina estilos por defecto del navegador */
     -webkit-appearance: none;
     -moz-appearance: none;
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20256%22%3E%3Cpath%20fill%3D%22%23cccccc%22%20d%3D%22M128%20192L0%2064h256z%22%2F%3E%3C%2Fsvg%3E');
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    background-size: 12px;
     cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.filters select:hover {
-    border-color: #6a6a8a;
-}
-
-.filters select:focus {
     outline: none;
-    border-color: #5a7d9a;
-    box-shadow: 0 0 0 3px rgba(90, 125, 154, 0.5);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Content Grid Styles */
+.filters select:hover,
+.filters select:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.3);
+}
+
+/* Rejilla de contenido (Películas/Series) */
 .content-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas en laptops/PC */
-    gap: 28px 22px;
-    justify-content: center;
-    padding: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Base para móvil */
+    gap: var(--grid-gap-mobile); /* Espaciado para móvil */
+    padding: var(--spacing-unit) 0;
 }
 
-/* Content Item Styles */
+/* Elemento individual de contenido */
 .content-item {
-    background-color: #2a2a4a;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.28);
+    background-color: var(--secondary-bg-color);
+    border-radius: 8px;
     overflow: hidden;
-    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
-    transition: transform 0.18s, box-shadow 0.18s;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-bottom: 10px;
-    border: none;
-    margin: 0;
-    min-height: 0;
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center;
 }
 
 .content-item:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.27);
-    background: #25255a;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
 }
 
 .content-item img {
     width: 100%;
-    max-width: 180px;
-    height: 260px;
-    object-fit: contain; /* Portada nunca se recorta */
-    background: #181828;
-    display: block;
-    border-bottom: 1.5px solid #3a3a5a;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-    margin: 0;
-    transition: transform 0.18s;
-}
-.content-item:hover img {
-    transform: scale(1.04);
+    height: 250px; /* Altura fija para las portadas en móvil */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsión */
+    border-bottom: 1px solid var(--border-color);
 }
 
 .content-item h3 {
-    margin: 12px 10px 0;
-    font-size: 0.85em; /* Título pequeño */
-    color: #e0e0e0;
-    overflow: hidden;
+    font-size: 1.1rem; /* Tamaño de título ajustado para móvil */
+    color: var(--text-color);
+    margin: 0.75rem 0.5rem; /* Margen para el título */
     text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    min-height: 2.1em;
-    max-width: 95%;
-    background: none;
-    border-radius: 0;
-    font-weight: 500;
+    overflow: hidden;
+    white-space: nowrap; /* Evita que el título se rompa en varias líneas */
+    width: calc(100% - 1rem); /* Ancho del título para evitar desbordamiento */
 }
 
-/* No results message */
-.content-grid p {
-    grid-column: 1 / -1;
-    text-align: center;
-    font-size: 1.2em;
-    color: #aaaaaa;
-    padding: 50px 0;
-}
-
-/* Animations */
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Pagination Controls Styles */
+/* Paginación */
 .pagination-controls {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 28px;
+    gap: var(--spacing-unit);
+    margin-top: calc(var(--spacing-unit) * 2);
+    padding-bottom: var(--spacing-unit);
 }
 
 .pagination-controls button {
-    background-color: #30305a;
-    color: #e0e0e0;
-    border: 1px solid #42426a;
-    border-radius: 7px;
-    padding: 7px 16px;
-    font-size: 1em;
-    font-weight: 600;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    min-width: 50px; /* Ancho mínimo para los botones */
 }
 
 .pagination-controls button:hover:not(:disabled) {
-    background-color: #42426a;
-    border-color: #7a7ab8;
+    background-color: #ff3d47;
 }
 
 .pagination-controls button:disabled {
-    background-color: #232345;
-    color: #6a6a8a;
+    background-color: #555555;
     cursor: not-allowed;
-    opacity: 0.7;
+    opacity: 0.6;
 }
 
-/* Responsive: 3 columnas en móviles/tabletas (menos de 700px) */
-@media (max-width: 700px) {
+/* Media Queries para Responsividad */
+
+/* Teléfonos: 3 películas por fila */
+@media (max-width: 768px) {
     .content-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px 10px;
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas para teléfonos */
+        gap: var(--grid-gap-mobile);
+    }
+
+    .content-item img {
+        height: 180px; /* Ajuste de altura para portadas en 3 columnas de teléfono */
+    }
+
+    .content-item h3 {
+        font-size: 0.95rem; /* Título un poco más pequeño en móvil */
+        white-space: normal; /* Permite que el título se rompa en varias líneas */
+        height: 2.8em; /* Altura fija para 2 líneas de texto */
+        line-height: 1.4em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Limita el texto a 2 líneas */
+        -webkit-box-orient: vertical;
+    }
+
+    .filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filters label {
+        margin-bottom: 0.2rem;
+    }
+}
+
+/* Tabletas y pantallas pequeñas (más de 768px y menos de 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .content-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas para tabletas */
+        gap: var(--grid-gap-desktop);
     }
     .content-item img {
-        max-width: 110px;
-        height: 160px;
+        height: 280px; /* Ajuste de altura para portadas en tabletas */
     }
     .content-item h3 {
-        font-size: 0.74em;
+        font-size: 1.1rem;
     }
 }
 
-/* Para pantallas muy pequeñas (opcional, para evitar desbordes) */
-@media (max-width: 400px) {
+/* Computadoras y TVs (más de 1024px) */
+@media (min-width: 1025px) {
     .content-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px 5px;
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas para desktop */
+        gap: var(--grid-gap-desktop);
     }
     .content-item img {
-        max-width: 70px;
-        height: 100px;
+        height: 320px; /* Altura de portada más grande para desktop */
     }
+    .content-item h3 {
+        font-size: 1.2rem; /* Título un poco más grande en desktop */
+    }
+}
+
+/* Estilos para mensajes de no resultados/error */
+.content-grid p {
+    grid-column: 1 / -1; /* Ocupa todo el ancho de la rejilla */
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--text-color);
+    padding: calc(var(--spacing-unit) * 2);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
 }
