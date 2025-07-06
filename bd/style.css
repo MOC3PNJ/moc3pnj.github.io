@@ -11,6 +11,7 @@ body {
 }
 
 header {
+    /* Existing styles */
     background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
     color: #fff;
     text-align: center;
@@ -19,11 +20,21 @@ header {
     box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     position: relative;
     overflow: hidden;
+
+    /* Added for cohesive background effect */
+    background-image: url('https://via.placeholder.com/1920x400/0f3460/16213e?text=Header+Background'); /* Placeholder image, replace with a relevant one */
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay; /* Blends the gradient with the image */
+    backdrop-filter: blur(8px); /* Apply blur to the background behind the content [span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span) */
+    -webkit-backdrop-filter: blur(8px); /* For Webkit browsers [span_2](start_span)[span_2](end_span) */
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.2em;
+    /* Original: font-size: 2.2em; */
+    /* Modern responsive sizing with clamp() [span_3](start_span)[span_3](end_span) */
+    font-size: clamp(1.8rem, 4vw + 0.5rem, 2.8rem); /* Min, Preferred, Max */
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -41,11 +52,13 @@ main {
 .filters {
     display: flex;
     justify-content: center;
-    gap: 18px;
+    /* Original: gap: 18px; */
+    gap: min(18px, 3vw); /* Responsive gap [span_4](start_span)[span_4](end_span) */
     margin-bottom: 32px;
     flex-wrap: wrap;
     background-color: #232345;
-    padding: 16px;
+    /* Original: padding: 16px; */
+    padding: min(16px, 4vw); /* Responsive padding [span_5](start_span)[span_5](end_span) */
     border-radius: 12px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.18);
     align-items: center;
@@ -70,7 +83,7 @@ main {
     transition: all 0.3s ease;
 }
 
-.filters select:hover, .filters select:focus {
+.filters select:hover,.filters select:focus {
     border-color: #5a7d9a;
     outline: none;
     box-shadow: 0 0 0 2px rgba(90, 125, 154, 0.16);
@@ -78,8 +91,10 @@ main {
 
 .content-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 15px;
+    /* Original: grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Adjusted min-width for slightly larger covers [span_8](start_span)[span_8](end_span)[span_9](start_span)[span_9](end_span) */
+    /* Original: gap: 15px; */
+    gap: min(20px, 4vw); /* Responsive gap [span_6](start_span)[span_6](end_span) */
     justify-content: center;
     padding: 10px;
 }
@@ -106,9 +121,10 @@ main {
 
 .content-item img {
     width: 100%;
-    max-width: 120px;
-    height: 180px;
-    object-fit: contain;
+    max-width: 150px; /* Adjusted to be slightly larger [span_7](start_span)[span_7](end_span) */
+    height: auto; /* Let aspect-ratio handle height [span_10](start_span)[span_10](end_span)[span_11](start_span)[span_11](end_span)[span_12](start_span)[span_12](end_span) */
+    aspect-ratio: 2 / 3; /* Assuming a 2:3 aspect ratio for movie covers [span_13](start_span)[span_13](end_span)[span_14](start_span)[span_14](end_span)[span_15](start_span)[span_15](end_span) */
+    object-fit: contain; /* Ensures full image is visible [span_16](start_span)[span_16](end_span)[span_17](start_span)[span_17](end_span) */
     background: #181828;
     border-radius: 8px;
     margin: 16px auto 8px auto;
@@ -177,19 +193,21 @@ main {
         max-width: 97vw;
         padding: 0 2vw 25px 2vw;
     }
-    .filters {
+   .filters {
         flex-direction: column;
         align-items: stretch;
-        gap: 7px;
-        padding: 10px;
+        /* Original: gap: 7px; padding: 10px; */
+        gap: min(7px, 2vw); /* Adjusted responsive gap */
+        padding: min(10px, 3vw); /* Adjusted responsive padding */
     }
-    .content-grid {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-        gap: 7px;
+   .content-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adjusted min-width for mobile */
+        gap: min(7px, 2vw); /* Adjusted responsive gap */
     }
-    .content-item img {
-        max-width: 95px;
-        height: 135px;
+   .content-item img {
+        /* Original: max-width: 95px; height: 135px; */
+        max-width: 110px; /* Slightly increased for mobile */
+        height: auto; /* Maintain aspect-ratio handling */
     }
 }
 
@@ -204,3 +222,4 @@ main {
         transform: translateY(0);
     }
 }
+
