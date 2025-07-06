@@ -157,6 +157,10 @@ nextButton.addEventListener('click', () => {
         displayPaginatedContent();
     }
 });
+
+// Ajuste responsivo al cambiar el tamaño de la ventana
+window.addEventListener('resize', () => {
+    setItemsPerPage();
     // Vuelve a mostrar el contenido para ajustar el número de elementos por página
     displayPaginatedContent();
 });
