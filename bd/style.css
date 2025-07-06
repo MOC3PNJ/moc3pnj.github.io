@@ -1,228 +1,202 @@
 body {
-    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; /* cite: 10 */
-    margin: 0; /* cite: 10 */
-    padding: 0; /* cite: 10 */
-    background-color: #1a1a2e; /* cite: 10 */
-    color: #e0e0e0; /* cite: 11 */
-    line-height: 1.6; /* cite: 11 */
-    display: flex; /* cite: 11 */
-    flex-direction: column; /* cite: 11 */
-    min-height: 100vh; /* cite: 11 */
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
-    background: linear-gradient(135deg, #16213e 0%, #0f3460 100%); /* cite: 15 */
-    color: #fff; /* cite: 16 */
-    text-align: center; /* cite: 16 */
-    padding: 25px 20px; /* cite: 17 */
-    margin-bottom: 30px; /* cite: 17 */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4); /* cite: 18 */
-    position: relative; /* cite: 19 */
-    overflow: hidden; /* cite: 19 */
-    background-image: url('https://via.placeholder.com/1920x400/0f3460/16213e?text=Header+Background'); /* cite: 20 */
-    background-size: cover; /* cite: 21 */
-    background-position: center; /* cite: 21 */
-    background-blend-mode: overlay; /* cite: 22 */
-    backdrop-filter: blur(8px); /* cite: 22 */
-    -webkit-backdrop-filter: blur(8px); /* cite: 23 */
+    background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+    color: #fff;
+    text-align: center;
+    padding: 25px 20px 18px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
 header h1 {
-    margin: 0; /* cite: 24 */
-    font-size: clamp(1.8rem, 4vw + 0.5rem, 2.8rem); /* cite: 25 */
-    font-weight: 700; /* cite: 25 */
-    letter-spacing: 2px; /* cite: 26 */
-    text-transform: uppercase; /* cite: 26 */
-    animation: fadeInDown 1s ease-out; /* cite: 27 */
+    margin: 0;
+    font-size: 2.1em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: fadeInDown 1s ease-out;
 }
 
 main {
-    flex-grow: 1; /* cite: 28 */
-    padding: 0 10px 30px; /* cite: 28 */
-    max-width: 1150px; /* cite: 29 */
-    margin: 0 auto; /* cite: 29 */
-    width: 100%; /* cite: 30 */
+    flex-grow: 1;
+    padding: 0 10px 30px;
+    max-width: 1150px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .filters {
-    display: flex; /* cite: 30 */
-    justify-content: center; /* cite: 31 */
-    gap: min(18px, 3vw); /* cite: 31 */
-    margin-bottom: 32px; /* cite: 32 */
-    flex-wrap: wrap; /* cite: 32 */
-    background-color: #232345; /* cite: 33 */
-    padding: min(16px, 4vw); /* cite: 33 */
-    border-radius: 12px; /* cite: 34 */
-    box-shadow: 0 5px 20px rgba(0,0,0,0.18); /* cite: 35 */
-    align-items: center; /* cite: 35 */
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+    background-color: #232345;
+    padding: 14px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.13);
+    align-items: center;
 }
 
 .filters label {
-    font-weight: 600; /* cite: 36 */
-    color: #bbbbbb; /* cite: 36 */
-    font-size: 1em; /* cite: 37 */
-    margin-right: 4px; /* cite: 37 */
+    font-weight: 600;
+    color: #bbbbbb;
+    font-size: 1em;
+    margin-right: 4px;
 }
 
 .filters select {
-    padding: 7px 12px; /* cite: 38 */
-    border-radius: 6px; /* cite: 38 */
-    border: 1px solid #42426a; /* cite: 39 */
-    min-width: 110px; /* cite: 39 */
-    background-color: #30305a; /* cite: 40 */
-    font-size: 0.95em; /* cite: 40 */
-    color: #e0e0e0; /* cite: 41 */
-    cursor: pointer; /* cite: 41 */
-    transition: all 0.3s ease; /* cite: 42 */
+    padding: 7px 12px;
+    border-radius: 6px;
+    border: 1px solid #42426a;
+    min-width: 110px;
+    background-color: #30305a;
+    font-size: 0.95em;
+    color: #e0e0e0;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.filters select:hover,
-.filters select:focus {
-    border-color: #5a7d9a; /* cite: 43 */
-    outline: none; /* cite: 43 */
-    box-shadow: 0 0 0 2px rgba(90, 125, 154, 0.16); /* cite: 44 */
+.filters select:hover, .filters select:focus {
+    border-color: #5a7d9a;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(90, 125, 154, 0.16);
 }
 
 .content-grid {
-    display: grid; /* cite: 45 */
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); [span_0](start_span)/* Adjusted min-width for slightly larger covers */[span_0](end_span)
-    gap: min(20px, 4vw); [span_1](start_span)/* Responsive gap */[span_1](end_span)
-    justify-content: center; /* cite: 47 */
-    padding: 10px; /* cite: 48 */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+    gap: 34px 20px; /* Más separación entre películas */
+    justify-content: center;
+    padding: 10px 5px 10px 5px;
 }
 
 .content-item {
-    background-color: #232345; /* cite: 49 */
-    border-radius: 10px; /* cite: 49 */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.13); /* cite: 50 */
-    overflow: hidden; /* cite: 50 */
-    text-align: center; /* cite: 51 */
-    cursor: pointer; /* cite: 51 */
-    transition: transform 0.15s, box-shadow 0.15s; /* cite: 52 */
-    display: flex; /* cite: 52 */
-    flex-direction: column; /* cite: 53 */
-    align-items: center; /* cite: 54 */
-    padding-bottom: 10px; /* cite: 54 */
-    min-height: 260px; /* cite: 54 */
+    /* ¡Sin fondo! Solo margen alrededor */
+    margin: 0 0 0 0;
+    box-shadow: none;
+    border-radius: 0;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    min-height: 200px;
+    transition: transform 0.18s;
+    cursor: pointer;
 }
 
 .content-item:hover {
-    transform: translateY(-4px) scale(1.03); /* cite: 55 */
-    box-shadow: 0 8px 22px rgba(0,0,0,0.22); /* cite: 56 */
+    transform: scale(1.03) translateY(-5px);
 }
 
 .content-item img {
-    width: 100%; /* cite: 57 */
-    max-width: 150px; [span_2](start_span)/* Adjusted to be slightly larger */[span_2](end_span)
-    height: auto; [span_3](start_span)/* Let aspect-ratio handle height */[span_3](end_span)
-    aspect-ratio: 2 / 3; [span_4](start_span)/* Assuming a 2:3 aspect ratio for movie covers */[span_4](end_span)
-    object-fit: contain; [span_5](start_span)/* Ensures full image is visible */[span_5](end_span)
-    background: #181828; /* cite: 61 */
-    border-radius: 8px; /* cite: 61 */
-    margin: 16px auto 8px auto; /* cite: 62 */
-    display: block; /* cite: 62 */
-    box-shadow: 0 2px 10px rgba(0,0,0,0.11); /* cite: 63 */
-    transition: transform 0.2s; /* cite: 64 */
+    width: 100%;
+    max-width: 115px;
+    height: 170px;
+    object-fit: contain;
+    background: #181828;
+    border-radius: 10px;
+    margin: 0 0 9px 0;
+    display: block;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.13);
+    transition: transform 0.18s;
 }
 
 .content-item:hover img {
-    transform: scale(1.055); /* cite: 65 */
+    transform: scale(1.06);
 }
 
 .content-item h3 {
-    font-size: 0.97em; /* cite: 66 */
-    margin: 0 8px 0 8px; /* cite: 67 */
-    font-weight: 500; /* cite: 67 */
-    color: #e0e0e0; /* cite: 68 */
-    white-space: normal; /* Allow text to wrap naturally */
-    overflow: hidden; /* cite: 69 */
-    text-overflow: ellipsis; /* cite: 69 */
-    display: -webkit-box; /* For multi-line ellipsis */
-    -webkit-line-clamp: 2; /* Limit to 2 lines before ellipsis */
-    -webkit-box-orient: vertical;
+    font-size: 0.98em;
+    margin: 0 8px 0 8px;
+    font-weight: 500;
+    color: #e0e0e0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .content-grid p {
-    grid-column: 1 / -1; /* cite: 70 */
-    text-align: center; /* cite: 70 */
-    font-size: 1.1em; /* cite: 71 */
-    color: #aaaaaa; /* cite: 71 */
-    padding: 38px 0; /* cite: 72 */
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.1em;
+    color: #aaaaaa;
+    padding: 38px 0;
 }
 
 .pagination-controls {
-    display: flex; /* cite: 73 */
-    justify-content: center; /* cite: 73 */
-    align-items: center; /* cite: 73 */
-    gap: 10px; /* cite: 74 */
-    margin-top: 28px; /* cite: 74 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 28px;
 }
 
 .pagination-controls button {
-    background-color: #30305a; /* cite: 75 */
-    color: #e0e0e0; /* cite: 75 */
-    border: 1px solid #42426a; /* cite: 76 */
-    border-radius: 7px; /* cite: 76 */
-    padding: 7px 16px; /* cite: 77 */
-    font-size: 1em; /* cite: 77 */
-    font-weight: 600; /* cite: 78 */
-    cursor: pointer; /* cite: 78 */
-    transition: all 0.3s; /* cite: 79 */
+    background-color: #30305a;
+    color: #e0e0e0;
+    border: 1px solid #42426a;
+    border-radius: 7px;
+    padding: 7px 16px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
 }
 
 .pagination-controls button:hover:not(:disabled) {
-    background-color: #42426a; /* cite: 80 */
-    border-color: #7a7ab8; /* cite: 80 */
+    background-color: #42426a;
+    border-color: #7a7ab8;
 }
 
 .pagination-controls button:disabled {
-    background-color: #232345; /* cite: 81 */
-    color: #6a6a8a; /* cite: 81 */
-    cursor: not-allowed; /* cite: 82 */
-    opacity: 0.7; /* cite: 82 */
+    background-color: #232345;
+    color: #6a6a8a;
+    cursor: not-allowed;
+    opacity: 0.7;
 }
 
-/* Responsive for mobile */
 @media (max-width: 768px) {
     main {
-        max-width: 97vw; /* cite: 83 */
-        padding: 0 2vw 25px 2vw; /* cite: 84 */
+        max-width: 97vw;
+        padding: 0 2vw 25px 2vw;
     }
     .filters {
-        flex-direction: column; /* cite: 85 */
-        align-items: stretch; /* cite: 86 */
-        gap: min(7px, 2vw); [span_6](start_span)/* Adjusted responsive gap */[span_6](end_span)
-        padding: min(10px, 3vw); [span_7](start_span)/* Adjusted responsive padding */[span_7](end_span)
+        flex-direction: column;
+        align-items: stretch;
+        gap: 7px;
+        padding: 10px;
     }
     .content-grid {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); [span_8](start_span)/* Adjusted min-width for 3 items per line on mobile */[span_8](end_span)
-        gap: min(7px, 2vw); [span_9](start_span)/* Adjusted responsive gap */[span_9](end_span)
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        gap: 16px 8px;
     }
     .content-item img {
-        max-width: 100px; [span_10](start_span)/* Adjusted for mobile */[span_10](end_span)
-        height: auto; [span_11](start_span)/* Maintain aspect-ratio handling */[span_11](end_span)
+        max-width: 70px;
+        height: 105px;
     }
 }
-
-/* Responsive for larger screens (laptops/desktops) */
-@media (min-width: 769px) {
-    .content-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); [span_12](start_span)/* Adjusted min-width for 4 items per line on desktop */[span_12](end_span)
-    }
-    .content-item img {
-        max-width: 160px; [span_13](start_span)/* Adjusted for desktop */[span_13](end_span)
-    }
-}
-
 
 /* Animación fadeInDown para el título */
 @keyframes fadeInDown {
     0% {
-        opacity: 0; /* cite: 95 */
-        transform: translateY(-30px); /* cite: 96 */
+        opacity: 0;
+        transform: translateY(-30px);
     }
     100% {
-        opacity: 1; /* cite: 97 */
-        transform: translateY(0); /* cite: 98 */
+        opacity: 1;
+        transform: translateY(0);
     }
 }
