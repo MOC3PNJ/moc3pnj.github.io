@@ -1,8 +1,8 @@
 body {
-    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1a1a2e;
+    background: #1a1a2e;
     color: #e0e0e0;
     line-height: 1.6;
     min-height: 100vh;
@@ -12,8 +12,9 @@ header {
     background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
     color: #fff;
     text-align: center;
-    padding: 25px 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    padding: 24px 12px 18px 12px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
 }
 
 header h1 {
@@ -27,22 +28,22 @@ header h1 {
 
 main {
     flex-grow: 1;
-    padding: 0 10px 30px;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     width: 100%;
+    padding: 0 8px 30px 8px;
 }
 
 .filters {
     display: flex;
     justify-content: center;
-    gap: 18px;
-    margin-bottom: 28px;
+    gap: 15px;
+    margin-bottom: 22px;
     flex-wrap: wrap;
-    background-color: #232345;
-    padding: 14px;
+    background: #232345;
+    padding: 12px 8px;
     border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.13);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.13);
     align-items: center;
 }
 
@@ -50,22 +51,22 @@ main {
     font-weight: 600;
     color: #bbbbbb;
     font-size: 1em;
+    margin-right: 4px;
 }
 
 .filters select {
     padding: 7px 12px;
     border-radius: 6px;
     border: 1px solid #42426a;
-    min-width: 110px;
-    background-color: #30305a;
+    min-width: 100px;
+    background: #30305a;
     font-size: 0.95em;
     color: #e0e0e0;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
 }
 
-.filters select:hover,
-.filters select:focus {
+.filters select:hover, .filters select:focus {
     border-color: #5a7d9a;
     outline: none;
     box-shadow: 0 0 0 2px rgba(90, 125, 154, 0.16);
@@ -74,11 +75,11 @@ main {
 .content-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 16px; /* Reducción del espacio entre películas */
+    gap: 32px 22px;
     justify-content: center;
-    padding: 28px 18px;
+    padding: 18px 0 10px 0;
     margin: 0 auto;
-    max-width: 1020px;
+    max-width: 100%;
 }
 
 .content-item {
@@ -86,45 +87,53 @@ main {
     flex-direction: column;
     align-items: center;
     background: #232345;
-    border-radius: 20px;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.17), 0 1.5px 4px rgba(50, 50, 80, 0.11);
-    padding: 14px 10px;
-    min-height: 250px; /* Aumentar la altura mínima para un mejor ajuste */
-    width: 150px; /* Definir un ancho fijo */
-    transition: box-shadow 0.18s, transform 0.14s;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+    padding: 0 0 12px 0;
+    margin: 0;
+    min-height: 0;
+    transition: box-shadow 0.17s, transform 0.14s;
     cursor: pointer;
     position: relative;
-    overflow: hidden; /* Para evitar que el texto se desborde */
 }
 
 .content-item:hover {
-    transform: translateY(-5px) scale(1.035);
-    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.23), 0 2px 6px rgba(70, 90, 150, 0.07);
+    transform: translateY(-4px) scale(1.035);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.24), 0 2px 8px rgba(70,90,150,0.09);
     background: #25255a;
 }
 
 .content-item img {
     width: 100%;
-    height: 148px;
+    max-width: 185px;
+    height: 277px;
     object-fit: contain;
     background: #181828;
-    border-radius: 12px;
-    margin: null;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.11);
+    border-radius: 12px 12px 8px 8px;
+    margin: 0;
+    box-shadow: 0 1px 7px rgba(0,0,0,0.09);
+    display: block;
+    transition: transform 0.15s;
+}
+
+.content-item:hover img {
+    transform: scale(1.055);
 }
 
 .content-item h3 {
-    font-size: 0.93em;
-    margin: 0;
-    font-weight: 600;
+    font-size: 0.89em;
+    margin: 9px 6px 0 6px;
+    font-weight: 500;
     color: #e0e0e0;
     text-align: center;
-    max-width: 100%;
-    padding: 0 4px;
-    white-space: normal; /* Permitir que el texto se divida en varias líneas */
-    overflow: hidden; /* Evitar desbordamientos */
-    text-overflow: ellipsis; /* Mostrar puntos suspensivos si hay desbordamiento */
-    line-height: 1.2; /* Ajustar la altura de línea para mejorar la legibilidad */
+    max-width: 95%;
+    padding: 0 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: 0.01em;
+    background: none;
+    border-radius: 0;
 }
 
 .content-grid p {
@@ -140,11 +149,11 @@ main {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-top: 28px;
+    margin-top: 22px;
 }
 
 .pagination-controls button {
-    background-color: #30305a;
+    background: #30305a;
     color: #e0e0e0;
     border: 1px solid #42426a;
     border-radius: 7px;
@@ -156,66 +165,69 @@ main {
 }
 
 .pagination-controls button:hover:not(:disabled) {
-    background-color: #42426a;
+    background: #42426a;
     border-color: #7a7ab8;
 }
 
 .pagination-controls button:disabled {
-    background-color: #232345;
+    background: #232345;
     color: #6a6a8a;
     cursor: not-allowed;
     opacity: 0.7;
 }
 
-/* Laptops */
-@media (max-width: 1024px) {
-    .content-grid {
-        grid-template-columns: repeat(4, 1fr);
-        max-width: 900px;
-        gap: 16px; /* Espacio reducido entre películas */
+/* Laptops y tablets grandes */
+@media (max-width: 1100px) {
+    main {
+        max-width: 96vw;
     }
-    .content-item img {
-        max-width: 95px;
-        height: 132px;
-    }
-}
-
-/* Tabletas y móviles grandes: 3 columnas */
-@media (max-width: 780px) {
     .content-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 16px; /* Espacio reducido entre películas */
-        max-width: 580px;
-        padding: 18px 2vw;
+        gap: 22px 14px;
     }
     .content-item img {
-        max-width: 74px;
-        height: 104px;
-    }
-    .content-item {
-        padding: 8px 6px;
-        min-height: 156px;
+        max-width: 155px;
+        height: 230px;
     }
 }
-
-/* Teléfonos pequeños: 2 columnas */
-@media (max-width: 480px) {
+/* Tabletas medianas y móviles grandes: 2 columnas */
+@media (max-width: 700px) {
     .content-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px; /* Espacio reducido entre películas */
-        max-width: 97vw;
-        padding: 8px 1vw;
+        gap: 17px 5vw;
+        padding: 12px 0 6px 0;
     }
     .content-item img {
-        max-width: 54px;
-        height: 76px;
+        max-width: 115px;
+        height: 170px;
     }
     .content-item h3 {
-        font-size: 0.87em;
+        font-size: 0.83em;
+    }
+}
+/* Teléfonos pequeños: 1 columna */
+@media (max-width: 420px) {
+    main {
+        max-width: 99vw;
+        padding: 0 2vw 18px 2vw;
+    }
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 12px 0;
+        padding: 4px 0 2px 0;
+    }
+    .content-item img {
+        max-width: 80vw;
+        height: auto;
+        min-width: 140px;
+        min-height: 110px;
+    }
+    .filters {
+        gap: 7px;
+        padding: 7px 3px;
     }
 }
 
-/* Animación fadeInDown para el título */
 @keyframes fadeInDown {
     0% {
         opacity: 0;
