@@ -25,7 +25,7 @@
 
             <label for="type-filter">Tipo:</label>
             <select id="type-filter">
-                [span_0](start_span)<option value="all">Todos</option>[span_0](end_span)
+                <option value="all">Todos</option>
                 <option value="Película">Película</option>
                 <option value="Serie">Serie</option>
             </select>
@@ -44,21 +44,21 @@
     <script type="module" src="script.js"></script>
     <script>
         // --- Deshabilitar Copiar, Pegar y Menú Contextual ---
-        [span_1](start_span)document.addEventListener('contextmenu', event => event.preventDefault());[span_1](end_span)
+        document.addEventListener('contextmenu', event => event.preventDefault());
         document.addEventListener('copy', (event) => {
-            [span_2](start_span)event.preventDefault();[span_2](end_span)
+            event.preventDefault();
             alert("¡Copiar contenido está deshabilitado en este sitio!");
         });
-        [span_3](start_span)document.addEventListener('selectstart', event => event.preventDefault());[span_3](end_span)
+        document.addEventListener('selectstart', event => event.preventDefault());
 
         // --- Deshabilitar Herramientas de Desarrollador ---
         document.onkeydown = function(e) {
-            [span_4](start_span)if (e.keyCode == 123) return false;[span_4](end_span)
-            [span_5](start_span)if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;[span_5](end_span)
-            [span_6](start_span)if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;[span_6](end_span)
-            [span_7](start_span)if (e.ctrlKey && e.keyCode == 'C'.charCodeAt(0)) return false;[span_7](end_span)
-            [span_8](start_span)if (e.ctrlKey && e.keyCode == 'V'.charCodeAt(0)) return false;[span_8](end_span)
-            [span_9](start_span)if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;[span_9](end_span)
+            if (e.keyCode == 123) return false;
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
+            if (e.ctrlKey && e.keyCode == 'C'.charCodeAt(0)) return false;
+            if (e.ctrlKey && e.keyCode == 'V'.charCodeAt(0)) return false;
+            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
         }
     </script>
 </body>
