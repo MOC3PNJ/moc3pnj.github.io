@@ -1,28 +1,28 @@
 body {
-    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #1a1a2e; /* Darker background for depth */
+    background-color: #1a1a2e;
     color: #e0e0e0;
     line-height: 1.6;
-    min-height: 100vh;
-    display: flex; /* For sticky footer or overall layout if needed */
+    display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
     background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
     color: #fff;
     text-align: center;
-    padding: 24px 12px 18px 12px;
-    margin-bottom: 18px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
-    /* No significant changes here, looks good. */
+    padding: 25px 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
 }
-
 header h1 {
     margin: 0;
-    font-size: 2.1em;
+    font-size: 2.8em;
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -31,134 +31,139 @@ header h1 {
 
 main {
     flex-grow: 1;
-    max-width: 1200px; /* Slightly wider max-width for more columns */
+    padding: 0 20px 40px;
+    max-width: 1100px;
     margin: 0 auto;
     width: 100%;
-    padding: 0 15px 30px 15px; /* Adjusted padding */
 }
 
+/* Filtros: igual que tu estilo original */
 .filters {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-bottom: 22px;
+    gap: 25px;
+    margin-bottom: 40px;
     flex-wrap: wrap;
-    background: #232345;
-    padding: 12px 8px;
+    background-color: #2a2a4a;
+    padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.13);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     align-items: center;
-    /* No significant changes here, looks good. */
 }
-
 .filters label {
     font-weight: 600;
     color: #bbbbbb;
-    font-size: 1em;
-    margin-right: 4px;
+    font-size: 1.1em;
+    margin-right: 5px;
 }
-
 .filters select {
-    padding: 7px 12px;
+    padding: 10px 15px;
     border-radius: 6px;
-    border: 1px solid #42426a;
-    min-width: 100px;
-    background: #30305a;
-    font-size: 0.95em;
+    border: 1px solid #4a4a6a;
+    min-width: 150px;
+    background-color: #3a3a5a;
+    font-size: 1em;
     color: #e0e0e0;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20256%22%3E%3Cpath%20fill%3D%22%23cccccc%22%20d%3D%22M128%20192L0%2064h256z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
 }
-
-.filters select:hover, .filters select:focus {
-    border-color: #5a7d9a;
+.filters select:hover { border-color: #6a6a8a; }
+.filters select:focus {
     outline: none;
-    box-shadow: 0 0 0 2px rgba(90, 125, 154, 0.16);
+    border-color: #5a7d9a;
+    box-shadow: 0 0 0 3px rgba(90, 125, 154, 0.5);
 }
 
+/* ======= PELÍCULAS (Bloque central) ======= */
 .content-grid {
     display: grid;
-    /* Adjusted to 5 columns for larger screens, as per the image */
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 25px 18px; /* Slightly adjusted gap */
+    grid-template-columns: repeat(4, 1fr); /* 4 en escritorio */
+    gap: 28px 22px;
     justify-content: center;
-    padding: 18px 0 10px 0;
-    margin: 0 auto;
-    max-width: 100%;
+    padding: 10px;
+    margin-bottom: 0;
 }
 
 .content-item {
+    background-color: #2a2a4a;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.28);
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.18s, box-shadow 0.18s;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content within the item */
-    background: #232345;
-    border-radius: 12px; /* Slightly smaller border-radius for a cleaner look */
-    box-shadow: 0 4px 18px rgba(0,0,0,0.18);
-    padding: 0; /* Remove padding from the item itself, the image and text will space themselves */
+    align-items: center;
+    padding-bottom: 10px;
+    border: none;
     margin: 0;
-    transition: box-shadow 0.17s, transform 0.14s;
-    cursor: pointer;
-    overflow: hidden; /* Ensure content within doesn't overflow the rounded corners */
+    min-height: 0;
 }
-
 .content-item:hover {
-    transform: translateY(-4px) scale(1.035);
-    box-shadow: 0 10px 28px rgba(0,0,0,0.24), 0 2px 8px rgba(70,90,150,0.09);
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.27);
     background: #25255a;
 }
 
 .content-item img {
-    width: 100%; /* Make image fill the width of its container */
-    height: auto; /* Allow height to adjust based on aspect ratio */
-    aspect-ratio: 2 / 3; /* Set a consistent aspect ratio for movie posters (width / height) */
-    object-fit: cover; /* This is crucial: covers the area, cropping if necessary */
-    border-radius: 12px 12px 0 0; /* Rounded top corners, sharp bottom to meet text */
-    margin: 0;
+    width: 100%;
+    height: 300px; /* Portada más grande y protagonista */
+    object-fit: cover;
     display: block;
-    transition: transform 0.15s;
-    /* Removed max-width and fixed height to allow for responsive scaling with aspect-ratio and object-fit */
+    border-bottom: 1.5px solid #3a3a5a;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    margin: 0;
+    background: #181828;
+    transition: transform 0.18s;
 }
-
 .content-item:hover img {
-    transform: scale(1.055);
+    transform: scale(1.04);
 }
 
 .content-item h3 {
-    font-size: 0.9em; /* Slightly adjusted font size */
-    margin: 10px 8px 12px 8px; /* Adjusted margins for better spacing below image */
-    font-weight: 500;
+    margin: 12px 10px 0;
+    font-size: 0.93em; /* Título más pequeño */
     color: #e0e0e0;
-    text-align: center;
-    max-width: calc(100% - 16px); /* Max width considering horizontal margins */
-    padding: 0; /* No padding needed here, margin handles spacing */
-    white-space: normal; /* Allow text to wrap */
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box; /* For multiline ellipsis */
-    -webkit-line-clamp: 2; /* Show up to 2 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    line-height: 1.3; /* Adjusted line height for wrapped text */
-    letter-spacing: 0.01em;
+    min-height: 2.1em;
+    max-width: 95%;
+    background: none;
+    border-radius: 0;
+    font-weight: 500;
 }
 
+/* No results message */
 .content-grid p {
     grid-column: 1 / -1;
     text-align: center;
-    font-size: 1.1em;
+    font-size: 1.2em;
     color: #aaaaaa;
-    padding: 38px 0;
+    padding: 50px 0;
 }
 
+/* Botón de abajo y demás elementos igual que tu estilo actual */
 .pagination-controls {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-top: 22px;
+    margin-top: 28px;
 }
-
 .pagination-controls button {
-    background: #30305a;
+    background-color: #30305a;
     color: #e0e0e0;
     border: 1px solid #42426a;
     border-radius: 7px;
@@ -168,101 +173,46 @@ main {
     cursor: pointer;
     transition: all 0.3s;
 }
-
 .pagination-controls button:hover:not(:disabled) {
-    background: #42426a;
+    background-color: #42426a;
     border-color: #7a7ab8;
 }
-
 .pagination-controls button:disabled {
-    background: #232345;
+    background-color: #232345;
     color: #6a6a8a;
     cursor: not-allowed;
     opacity: 0.7;
 }
 
-/* Laptops y tablets grandes (adjusting grid for consistency) */
-@media (max-width: 1200px) {
-    .content-grid {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* 4 columns for typical laptops */
-        gap: 20px 15px;
-    }
-}
-
-@media (max-width: 992px) {
-    .content-grid {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); /* 3-4 columns for smaller laptops/large tablets */
-        gap: 18px 12px;
-    }
-}
-
-/* Tabletas medianas y móviles grandes: 2 columnas */
-@media (max-width: 768px) {
-    main {
-        padding: 0 10px 25px 10px;
-    }
-    .content-grid {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* More compact 2-3 columns */
-        gap: 15px 10px;
-    }
-    .content-item h3 {
-        font-size: 0.85em;
-    }
-}
-
-/* Teléfonos pequeños: 2 columnas compactas o 1 grande */
-@media (max-width: 576px) {
-    main {
-        padding: 0 8px 20px 8px;
-    }
-    .content-grid {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* 2 columns for smaller phones */
-        gap: 12px 8px;
-    }
-    .content-item h3 {
-        font-size: 0.8em;
-    }
-}
-
-@media (max-width: 400px) {
-    .content-grid {
-        grid-template-columns: 1fr; /* Single column for very small screens */
-        gap: 10px;
-    }
-    .content-item {
-        flex-direction: row; /* Stack horizontally for single column */
-        align-items: center;
-        padding: 10px;
-        border-radius: 8px;
-    }
-    .content-item img {
-        width: 80px; /* Fixed small width for horizontal layout */
-        height: 120px; /* Fixed height for horizontal layout */
-        object-fit: cover;
-        border-radius: 8px;
-        margin-right: 10px; /* Space between image and text */
-        flex-shrink: 0; /* Prevent image from shrinking */
-    }
-    .content-item h3 {
-        text-align: left;
-        margin: 0; /* Remove internal margins as flex handles spacing */
-        max-width: unset; /* No max-width for text in horizontal layout */
-        -webkit-line-clamp: 3; /* Allow more lines for text in horizontal layout */
-    }
-    .filters {
-        gap: 7px;
-        padding: 7px 3px;
-    }
-}
-
-
+/* Animación título principal */
 @keyframes fadeInDown {
-    0% {
+    from {
         opacity: 0;
-        transform: translateY(-30px);
+        transform: translateY(-20px);
     }
-    100% {
+    to {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* ==== RESPONSIVE ==== */
+/* Laptops y tablets grandes */
+@media (max-width: 1100px) {
+    main { max-width: 97vw; }
+    .content-grid { grid-template-columns: repeat(3, 1fr); }
+    .content-item img { height: 240px; }
+}
+/* Tablets medianos y móviles grandes */
+@media (max-width: 700px) {
+    .content-grid { grid-template-columns: repeat(2, 1fr); }
+    .content-item img { height: 170px; }
+    .content-item h3 { font-size: 0.87em; }
+}
+/* Teléfonos pequeños */
+@media (max-width: 450px) {
+    main { max-width: 99vw; padding: 0 2vw 18px 2vw; }
+    .content-grid { grid-template-columns: 1fr; }
+    .content-item img { height: 135px; }
+    .filters { gap: 7px; padding: 7px 3px; }
 }
