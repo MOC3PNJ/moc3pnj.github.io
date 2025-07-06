@@ -20,7 +20,8 @@ let itemsPerPage = 20; // Valor por defecto
 // Determina cuántos elementos mostrar por página según el ancho de la pantalla
 const setItemsPerPage = () => {
     // El punto de quiebre 768px coincide con el CSS para vistas de teléfono/tableta
-    itemsPerPage = window.innerWidth <= 768 ? 21 : 20;
+    itemsPerPage = window.innerWidth <= 768 ?
+        21 : 20;
 };
 
 // Función principal para obtener y mostrar datos iniciales
@@ -84,13 +85,14 @@ function displayPaginatedContent() {
         
         const imageUrl = item.portada && item.portada.startsWith('http') ? item.portada : 'https://i.ibb.co/MkfkNDtT/Sin-t-tulo-3.png';
 
-        // --- Portada envuelta por un div por si quieres controlar estilos desde CSS ---
+        // --- CAMBIO APLICADO AQUÍ: Envuelve la imagen en un div con clase 'image-container' ---
         contentItem.innerHTML = `
             <div class="image-container">
                 <img src="${imageUrl}" alt="Portada de ${item.nombre}">
             </div>
             <h3>${item.nombre}</h3>
         `;
+        // --- FIN DEL CAMBIO ---
         
         contentItem.addEventListener('click', () => {
             if (item.link) {
