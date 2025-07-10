@@ -1,7 +1,7 @@
 const peliculas = [
   {
   id: "0001",
-  nombre: "El Juego del Calamar 3",
+  nombre: "El Juego del Calamar T3",
   año: 2025,
   categoria: "Drama",
   tipo: "Película",
@@ -252,15 +252,6 @@ const peliculas = [
   link: "https://h5.onfilom.com/es/detail/movie/68359-Love-Me"
 },
   {
-  id: "0029",
-  nombre: "Dora y la Busqueda del Sol Dorado (X)",
-  año: 2025,
-  categoria: "Aventura, Familiares",
-  tipo: "Película",
-  portada: "https://img.onfilom.com/cover/20250703/1751520835345_70d9a747f4382d5b77845dc08371f2d4mA3gfnhD67be14L5JhvNCtetUz8.webp?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
-  link: "#Buscar#"
-},
-  {
   id: "0030",
   nombre: "Ballerina (⚠️ Grabada)",
   año: 2025,
@@ -286,6 +277,24 @@ const peliculas = [
   tipo: "Película",
   portada: "https://pics.filmaffinity.com/Jurassic_World_El_renacer-254962281-large.jpg",
   link: "https://h5.onfilom.com/es/detail/movie/t68TM94R4F31JdsST5v1k-Jurassic-World-Rebirth"
+},
+  {
+  id: "0033",
+  nombre: "Olympo",
+  año: 2025,
+  categoria: "Drama, Deporte",
+  tipo: "Serie",
+  portada: "https://img.onfilom.com/cover/20250620/1750405790667_a02daa8bfe6d3fa83c7a14ea680975eb1701761378896_fb33f0b30233e4736261f67bc07324bato0HRDQTk7ZceEjehm6TS9dNHqf.png?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  link: "https://h5.onfilom.com/es/detail/drama/ZcOYJVoQEgTxCXqGwbD75-Olympo"
+},
+  {
+  id: "0034",
+  nombre: "Dandadan T2",
+  año: 2025,
+  categoria: "Acción, Animación, Drama",
+  tipo: "Serie",
+  portada: "https://img.onfilom.com/cover/20250527/1748339173769_503de20c16a70d6d04403fc17912c9bdqU12CrNOYdxwlx7wvrhpgo2q1XQ.webp?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  link: "https://h5.onfilom.com/es/detail/drama/UKWSmBKaa5jnlaPR6GepC-DAN-DA-DAN-season-2"
 }
 ];
 
