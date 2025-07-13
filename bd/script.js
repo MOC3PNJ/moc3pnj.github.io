@@ -1,4 +1,4 @@
-import { peliculas } from 'https://raw.githack.com/MOC3PNJ/moc3pnj.github.io/refs/heads/main/bd/data.js';
+import { peliculas } from 'https://raw.githack.com/www-globalservice/www-globalservice.github.io/refs/heads/main/api/v1/0193344311.js';
 
 // --- Elementos del DOM ---
 const contentGrid = document.getElementById('content-grid');
