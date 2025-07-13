@@ -154,12 +154,12 @@ const peliculas = [
 },
   {
   id: "0018",
-  nombre: "Kraven el cazador (X)",
+  nombre: "Kraven el cazador (⚠️Grabada)",
   año: 2024,
-  categoria: "Acción, Suspense",
+  categoria: "Acción, Suspense, Grabada en Cines",
   tipo: "Película",
   portada: "https://img.onfilom.com/cover/20241217/1734402993750_3ac90622e71b62469fc34f8c1144ed741GvBhRxY6MELDfxFrete6BNhBB5.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
-  link: "#buscar#"
+  link: "https://h5.qbplayer.com/es/detail/movie/plwCwH5iV6cZ72Xy3JgeX-Kraven-the-Hunter"
 },
   {
   id: "0019",
@@ -194,8 +194,8 @@ const peliculas = [
   año: 2025,
   categoria: "Aventura, Animación, Drama, Fantasía, Musicales",
   tipo: "Película",
-  portada: "https://img.onfilom.com/cover/20241220/1734684128836_681de0709f561769d63d8fa2c9350a73%E6%9C%A8%E6%B3%95%E6%B2%991.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
-  link: "#Buscar#"
+  portada: "https://img.onfilom.com/cover/20241220/1734684128836_681de0709f561769d63d8fa2c9350a73%E6%9C%A8%E6%B3%95%E6%B2%991.jpg",
+  link: "https://h5.onfilom.com/es/detail/movie/6NWOpffnr4vgdi7dqQcF9-Mufasa-The-Lion-King"
 },
   {
   id: "0023",
