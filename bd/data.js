@@ -5,7 +5,7 @@ const peliculas = [
   año: 2025,
   categoria: "Drama",
   tipo: "Película",
-  portada: "https://img.onfilom.com/cover/20250626/1750904539638_ab8aa265f1b4639cca11f9bb996fcb66%E4%B8%8B%E8%BD%BD.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  portada: "https://img.onfilom.com/cover/20250626/1750904539638_ab8aa265f1b4639cca11f9bb996fcb66%E4%B8%8B%E8%BD%BD.jpg",
   link: "https://h5.onfilom.com/es/detail/drama/oDnwlGWTFq8CW18zjyd8C-Squid-Game-Season-3/1"
 },
   {
@@ -14,7 +14,7 @@ const peliculas = [
   año: 2025,
   categoria: "Horror",
   tipo: "Película",
-  portada: "https://img.onfilom.com/cover/20250410/1744273562545_37289de07017d297262e891c659f80f2%E6%AD%BB%E7%A5%9E1.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  portada: "https://img.onfilom.com/cover/20250410/1744273562545_37289de07017d297262e891c659f80f2%E6%AD%BB%E7%A5%9E1.jpg",
   link: "https://h5.onfilom.com/es/detail/movie/UsNJzqxwgH0onKw3tlHJT-Final-Destination-Bloodlines"
 },
   {
@@ -23,7 +23,7 @@ const peliculas = [
   año: 2025,
   categoria: "Ciencia Ficción, Terror, Grabada en cines",
   tipo: "Película",
-  portada: "https://img.onfilom.com/cover/20250527/1748338320708_47d6086832f1621bfcf91092b6d2ae6fhVKHzr4GwSw0FepqhqQ0DDiYHNY%20(1).webp?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  portada: "https://img.onfilom.com/cover/20250527/1748338320708_47d6086832f1621bfcf91092b6d2ae6fhVKHzr4GwSw0FepqhqQ0DDiYHNY%20(1).webp",
   link: "https://h5.onfilom.com/es/detail/movie/5UKunplRip3dYHlxZt5lv-28-Years-Later"
 },
   {
@@ -32,7 +32,7 @@ const peliculas = [
   año: 2025,
   categoria: "Comedia",
   tipo: "Película",
-  portada: "https://img.onfilom.com/cover/20250407/1743992284274_bff8d2802591f1667c9277f62b13c9deyFHHfHcUgGAxziP1C3lLt0q2T4s.webp?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  portada: "https://img.onfilom.com/cover/20250407/1743992284274_bff8d2802591f1667c9277f62b13c9deyFHHfHcUgGAxziP1C3lLt0q2T4s.webp",
   link: "https://h5.onfilom.com/es/detail/movie/PI97tF4VKHGs7NkDVVnLR-A-Minecraft-Movie"
 },
   {
@@ -59,7 +59,7 @@ const peliculas = [
   año: 2019,
   categoria: "Crimen, Drama, Horror, Suspense, Thriller",
   tipo: "Serie",
-  portada: "https://img.onfilom.com/cover/20211228/1640679778103_8c54296618ded2e1dbe0c2cf7cced582xIpqBtVpu9bUq05dT3VTRYPjBP7.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  portada: "https://img.onfilom.com/cover/20211228/1640679778103_8c54296618ded2e1dbe0c2cf7cced582xIpqBtVpu9bUq05dT3VTRYPjBP7.jpg",
   link: "https://h5.onfilom.com/es/detail/drama/OUO4gFFNjHoK3eaY07TPW-Pretty-Little-Liars-The-Perfectionists"
 },
   {
@@ -68,7 +68,7 @@ const peliculas = [
   año: 2019,
   categoria: "Drama, Fantasía, Música, Romance",
   tipo: "Serie",
-  portada: "https://img.onfilom.com/cover/20230630/1688125486942_af70e2a9afc3a07b90e596fe0250abda%E5%BD%93%E6%81%B6%E9%AD%94%E5%91%BC%E5%96%8A%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E6%97%B6.png?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  portada: "https://img.onfilom.com/cover/20230630/1688125486942_af70e2a9afc3a07b90e596fe0250abda%E5%BD%93%E6%81%B6%E9%AD%94%E5%91%BC%E5%96%8A%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97%E6%97%B6.png",
   link: "https://h5.qbplayer.com/es/detail/drama/LxXhNBodjGwtEh4VnU9lp-When-the-Devil-Calls-Your-Name"
 },
   {
@@ -77,7 +77,7 @@ const peliculas = [
   año: 2020,
   categoria: "Drama, Romance",
   tipo: "Película",
-  portada: "https://img.onfilom.com/cover/20211228/1640673838249_16750b11fb3409ce792cccdefe50ae19AedH7kQttLVgqd260IXevTK0Mek.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  portada: "https://img.onfilom.com/cover/20211228/1640673838249_16750b11fb3409ce792cccdefe50ae19AedH7kQttLVgqd260IXevTK0Mek.jpg",
   link: "https://h5.onfilom.com/es/detail/movie/NLsdnmI5gjFqPgzGwkDJU-Words-on-Bathroom-Walls"
 },
   {
@@ -86,7 +86,7 @@ const peliculas = [
   año: 2021,
   categoria: "Comedia, Romance",
   tipo: "Película",
-  portada: "https://img.onfilom.com/cover/20211228/1640673163627_d6359923c0e00266357e9342248058baOyKfblQX6SR2rL6R26g5eYCLHq.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  portada: "https://img.onfilom.com/cover/20211228/1640673163627_d6359923c0e00266357e9342248058baOyKfblQX6SR2rL6R26g5eYCLHq.jpg",
   link: "https://h5.onfilom.com/es/detail/movie/AqHmGDNxMbMQxpJ2Dsdb6-Long-Weekend"
 },
   {
@@ -95,7 +95,7 @@ const peliculas = [
   año: 1974,
   categoria: "Horror, Thriller",
   tipo: "Película",
-  portada: "https://img.onfilom.com/cover/20250612/1749720573941_2b830758971bad3ce87571cffce8f6ff6.webp?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  portada: "https://img.onfilom.com/cover/20250612/1749720573941_2b830758971bad3ce87571cffce8f6ff6.webp",
   link: "https://h5.onfilom.com/es/detail/movie/vNDNHkmPOi1YEXTBub66b-The-Texas-Chainsaw-Massacre-The-Beginning"
 },
   {
@@ -104,7 +104,7 @@ const peliculas = [
   año: 1986,
   categoria: "Horror",
   tipo: "Película",
-  portada: "https://img.onfilom.com/cover/20250612/1749719742905_3aa1a501000c4d8e0975e17fcf5666d81.webp?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  portada: "https://img.onfilom.com/cover/20250612/1749719742905_3aa1a501000c4d8e0975e17fcf5666d81.webp",
   link: "https://h5.onfilom.com/es/detail/movie/hWR8gRJTXAQOyXQrp4Pov-The-Texas-Chainsaw-Massacre-2"
 },
   {
@@ -113,7 +113,7 @@ const peliculas = [
   año: 1990,
   categoria: "Horror, Thriller",
   tipo: "Película",
-  portada: "https://img.onfilom.com/cover/20250612/1749720045464_4d184f8f871cd7f1a9cd97c89dceb24d3.webp?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  portada: "https://img.onfilom.com/cover/20250612/1749720045464_4d184f8f871cd7f1a9cd97c89dceb24d3.webp",
   link: "https://h5.onfilom.com/es/detail/movie/30wfPlm0wDyAhOcNm86BD-Leatherface-Texas-Chainsaw-Massacre-3"
 },
   {
@@ -122,7 +122,7 @@ const peliculas = [
   año: 1994,
   categoria: "Comedia, Horror, Thriller",
   tipo: "Película",
-  portada: "https://img.onfilom.com/cover/20250612/1749720128937_6110c2f9e2316f5bf20071b6d297cf9c4.webp?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  portada: "https://img.onfilom.com/cover/20250612/1749720128937_6110c2f9e2316f5bf20071b6d297cf9c4.webp",
   link: "https://h5.onfilom.com/es/detail/movie/5CS3TsKlVKkIvtaEM7uaz-Texas-Chainsaw-Massacre-4-The-Next-Generation"
 },
   {
@@ -131,7 +131,7 @@ const peliculas = [
   año: 2003,
   categoria: "Crimen, Horror",
   tipo: "Película",
-  portada: "https://img.onfilom.com/cover/20250612/1749720480273_defc6ff065f2535f0f81c9a9671b60145.webp?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  portada: "https://img.onfilom.com/cover/20250612/1749720480273_defc6ff065f2535f0f81c9a9671b60145.webp",
   link: "https://h5.onfilom.com/es/detail/movie/XfVMCeunk3oyGhAnX9eWe-The-Texas-Chainsaw-Massacre"
 },
   {
@@ -140,7 +140,7 @@ const peliculas = [
   año: 2013,
   categoria: "Horror, Thriller",
   tipo: "Serie",
-  portada: "https://img.onfilom.com/cover/20250612/1749720730871_f4c532ea730b8e2c7bbc6272012b8a887.webp?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  portada: "https://img.onfilom.com/cover/20250612/1749720730871_f4c532ea730b8e2c7bbc6272012b8a887.webp",
   link: "https://h5.onfilom.com/es/detail/movie/AgIwttURYwnx1XVnqOyA8-Texas-Chainsaw-3D"
 },
   {
@@ -149,7 +149,7 @@ const peliculas = [
   año: 2025,
   categoria: "Drama, Romance",
   tipo: "Película",
-  portada: "https://img.onfilom.com/cover/20241119/1731993395066_ac56c8f6c65e9bf3d8c0a94685824bba6kYDG8Imfhph2duBYZeYksHgx7L.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  portada: "https://img.onfilom.com/cover/20241119/1731993395066_ac56c8f6c65e9bf3d8c0a94685824bba6kYDG8Imfhph2duBYZeYksHgx7L.jpg",
   link: "https://h5.onfilom.com/es/detail/movie/70350-Your-Fault"
 },
   {
@@ -295,6 +295,60 @@ const peliculas = [
   tipo: "Serie",
   portada: "https://img.onfilom.com/cover/20250527/1748339173769_503de20c16a70d6d04403fc17912c9bdqU12CrNOYdxwlx7wvrhpgo2q1XQ.webp?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
   link: "https://h5.onfilom.com/es/detail/drama/UKWSmBKaa5jnlaPR6GepC-DAN-DA-DAN-season-2"
+},
+  {
+  id: "0035",
+  nombre: "Cómo entrenar a tu dragón 2",
+  año: 2014,
+  categoria: "Aventura, Animación, Fantasía",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20211216/1639645649175_79ed6b766b1ba2ac55a597ebffbb4f4c1yC7mlAGPBCrMlnXpgqvWA8ObII.jpg",
+  link: "https://h5.onfilom.com/es/detail/movie/65337-How-to-Train-Your-Dragon-2"
+},
+  {
+  id: "0036",
+  nombre: "Cómo entrenar a tu dragón",
+  año: 2010,
+  categoria: "Aventura, Animación, Fantasía",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20250107/1736217561430_b38a170eeaf861918fc4d17ef869229exoXFmWtnavKcGxUHy62Q97cbqS1.jpg",
+  link: "https://h5.onfilom.com/es/detail/movie/i2chBKJMZyRDnQQAICa3L-How-to-Train-Your-Dragon"
+},
+  {
+  id: "0037",
+  nombre: "Cómo entrenar a tu dragón 3",
+  año: 2019,
+  categoria: "Acción, Aventura, Animación, Comedia, Familiares, Fantasía",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20211216/1639645938524_eb0526191865191feaec54836f32995dxvx4Yhf0DVH8G4LzNISpMfFBDy2.jpg",
+  link: "https://h5.onfilom.com/es/detail/movie/anI03DTfTPE36YIhZKqdJ-How-to-Train-Your-Dragon-The-Hidden-World"
+},
+  {
+  id: "0038",
+  nombre: "Merlina",
+  año: 2022,
+  categoria: "Comedia, Crimen, Familiares, Fantasía, Suspense",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20250212/1739349328257_44df55a4829d8999b033ad74b8ee7964wFvfqUNUSxjT3zDOKhryKiV9YEt.jpg",
+  link: "https://h5.onfilom.com/es/detail/drama/j5LWeaJpNFW159I98DsqD-Wednesday"
+},
+  {
+  id: "0039",
+  nombre: "El juego del calamar T2",
+  año: 2024,
+  categoria: "Acción, Aventura, Drama, Suspense, Thriller",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20241202/1733128636190_d893f90d4cc039d7f787b96f8d8b0294EN-US_SG-S2_Primary_Main_RoundandRound-Safe_Vertical_27x40_RGB_PRE.jpg",
+  link: "https://h5.onfilom.com/es/detail/drama/VXB0QqzLguMs9996bpRac-Squid-Game-Season-2"
+},
+  {
+  id: "0040",
+  nombre: "El juego del calamar T1",
+  año: 2021,
+  categoria: "Acción, Drama, Suspense, Thriller",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20221111/1668133991321_82cc8d204c5ae86269d2d9bb6e5e2e1b%E9%B1%BF%E9%B1%BC%20%E7%AB%96.jpg",
+  link: "https://h5.onfilom.com/es/detail/drama/79n4BcdNCorpQEbNHcKwN-Squid-Game-Season-1"
 }
 ];
 
