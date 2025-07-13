@@ -145,7 +145,7 @@ const peliculas = [
 },
   {
   id: "0017",
-  nombre: "Culpa tuya",
+  nombre: "Culpa tuya putas",
   año: 2025,
   categoria: "Drama, Romance",
   tipo: "Película",
