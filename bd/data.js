@@ -156,7 +156,7 @@ const peliculas = [
   id: "0018",
   nombre: "Kraven el cazador (⚠️Grabada)",
   año: 2024,
-  categoria: "Acción, Suspense, Grabada en Cines",
+  categoria: "Acción, Suspense, Grabada en cines",
   tipo: "Película",
   portada: "https://img.onfilom.com/cover/20241217/1734402993750_3ac90622e71b62469fc34f8c1144ed741GvBhRxY6MELDfxFrete6BNhBB5.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
   link: "https://h5.qbplayer.com/es/detail/movie/plwCwH5iV6cZ72Xy3JgeX-Kraven-the-Hunter"
@@ -190,7 +190,7 @@ const peliculas = [
 },
   {
   id: "0022",
-  nombre: "Mufasa: El rey Leon (X)",
+  nombre: "Mufasa: El rey Leon",
   año: 2025,
   categoria: "Aventura, Animación, Drama, Fantasía, Musicales",
   tipo: "Película",
