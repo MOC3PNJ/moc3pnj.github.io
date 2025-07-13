@@ -349,6 +349,96 @@ const peliculas = [
   tipo: "Película",
   portada: "https://img.onfilom.com/cover/20221111/1668133991321_82cc8d204c5ae86269d2d9bb6e5e2e1b%E9%B1%BF%E9%B1%BC%20%E7%AB%96.jpg",
   link: "https://h5.onfilom.com/es/detail/drama/79n4BcdNCorpQEbNHcKwN-Squid-Game-Season-1"
+},
+  {
+  id: "0041",
+  nombre: "Jurassic World: Dominion",
+  año: 2022,
+  categoria: "Acción, Aventura, Ciencia, ficción, Thriller",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20220707/1657179404636_b8f6afb8816c3674f21f85bf574b9b06kAVRgw7GgK1CfYEJq8ME6EvRIgU.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  link: "https://h5.onfilom.com/es/detail/movie/xJ1Z6jonxdtoi0zgKF4t2-Jurassic-World-Dominion"
+},
+  {
+  id: "0042",
+  nombre: "Jurassic World: El reino caído",
+  año: 2018,
+  categoria: "Acción, Aventura, Ciencia ficción",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20250222/1740190661251_87687f6a2cf4333b25bbfb4e1770491cyHa2I7qxZvZUASLHrIR8vQLmZ4B.webp?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  link: "https://h5.onfilom.com/es/detail/movie/c7HJ1bnzZqrVp31ifVZ1p-Jurassic-World-Fallen-Kingdom"
+},
+  {
+  id: "0043",
+  nombre: "Jurassic World",
+  año: 2015,
+  categoria: "Acción, Aventura, Ciencia ficción",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20250225/1740465111803_489a24303bca6e93d4bb5729aa4da836lWhnr4ehIiRMudbF6YCEViatbaN.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  link: "https://h5.onfilom.com/es/detail/movie/8tLcWitl70PgubjrTCYi6-Jurassic-World"
+},
+  {
+  id: "0044",
+  nombre: "F1",
+  año: 2025,
+  categoria: "Acción, Drama, Deporte",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20250630/1751275001354_1f4b2c67dab34986033611e3dcc86bfd1750830485823_5080f4b9d11653573bb7274c25c8b3a1vqBmyAj0Xm9LnS1xe1MSlMAJyHq.png?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  link: "https://h5.onfilom.com/es/detail/movie/97049-F1-The-Movie"
+},
+  {
+  id: "0045",
+  nombre: "M3GAN 2.0 (Grabada)",
+  año: 2025,
+  categoria: "Horror, Ciencia ficción, Thriller, Grabada en cines",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20250702/1751437772863_98fbf82be9664c32bf598d755772f1c4w8llBJfNIJoQY9UV8p1eOBTyEjP.webp?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  link: "https://h5.onfilom.com/es/detail/movie/97288-M3GAN-20"
+},
+  {
+  id: "0046",
+  nombre: "M3GAN",
+  año: 2022,
+  categoria: "Horror, Ciencia ficción, Thriller",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20230113/1673578110499_ca8923a905c34dfc6a65de0d5f3f2af9%E6%A2%85%E6%A0%B9%20%E7%AB%96.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  link: "https://h5.onfilom.com/es/detail/movie/kr2JNn8tlqsKtACrjnLgj-M3GAN"
+},
+  {
+  id: "0047",
+  nombre: "La casa del papel T4",
+  año: 2020,
+  categoria: "Acción, Crimen, Suspense, Thriller",
+  tipo: "Serie",
+  portada: "https://img.onfilom.com/cover/20210914/1631601461145_e46ffd2a2a27c49614e5ab9714fad3dazd8mxIfGY8SlupYd9XvK3qJL91B.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  link: "https://h5.onfilom.com/es/detail/drama/A5OR7OLZnwq72UtefK8Ri-Money-Heist-Season-4/1"
+},
+  {
+  id: "0048",
+  nombre: "La casa del papel T3",
+  año: 2019,
+  categoria: "Acción, Crimen, Suspense, Thriller",
+  tipo: "Serie",
+  portada: "https://img.onfilom.com/cover/20211105/1636116489836_6954343edc9237911cdccdcf826500a9reEMJA1uzscCbkpeRJeTT2bjqUp.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  link: "https://h5.onfilom.com/es/detail/drama/l75BwWt0P9guKX5L2D8gl-Money-Heist-Season-3"
+},
+  {
+  id: "0049",
+  nombre: "La casa del papel T2",
+  año: 2019,
+  categoria: "Acción, Crimen, Suspense, Thriller",
+  tipo: "Serie",
+  portada: "https://img.onfilom.com/cover/20210831/o_1630396263895.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  link: "https://h5.onfilom.com/es/detail/drama/1aZPakk9er8LchU1S7e0S-Money-Heist-Season-2"
+},
+  {
+  id: "0050",
+  nombre: "La casa del papel T1",
+  año: 2018,
+  categoria: "Acción, Crimen, Suspense, Thriller",
+  tipo: "Serie",
+  portada: "https://img.onfilom.com/cover/20210831/o_1630396292934.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  link: "https://h5.onfilom.com/es/detail/drama/Sfqu3ZBmffVwOm9Dv6YEe-Money-Heist-Season-1"
 }
 ];
 
