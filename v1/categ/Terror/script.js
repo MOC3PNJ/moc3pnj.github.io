@@ -16,57 +16,62 @@ let currentPage = 1;
 let itemsPerPage = 20;
 
 // --- Funciones ---
+
 const setItemsPerPage = () => {
-    itemsPerPage = window.innerWidth <= 768 ? [span_0](start_span)21 : 20;[span_0](end_span)
+    itemsPerPage = window.innerWidth <= 768 ? 21 : 20;
 };
 
 async function initializeApp() {
     try {
         allContent = peliculas.sort((a, b) => b.año - a.año);
-        [span_1](start_span)currentFilteredItems = [...allContent];[span_1](end_span)
+        currentFilteredItems = [...allContent];
         setItemsPerPage();
         populateFilters();
         displayPaginatedContent();
     } catch (error) {
         console.error('Error al cargar la base de datos:', error);
-        contentGrid.innerHTML = '<p>Error al cargar el contenido. [span_2](start_span)Por favor, inténtalo de nuevo más tarde.</p>';[span_2](end_span)
+        contentGrid.innerHTML = '<p>Error al cargar el contenido. Por favor, inténtalo de nuevo más tarde.</p>';
     }
 }
 
 // Rellena los menús desplegables de los filtros
 function populateFilters() {
-    // --- MODIFICACIÓN CLAVE ---
-    // Se elimina el código que recorría todas las categorías.
-    // En su lugar, se insertan directamente solo las opciones deseadas.
+    // =================== INICIO DE LA CORRECCIÓN ===================
+    // Se elimina por completo el código que leía todas las categorías.
+    // En su lugar, establecemos directamente el HTML del selector
+    // con únicamente las opciones que deseas.
+
     categoryFilter.innerHTML = `
         <option value="all">Todas</option>
         <option value="Terror">Terror</option>
         <option value="Horror">Horror</option>
     `;
-    // --- FIN DE LA MODIFICACIÓN ---
 
-    [span_3](start_span)const years = new Set(allContent.map(item => item.año));[span_3](end_span)
+    // ==================== FIN DE LA CORRECCIÓN =====================
+
+    // El resto de la función para los años permanece igual.
+    const years = new Set(allContent.map(item => item.año));
     yearFilter.innerHTML = '<option value="all">Todos</option>';
     years.forEach(year => {
         const option = document.createElement('option');
         option.value = year;
         option.textContent = year;
-        [span_4](start_span)yearFilter.appendChild(option);[span_4](end_span)
+        yearFilter.appendChild(option);
     });
 }
 
 function displayPaginatedContent() {
     contentGrid.innerHTML = '';
     if (currentFilteredItems.length === 0) {
-        [span_5](start_span)contentGrid.innerHTML = '<p>No se encontraron resultados para los filtros seleccionados.</p>';[span_5](end_span)
-        [span_6](start_span)paginationControls.style.display = 'none';[span_6](end_span)
+        contentGrid.innerHTML = '<p>No se encontraron resultados para los filtros seleccionados.</p>';
+        paginationControls.style.display = 'none';
         return;
     }
 
-    [span_7](start_span)paginationControls.style.display = 'flex';[span_7](end_span)
+    paginationControls.style.display = 'flex';
 
     const startIndex = (currentPage - 1) * itemsPerPage;
-    [span_8](start_span)const endIndex = startIndex + itemsPerPage;[span_8](end_span)
+    const endIndex = startIndex + itemsPerPage;
     const paginatedItems = currentFilteredItems.slice(startIndex, endIndex);
 
     paginatedItems.forEach(item => {
@@ -84,7 +89,7 @@ function displayPaginatedContent() {
         
         contentItem.addEventListener('click', () => {
             if (item.link) {
-                [span_9](start_span)window.open(item.link, '_blank');[span_9](end_span)
+                window.open(item.link, '_blank');
             } else {
                 alert('Lo siento, no hay un enlace disponible para este contenido.');
             }
@@ -93,34 +98,35 @@ function displayPaginatedContent() {
         contentGrid.appendChild(contentItem);
     });
 
-    [span_10](start_span)updatePaginationButtons();[span_10](end_span)
+    updatePaginationButtons();
 }
 
 function updatePaginationButtons() {
     const totalPages = Math.ceil(currentFilteredItems.length / itemsPerPage);
-    [span_11](start_span)prevButton.disabled = currentPage === 1;[span_11](end_span)
-    [span_12](start_span)nextButton.disabled = currentPage === totalPages || totalPages === 0;[span_12](end_span)
+    prevButton.disabled = currentPage === 1;
+    nextButton.disabled = currentPage === totalPages || totalPages === 0;
     
     if (totalPages <= 1) {
-        [span_13](start_span)paginationControls.style.display = 'none';[span_13](end_span)
+        paginationControls.style.display = 'none';
     } else {
-        [span_14](start_span)paginationControls.style.display = 'flex';[span_14](end_span)
+        paginationControls.style.display = 'flex';
     }
 }
 
 function filterContent() {
     const selectedCategory = categoryFilter.value;
-    [span_15](start_span)const selectedYear = yearFilter.value;[span_15](end_span)
+    const selectedYear = yearFilter.value;
     const selectedType = typeFilter.value;
 
     currentFilteredItems = allContent.filter(item => {
+        // Esta lógica de filtro seguirá funcionando correctamente
         const matchesCategory = selectedCategory === 'all' || item.categoria.split(',').map(cat => cat.trim()).includes(selectedCategory);
         const matchesYear = selectedYear === 'all' || item.año.toString() === selectedYear;
         const matchesType = selectedType === 'all' || item.tipo === selectedType;
         return matchesCategory && matchesYear && matchesType;
     });
 
-    [span_16](start_span)currentPage = 1;[span_16](end_span)
+    currentPage = 1;
     displayPaginatedContent();
 }
 
@@ -132,7 +138,7 @@ typeFilter.addEventListener('change', filterContent);
 prevButton.addEventListener('click', () => {
     if (currentPage > 1) {
         currentPage--;
-        [span_17](start_span)displayPaginatedContent();[span_17](end_span)
+        displayPaginatedContent();
     }
 });
 
@@ -140,13 +146,13 @@ nextButton.addEventListener('click', () => {
     const totalPages = Math.ceil(currentFilteredItems.length / itemsPerPage);
     if (currentPage < totalPages) {
         currentPage++;
-        [span_18](start_span)displayPaginatedContent();[span_18](end_span)
+        displayPaginatedContent();
     }
 });
 
 window.addEventListener('resize', () => {
     setItemsPerPage();
-    [span_19](start_span)displayPaginatedContent();[span_19](end_span)
+    displayPaginatedContent();
 });
 
 // --- Inicialización ---
