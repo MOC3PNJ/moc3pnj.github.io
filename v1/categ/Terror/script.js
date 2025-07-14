@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // La URL de tu base de datos
+    // La URL de tu base de datos (se cargará como JSON)
     const DATA_URL = 'https://raw.githack.com/MOC3PNJ/moc3pnj.github.io/refs/heads/main/bd/data.js';
     
     // Elementos del DOM
@@ -8,29 +8,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextButton = document.querySelector('.carousel-button.next');
     
     // Configuración del carrusel
-    const moviesPerPage = 3; // Mostrar 3 películas a la vez
+    const moviesPerPage = 3; // Siempre mostrar 3 películas a la vez
     let currentIndex = 0; // Índice de la primera película visible
     let filteredMovies = []; // Aquí se guardarán las películas de terror/horror
 
     // --- Función para obtener y filtrar las películas ---
     async function fetchAndFilterMovies() {
         try {
-            // Se asume que el archivo data.js exporta un objeto/array directamente, no un 'import { peliculas }'
-            // Por lo tanto, lo tratamos como un JSON puro.
+            // Usamos fetch() para cargar el JSON desde la URL.
+            // Esta es la forma correcta de obtener el contenido de data.js en un navegador,
+            // ya que no es un módulo ES con 'export', sino un archivo JSON puro.
             const response = await fetch(DATA_URL);
             if (!response.ok) {
+                // Si la respuesta HTTP no es exitosa (ej. 404, 500), lanzamos un error
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-            const data = await response.json(); // Parsea la respuesta como JSON
+            const data = await response.json(); // Parsea la respuesta como un objeto/array JSON
             
-            // Filtra las películas para incluir solo las de "Terror" o "Horror"
-            // Se verifica que 'category' exista y sea un array, luego se busca dentro del array.
-            filteredMovies = data.filter(movie => 
-                movie.category && Array.isArray(movie.category) && 
-                (movie.category.includes('Terror') || movie.category.includes('Horror'))
-            );
+            // FILTRADO ESPECÍFICO PARA 'Terror' Y 'Horror'
+            filteredMovies = data.filter(movie => {
+                // Asegúrate de que movie.category existe y sea un array
+                if (movie.category && Array.isArray(movie.category)) {
+                    // Verifica si el array 'category' incluye 'Terror' O 'Horror'
+                    return movie.category.includes('Terror') || movie.category.includes('Horror');
+                }
+                return false; // Si no tiene category o no es un array, no la incluimos
+            });
 
-            // Si no hay películas filtradas, muestra un mensaje
+            // Si no hay películas filtradas, muestra un mensaje y deshabilita botones
             if (filteredMovies.length === 0) {
                 carousel.innerHTML = '<p style="text-align: center; width: 100%;">No se encontraron películas de Terror o Horror.</p>';
                 prevButton.disabled = true;
@@ -39,11 +44,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             displayMovies(); // Muestra las películas en el carrusel
+            // El primer updateCarousel asegura que la posición inicial sea correcta
+            updateCarousel(); 
             updateCarouselButtons(); // Actualiza el estado de los botones
             
         } catch (error) {
             console.error('Error al cargar o procesar los datos:', error);
-            carousel.innerHTML = '<p style="text-align: center; width: 100%;">Error al cargar las películas. Por favor, inténtalo de nuevo más tarde.</p>';
+            carousel.innerHTML = '<p style="text-align: center; width: 100%;">Error al cargar las películas. Por favor, asegúrate de que la URL de la base de datos es correcta y el archivo está disponible.</p>';
             prevButton.disabled = true;
             nextButton.disabled = true;
         }
@@ -57,13 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const movieCard = document.createElement('div');
             movieCard.classList.add('movie-card');
             
-            // Asegúrate de que las propiedades coincidan con tu 'data.js'
-            // 'image', 'title', 'director', 'year', 'category', 'description'
-            // Para el enlace, la base de datos de ejemplo no tiene 'link', pero si tuvieras podrías añadirlo:
-            // const movieLink = movie.link || '#'; // Usar un enlace si existe, si no, un '#'
-
+            // Usamos un manejador de errores para la imagen si la URL es inválida
+            const imageUrl = movie.image || 'https://i.ibb.co/MkfkNDt/Sin-t-tulo-3.png'; // Fallback por si 'image' no existe
+            
             movieCard.innerHTML = `
-                <img src="${movie.image}" alt="${movie.title}" onerror="this.onerror=null;this.src='https://i.ibb.co/MkfkNDt/Sin-t-tulo-3.png';">
+                <img src="${imageUrl}" alt="${movie.title}" onerror="this.onerror=null;this.src='https://i.ibb.co/MkfkNDt/Sin-t-tulo-3.png';">
                 <div class="movie-info">
                     <h2>${movie.title}</h2>
                     <p><strong>Director:</strong> ${movie.director}</p>
@@ -74,16 +79,12 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             carousel.appendChild(movieCard);
         });
-
-        // Asegurarse de que el carrusel esté en la posición correcta al cargar
-        // Esto es crucial para que el desplazamiento inicial sea correcto.
-        updateCarousel(); 
     }
 
     // --- Función para actualizar la posición del carrusel ---
     function updateCarousel() {
-        // Obtenemos la altura real de una tarjeta de película y su margen vertical
-        // Esto es más robusto que usar una altura fija en JS.
+        // Obtenemos la altura real de una tarjeta de película y su margen vertical.
+        // Esto es crucial para un desplazamiento preciso, especialmente si los estilos CSS varían.
         const firstMovieCard = carousel.querySelector('.movie-card');
         if (!firstMovieCard) return; // No hay tarjetas, no se puede calcular
 
@@ -94,13 +95,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const totalCardHeightWithMargin = movieCardHeight + marginTop + marginBottom;
         
         carousel.style.transform = `translateY(${-currentIndex * totalCardHeightWithMargin}px)`;
-        updateCarouselButtons();
+        updateCarouselButtons(); // Actualizamos el estado de los botones cada vez que el carrusel se mueve
     }
 
     // --- Función para actualizar el estado de los botones de navegación ---
     function updateCarouselButtons() {
         prevButton.disabled = currentIndex === 0;
-        // El botón 'next' se deshabilita cuando no hay suficientes películas para llenar la siguiente "página" de 3
+        // El botón 'next' se deshabilita cuando no hay suficientes películas restantes
+        // para llenar el número completo de 'moviesPerPage' en la siguiente vista.
         nextButton.disabled = currentIndex >= filteredMovies.length - moviesPerPage;
     }
 
@@ -113,15 +115,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     nextButton.addEventListener('click', () => {
+        // Nos aseguramos de no ir más allá del final de las películas disponibles
         if (currentIndex < filteredMovies.length - moviesPerPage) {
             currentIndex++;
             updateCarousel();
         }
     });
 
-    // --- Ajuste responsivo al cambiar el tamaño de la ventana (re-calcula posición si la altura de la tarjeta cambia) ---
+    // --- Ajuste responsivo ---
+    // Si la ventana cambia de tamaño, la altura de las tarjetas podría cambiar,
+    // así que recalculamos la posición del carrusel para que se vea correctamente.
     window.addEventListener('resize', updateCarousel);
 
-    // --- Inicialización de la aplicación ---
+    // --- Inicialización de la aplicación: carga y filtra las películas ---
     fetchAndFilterMovies();
 });
