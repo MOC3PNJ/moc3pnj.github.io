@@ -2,7 +2,6 @@ import { peliculas } from 'https://raw.githack.com/MOC3PNJ/moc3pnj.github.io/ref
 
 // --- Elementos del DOM ---
 const contentGrid = document.getElementById('content-grid');
-const categoryFilter = document.getElementById('category-filter');
 const yearFilter = document.getElementById('year-filter');
 const typeFilter = document.getElementById('type-filter');
 const prevButton = document.getElementById('prev-button');
@@ -16,7 +15,6 @@ let currentPage = 1;
 let itemsPerPage = 20;
 
 // --- Funciones ---
-
 const setItemsPerPage = () => {
     itemsPerPage = window.innerWidth <= 768 ? 21 : 20;
 };
@@ -27,29 +25,15 @@ async function initializeApp() {
         currentFilteredItems = [...allContent];
         setItemsPerPage();
         populateFilters();
-        displayPaginatedContent();
+        filterContent();  // <-- Aplica el filtro desde el inicio
     } catch (error) {
         console.error('Error al cargar la base de datos:', error);
         contentGrid.innerHTML = '<p>Error al cargar el contenido. Por favor, inténtalo de nuevo más tarde.</p>';
     }
 }
 
-// Rellena los menús desplegables de los filtros
 function populateFilters() {
-    // =================== INICIO DE LA CORRECCIÓN ===================
-    // Se elimina por completo el código que leía todas las categorías.
-    // En su lugar, establecemos directamente el HTML del selector
-    // con únicamente las opciones que deseas.
-
-    categoryFilter.innerHTML = `
-        <option value="all">Todas</option>
-        <option value="Terror">Terror</option>
-        <option value="Horror">Horror</option>
-    `;
-
-    // ==================== FIN DE LA CORRECCIÓN =====================
-
-    // El resto de la función para los años permanece igual.
+    // No se necesita categoryFilter, ya que el filtro es forzado
     const years = new Set(allContent.map(item => item.año));
     yearFilter.innerHTML = '<option value="all">Todos</option>';
     years.forEach(year => {
@@ -77,7 +61,7 @@ function displayPaginatedContent() {
     paginatedItems.forEach(item => {
         const contentItem = document.createElement('div');
         contentItem.classList.add('content-item');
-        
+
         const imageUrl = item.portada && item.portada.startsWith('http') ? item.portada : 'https://i.ibb.co/MkfkNDtT/Sin-t-tulo-3.png';
 
         contentItem.innerHTML = `
@@ -86,7 +70,7 @@ function displayPaginatedContent() {
             </div>
             <h3>${item.nombre}</h3>
         `;
-        
+
         contentItem.addEventListener('click', () => {
             if (item.link) {
                 window.open(item.link, '_blank');
@@ -94,7 +78,7 @@ function displayPaginatedContent() {
                 alert('Lo siento, no hay un enlace disponible para este contenido.');
             }
         });
-       
+
         contentGrid.appendChild(contentItem);
     });
 
@@ -105,7 +89,7 @@ function updatePaginationButtons() {
     const totalPages = Math.ceil(currentFilteredItems.length / itemsPerPage);
     prevButton.disabled = currentPage === 1;
     nextButton.disabled = currentPage === totalPages || totalPages === 0;
-    
+
     if (totalPages <= 1) {
         paginationControls.style.display = 'none';
     } else {
@@ -114,13 +98,14 @@ function updatePaginationButtons() {
 }
 
 function filterContent() {
-    const selectedCategory = categoryFilter.value;
     const selectedYear = yearFilter.value;
     const selectedType = typeFilter.value;
 
+    const allowedCategories = ["Terror", "Horror"];
+
     currentFilteredItems = allContent.filter(item => {
-        // Esta lógica de filtro seguirá funcionando correctamente
-        const matchesCategory = selectedCategory === 'all' || item.categoria.split(',').map(cat => cat.trim()).includes(selectedCategory);
+        const categories = item.categoria.split(',').map(cat => cat.trim());
+        const matchesCategory = categories.some(cat => allowedCategories.includes(cat));
         const matchesYear = selectedYear === 'all' || item.año.toString() === selectedYear;
         const matchesType = selectedType === 'all' || item.tipo === selectedType;
         return matchesCategory && matchesYear && matchesType;
@@ -131,7 +116,6 @@ function filterContent() {
 }
 
 // --- Event Listeners ---
-categoryFilter.addEventListener('change', filterContent);
 yearFilter.addEventListener('change', filterContent);
 typeFilter.addEventListener('change', filterContent);
 
