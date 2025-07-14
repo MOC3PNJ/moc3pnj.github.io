@@ -51,7 +51,7 @@ main {
   padding: var(--spacing);
 }
 
-/* === FILTROS === */
+/* === FILTROS (ahora solo un buscador) === */
 .filters {
   display: flex;
   flex-wrap: wrap;
@@ -63,31 +63,20 @@ main {
   box-shadow: 0 3px 6px var(--card-shadow);
 }
 
-.filters label {
-  font-size: 1rem;
-  color: var(--text-color);
-  margin-right: 0.5rem;
-}
-
-.filters select {
-  padding: 0.5rem 1rem;
+.filters input[type="text"] {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.7rem 1.2rem;
   background-color: #2a2a2a;
   color: var(--text-color);
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
   font-size: 1rem;
-  appearance: none;
-  background-image: url('data:image/svg+xml;utf8,<svg fill="%23f0f0f0" height="24" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
-  background-repeat: no-repeat;
-  background-position: right 0.7rem center;
-  background-size: 1.2em;
-  padding-right: 2.5rem;
-  cursor: pointer;
   transition: border-color var(--transition), box-shadow var(--transition);
 }
 
-.filters select:hover,
-.filters select:focus {
+.filters input[type="text"]:focus {
+  outline: none;
   border-color: var(--accent-color);
   box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.3);
 }
