@@ -1,95 +1,85 @@
-import { peliculas } from 'https://raw.githack.com/MOC3PNJ/moc3pnj.github.io/refs/heads/main/bd/data.js';
+document.addEventListener('DOMContentLoaded', () => {
+    const DATA_URL = 'https://raw.githack.com/MOC3PNJ/moc3pnj.github.io/refs/heads/main/bd/data.js';
+    const carousel = document.querySelector('.carousel');
+    const prevButton = document.querySelector('.carousel-button.prev');
+    const nextButton = document.querySelector('.carousel-button.next');
+    const moviesPerPage = 3; // Cuántas películas se muestran a la vez
+    let currentIndex = 0;
+    let filteredMovies = [];
 
-// --- Elementos del DOM ---
-const contentGrid = document.getElementById('content-grid');
-const prevButton = document.getElementById('prev-button');
-const nextButton = document.getElementById('next-button');
-
-// --- Estado ---
-let currentPage = 1;
-let itemsPerPage = 20;
-let filteredContent = [];
-
-// --- Inicialización ---
-async function initializeApp() {
-    try {
-        const allowedCategories = ["Terror", "Horror"];
-
-        filteredContent = peliculas.filter(item => {
-            const categorias = item.categoria.split(',').map(cat => cat.trim());
-            return categorias.some(cat => allowedCategories.includes(cat));
-        });
-
-        displayPaginatedContent();
-    } catch (error) {
-        console.error("Error al cargar los datos:", error);
-        contentGrid.innerHTML = "<p>No se pudo cargar el contenido.</p>";
-    }
-}
-
-// --- Mostrar contenido por página ---
-function displayPaginatedContent() {
-    contentGrid.innerHTML = "";
-
-    const start = (currentPage - 1) * itemsPerPage;
-    const end = start + itemsPerPage;
-    const pageItems = filteredContent.slice(start, end);
-
-    if (pageItems.length === 0) {
-        contentGrid.innerHTML = "<p>No hay contenido de Terror u Horror disponible.</p>";
-        return;
-    }
-
-    pageItems.forEach(item => {
-        const itemDiv = document.createElement("div");
-        itemDiv.classList.add("content-item");
-
-        const imageUrl = item.portada && item.portada.startsWith("http") 
-            ? item.portada 
-            : "https://i.ibb.co/MkfkNDtT/Sin-t-tulo-3.png";
-
-        itemDiv.innerHTML = `
-            <div class="image-container">
-                <img src="${imageUrl}" alt="Portada de ${item.nombre}">
-            </div>
-            <h3>${item.nombre}</h3>
-        `;
-
-        itemDiv.addEventListener("click", () => {
-            if (item.link) {
-                window.open(item.link, "_blank");
-            } else {
-                alert("No hay enlace disponible para este contenido.");
+    async function fetchMovies() {
+        try {
+            const response = await fetch(DATA_URL);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
             }
+            const data = await response.json();
+            
+            // Filtrar películas por categoría "Terror" o "Horror"
+            filteredMovies = data.filter(movie => 
+                movie.category && (movie.category.includes('Terror') || movie.category.includes('Horror'))
+            );
+
+            displayMovies();
+            updateCarouselButtons();
+
+        } catch (error) {
+            console.error('Error al cargar o procesar los datos:', error);
+            carousel.innerHTML = '<p>Error al cargar las películas. Por favor, inténtalo de nuevo más tarde.</p>';
+        }
+    }
+
+    function displayMovies() {
+        carousel.innerHTML = ''; // Limpiar el carrusel
+        filteredMovies.forEach(movie => {
+            const movieCard = document.createElement('div');
+            movieCard.classList.add('movie-card');
+            movieCard.innerHTML = `
+                <img src="${movie.image}" alt="${movie.title}">
+                <div class="movie-info">
+                    <h2>${movie.title}</h2>
+                    <p><strong>Director:</strong> ${movie.director}</p>
+                    <p><strong>Año:</strong> ${movie.year}</p>
+                    <p class="categories"><strong>Categoría:</strong> ${movie.category ? movie.category.join(', ') : 'N/A'}</p>
+                    <p>${movie.description}</p>
+                </div>
+            `;
+            carousel.appendChild(movieCard);
         });
 
-        contentGrid.appendChild(itemDiv);
+        // Ajustar la altura del carrusel para que se vea el efecto de 3 en 3
+        // Esto es un cálculo aproximado, puede que necesites ajustarlo con tus estilos finales
+        // const movieCardHeight = carousel.querySelector('.movie-card') ? carousel.querySelector('.movie-card').offsetHeight + 20 : 200; // +20 por el margen
+        // document.querySelector('.carousel-wrapper').style.height = `${movieCardHeight * moviesPerPage}px`;
+        // La altura se maneja con CSS para mayor consistencia.
+    }
+
+    function updateCarousel() {
+        // Calcula el desplazamiento vertical
+        const movieCardHeight = carousel.querySelector('.movie-card') ? carousel.querySelector('.movie-card').offsetHeight + 20 : 0; // Altura de la tarjeta + margen
+        carousel.style.transform = `translateY(${-currentIndex * movieCardHeight}px)`;
+        updateCarouselButtons();
+    }
+
+    function updateCarouselButtons() {
+        prevButton.disabled = currentIndex === 0;
+        nextButton.disabled = currentIndex >= filteredMovies.length - moviesPerPage;
+    }
+
+    prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
     });
 
-    updateButtons();
-}
+    nextButton.addEventListener('click', () => {
+        if (currentIndex < filteredMovies.length - moviesPerPage) {
+            currentIndex++;
+            updateCarousel();
+        }
+    });
 
-// --- Navegación ---
-prevButton.addEventListener("click", () => {
-    if (currentPage > 1) {
-        currentPage--;
-        displayPaginatedContent();
-    }
+    // Cargar las películas al iniciar
+    fetchMovies();
 });
-
-nextButton.addEventListener("click", () => {
-    const totalPages = Math.ceil(filteredContent.length / itemsPerPage);
-    if (currentPage < totalPages) {
-        currentPage++;
-        displayPaginatedContent();
-    }
-});
-
-function updateButtons() {
-    const totalPages = Math.ceil(filteredContent.length / itemsPerPage);
-    prevButton.disabled = currentPage === 1;
-    nextButton.disabled = currentPage >= totalPages;
-}
-
-// --- Ejecutar ---
-initializeApp();
