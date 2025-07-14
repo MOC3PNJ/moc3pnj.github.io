@@ -1,4 +1,4 @@
-/* --- VARIABLES BASE --- */
+/* === VARIABLES BASE === */
 :root {
   --primary-bg-color: #0c0c0c;
   --secondary-bg-color: #1c1c1c;
@@ -7,15 +7,14 @@
   --accent-hover: #ff3d47;
   --border-color: #333;
   --card-shadow: rgba(0, 0, 0, 0.7);
-  --spacing: 1.2rem;
+  --spacing: 1rem;
   --radius: 10px;
   --poster-ratio: 0.67;
-  --transition-fast: 0.3s ease;
-  --transition-medium: 0.5s ease;
+  --transition: 0.3s ease;
   --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-/* --- RESET + BODY --- */
+/* === BODY GENERAL === */
 body {
   margin: 0;
   padding: 0;
@@ -27,7 +26,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* --- ENCABEZADO --- */
+/* === ENCABEZADO === */
 header {
   background-color: var(--secondary-bg-color);
   padding: var(--spacing) calc(var(--spacing) * 2);
@@ -37,53 +36,53 @@ header {
 }
 header h1 {
   color: var(--accent-color);
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
   font-weight: 700;
+  letter-spacing: 2px;
   margin: 0;
 }
 
-/* --- CONTENEDOR PRINCIPAL --- */
+/* === CONTENIDO PRINCIPAL === */
 main {
   max-width: 1400px;
   margin: auto;
   padding: var(--spacing);
 }
 
-/* --- FILTROS --- */
+/* === FILTROS === */
 .filters {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   gap: var(--spacing);
-  padding: var(--spacing);
+  justify-content: center;
   background-color: var(--secondary-bg-color);
+  padding: var(--spacing);
   border-radius: var(--radius);
   box-shadow: 0 3px 6px var(--card-shadow);
 }
 
 .filters label {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--text-color);
+  margin-right: 0.5rem;
 }
 
 .filters select {
-  padding: 0.6rem 1rem;
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
   background-color: #2a2a2a;
   color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
   font-size: 1rem;
   appearance: none;
-  cursor: pointer;
-  transition: var(--transition-fast);
   background-image: url('data:image/svg+xml;utf8,<svg fill="%23f0f0f0" height="24" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
   background-repeat: no-repeat;
   background-position: right 0.7rem center;
   background-size: 1.2em;
   padding-right: 2.5rem;
+  cursor: pointer;
+  transition: border-color var(--transition), box-shadow var(--transition);
 }
 
 .filters select:hover,
@@ -92,38 +91,35 @@ main {
   box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.3);
 }
 
-/* --- REJILLA DE PELÍCULAS --- */
+/* === REJILLA DE CONTENIDO === */
 .content-grid {
   display: grid;
   gap: calc(var(--spacing) * 1.2);
-  padding: var(--spacing) 0;
+  padding: var(--spacing);
 }
 
-/* --- TARJETA DE CONTENIDO --- */
+/* === TARJETA INDIVIDUAL === */
 .content-item {
   background-color: var(--secondary-bg-color);
   border-radius: var(--radius);
+  box-shadow: 0 4px 8px var(--card-shadow);
   overflow: hidden;
-  box-shadow: 0 6px 12px var(--card-shadow);
-  transition: var(--transition-medium);
+  transition: transform var(--transition), box-shadow var(--transition);
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  padding-bottom: 0.5rem;
 }
 
 .content-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px var(--card-shadow);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px var(--card-shadow);
 }
 
 .content-item:hover img {
   transform: scale(1.08);
-  transition: transform var(--transition-fast);
+  transition: transform var(--transition);
 }
 
-/* --- IMAGEN Y ASPECT RATIO --- */
+/* === CONTENEDOR DE IMAGEN === */
 .image-container {
   width: 100%;
   padding-top: calc(100% / var(--poster-ratio));
@@ -132,7 +128,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid var(--border-color);
 }
 
 .image-container img {
@@ -142,26 +137,27 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform var(--transition);
 }
 
-/* --- TÍTULO DE LA PELÍCULA --- */
+/* === TÍTULO DE LA PELÍCULA === */
 .content-item h3 {
-  font-size: 1.15rem;
-  font-weight: 600;
-  margin: 0.75rem 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0.5rem;
   color: var(--text-color);
-  white-space: normal;
-  height: 3.2em;
-  line-height: 1.6em;
+  text-align: center;
+  line-height: 1.4em;
+  height: 2.8em;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  word-break: break-word;
 }
 
-/* --- PAGINACIÓN --- */
+/* === PAGINACIÓN === */
 .pagination-controls {
   display: flex;
   justify-content: center;
@@ -173,11 +169,12 @@ main {
   background-color: var(--accent-color);
   color: white;
   border: none;
-  padding: 0.8rem 1.4rem;
+  padding: 0.6rem 1.2rem;
   border-radius: var(--radius);
-  font-size: 1.1rem;
+  font-size: 1rem;
   cursor: pointer;
-  transition: var(--transition-fast);
+  transition: background-color var(--transition);
+  min-width: 50px;
 }
 
 .pagination-controls button:hover:not(:disabled) {
@@ -190,13 +187,13 @@ main {
   opacity: 0.6;
 }
 
-/* --- RESPONSIVO --- */
+/* === RESPONSIVO === */
 @media (max-width: 480px) {
   .content-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
   .content-grid {
     grid-template-columns: repeat(3, 1fr);
   }
