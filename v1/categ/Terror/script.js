@@ -5,7 +5,7 @@ const peliculas = [
     {
         nombre: "Al Impenetrable",
         portada: "https://i.ibb.co/hV723kL/impenetrable.jpg",
-        categoria: "Terror",
+        categoria: "Terror, Thriller",
         año: 2022,
         link: "https://ejemplo.com/impenetrable",
         tipo: "Película"
@@ -21,7 +21,7 @@ const peliculas = [
     {
         nombre: "The Addiction",
         portada: "https://i.ibb.co/tZ56V6X/addiction.jpg",
-        categoria: "Horror",
+        categoria: "Horror, Drama",
         año: 1995,
         link: "https://ejemplo.com/addiction",
         tipo: "Película"
@@ -53,7 +53,7 @@ const peliculas = [
     {
         nombre: "Psycho Goreman",
         portada: "https://i.ibb.co/P8Qy8C6/psycho-goreman.jpg",
-        categoria: "Terror",
+        categoria: "Terror, Comedia",
         año: 2020,
         link: "https://ejemplo.com/psycho-goreman",
         tipo: "Película"
@@ -77,7 +77,7 @@ const peliculas = [
     {
         nombre: "Deep Evil",
         portada: "https://i.ibb.co/r7b6tD5/deep-evil.jpg",
-        categoria: "Terror",
+        categoria: "Terror, Acción",
         año: 2021,
         link: "https://ejemplo.com/deep-evil",
         tipo: "Película"
@@ -94,9 +94,7 @@ const peliculas = [
 
 // --- Elementos del DOM ---
 const contentGrid = document.getElementById('content-grid');
-const categoryFilter = document.getElementById('category-filter');
-const yearFilter = document.getElementById('year-filter');
-const typeFilter = document.getElementById('type-filter');
+const searchInput = document.getElementById('search-input');
 const prevButton = document.getElementById('prev-button');
 const nextButton = document.getElementById('next-button');
 const paginationControls = document.querySelector('.pagination-controls');
@@ -119,7 +117,6 @@ async function initializeApp() {
         currentFilteredItems = [...allContent];
 
         setItemsPerPage();
-        populateFilters();
         displayPaginatedContent();
     } catch (error) {
         console.error('Error al cargar la base de datos:', error);
@@ -127,32 +124,10 @@ async function initializeApp() {
     }
 }
 
-function populateFilters() {
-    const categories = new Set();
-    allContent.forEach(item => {
-        item.categoria.split(',').forEach(cat => categories.add(cat.trim()));
-    });
-    categoryFilter.innerHTML = '<option value="all">Todas</option>';
-    categories.forEach(category => {
-        const option = document.createElement('option');
-        option.value = category;
-        option.textContent = category;
-        categoryFilter.appendChild(option);
-    });
-    const years = new Set(allContent.map(item => item.año));
-    yearFilter.innerHTML = '<option value="all">Todos</option>';
-    years.forEach(year => {
-        const option = document.createElement('option');
-        option.value = year;
-        option.textContent = year;
-        yearFilter.appendChild(option);
-    });
-}
-
 function displayPaginatedContent() {
     contentGrid.innerHTML = '';
     if (currentFilteredItems.length === 0) {
-        contentGrid.innerHTML = '<p>No se encontraron resultados para los filtros seleccionados.</p>';
+        contentGrid.innerHTML = '<p>No se encontraron resultados para su búsqueda.</p>';
         paginationControls.style.display = 'none';
         return;
     }
@@ -200,16 +175,13 @@ function updatePaginationButtons() {
     }
 }
 
-function filterContent() {
-    const selectedCategory = categoryFilter.value;
-    const selectedYear = yearFilter.value;
-    const selectedType = typeFilter.value;
+function searchContent() {
+    const searchTerm = searchInput.value.toLowerCase();
 
     currentFilteredItems = allContent.filter(item => {
-        const matchesCategory = selectedCategory === 'all' || item.categoria.split(',').map(cat => cat.trim()).includes(selectedCategory);
-        const matchesYear = selectedYear === 'all' || item.año.toString() === selectedYear;
-        const matchesType = selectedType === 'all' || item.tipo === selectedType;
-        return matchesCategory && matchesYear && matchesType;
+        const matchesName = item.nombre.toLowerCase().includes(searchTerm);
+        const matchesCategory = item.categoria.toLowerCase().includes(searchTerm);
+        return matchesName || matchesCategory;
     });
 
     currentPage = 1;
@@ -217,9 +189,7 @@ function filterContent() {
 }
 
 // --- Event Listeners ---
-categoryFilter.addEventListener('change', filterContent);
-yearFilter.addEventListener('change', filterContent);
-typeFilter.addEventListener('change', filterContent);
+searchInput.addEventListener('input', searchContent);
 
 prevButton.addEventListener('click', () => {
     if (currentPage > 1) {
@@ -227,6 +197,7 @@ prevButton.addEventListener('click', () => {
         displayPaginatedContent();
     }
 });
+
 nextButton.addEventListener('click', () => {
     const totalPages = Math.ceil(currentFilteredItems.length / itemsPerPage);
     if (currentPage < totalPages) {
