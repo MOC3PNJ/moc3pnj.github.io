@@ -13,66 +13,60 @@ const paginationControls = document.querySelector('.pagination-controls');
 let allContent = [];
 let currentFilteredItems = [];
 let currentPage = 1;
-let itemsPerPage = 20; // Valor por defecto
+let itemsPerPage = 20;
 
 // --- Funciones ---
-
-// Determina cuántos elementos mostrar por página según el ancho de la pantalla
 const setItemsPerPage = () => {
-    // El punto de quiebre 768px coincide con el CSS para vistas de teléfono/tableta
-    itemsPerPage = window.innerWidth <= 768 ? 21 : 20;
+    itemsPerPage = window.innerWidth <= 768 ? [span_0](start_span)21 : 20;[span_0](end_span)
 };
 
-// Función principal para obtener y mostrar datos iniciales
 async function initializeApp() {
     try {
-        // Ordena el contenido por año descendente desde el principio
         allContent = peliculas.sort((a, b) => b.año - a.año);
-        currentFilteredItems = [...allContent];
-
+        [span_1](start_span)currentFilteredItems = [...allContent];[span_1](end_span)
         setItemsPerPage();
         populateFilters();
         displayPaginatedContent();
     } catch (error) {
         console.error('Error al cargar la base de datos:', error);
-        contentGrid.innerHTML = '<p>Error al cargar el contenido. Por favor, inténtalo de nuevo más tarde.</p>';
+        contentGrid.innerHTML = '<p>Error al cargar el contenido. [span_2](start_span)Por favor, inténtalo de nuevo más tarde.</p>';[span_2](end_span)
     }
 }
 
 // Rellena los menús desplegables de los filtros
 function populateFilters() {
-    // --- CAMBIO APLICADO AQUÍ: Se añaden las categorías manualmente ---
+    // --- MODIFICACIÓN CLAVE ---
+    // Se elimina el código que recorría todas las categorías.
+    // En su lugar, se insertan directamente solo las opciones deseadas.
     categoryFilter.innerHTML = `
         <option value="all">Todas</option>
         <option value="Terror">Terror</option>
         <option value="Horror">Horror</option>
     `;
-    // --- FIN DEL CAMBIO ---
+    // --- FIN DE LA MODIFICACIÓN ---
 
-    const years = new Set(allContent.map(item => item.año));
+    [span_3](start_span)const years = new Set(allContent.map(item => item.año));[span_3](end_span)
     yearFilter.innerHTML = '<option value="all">Todos</option>';
     years.forEach(year => {
         const option = document.createElement('option');
         option.value = year;
         option.textContent = year;
-        yearFilter.appendChild(option);
+        [span_4](start_span)yearFilter.appendChild(option);[span_4](end_span)
     });
 }
 
-// Muestra el contenido de la página actual
 function displayPaginatedContent() {
     contentGrid.innerHTML = '';
     if (currentFilteredItems.length === 0) {
-        contentGrid.innerHTML = '<p>No se encontraron resultados para los filtros seleccionados.</p>';
-        paginationControls.style.display = 'none'; // Oculta los controles si no hay resultados
+        [span_5](start_span)contentGrid.innerHTML = '<p>No se encontraron resultados para los filtros seleccionados.</p>';[span_5](end_span)
+        [span_6](start_span)paginationControls.style.display = 'none';[span_6](end_span)
         return;
     }
 
-    paginationControls.style.display = 'flex'; // Muestra los controles
+    [span_7](start_span)paginationControls.style.display = 'flex';[span_7](end_span)
 
-    // Calcula los índices de inicio y fin para la página actual
     const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
+    [span_8](start_span)const endIndex = startIndex + itemsPerPage;[span_8](end_span)
     const paginatedItems = currentFilteredItems.slice(startIndex, endIndex);
 
     paginatedItems.forEach(item => {
@@ -90,7 +84,7 @@ function displayPaginatedContent() {
         
         contentItem.addEventListener('click', () => {
             if (item.link) {
-                window.open(item.link, '_blank');
+                [span_9](start_span)window.open(item.link, '_blank');[span_9](end_span)
             } else {
                 alert('Lo siento, no hay un enlace disponible para este contenido.');
             }
@@ -99,27 +93,24 @@ function displayPaginatedContent() {
         contentGrid.appendChild(contentItem);
     });
 
-    updatePaginationButtons();
+    [span_10](start_span)updatePaginationButtons();[span_10](end_span)
 }
 
-// Actualiza el estado (habilitado/deshabilitado) de los botones de paginación
 function updatePaginationButtons() {
     const totalPages = Math.ceil(currentFilteredItems.length / itemsPerPage);
-    prevButton.disabled = currentPage === 1;
-    nextButton.disabled = currentPage === totalPages || totalPages === 0;
-
-    // Oculta los controles si solo hay una página o menos
+    [span_11](start_span)prevButton.disabled = currentPage === 1;[span_11](end_span)
+    [span_12](start_span)nextButton.disabled = currentPage === totalPages || totalPages === 0;[span_12](end_span)
+    
     if (totalPages <= 1) {
-        paginationControls.style.display = 'none';
+        [span_13](start_span)paginationControls.style.display = 'none';[span_13](end_span)
     } else {
-        paginationControls.style.display = 'flex';
+        [span_14](start_span)paginationControls.style.display = 'flex';[span_14](end_span)
     }
 }
 
-// Filtra el contenido basado en la selección del usuario
 function filterContent() {
     const selectedCategory = categoryFilter.value;
-    const selectedYear = yearFilter.value;
+    [span_15](start_span)const selectedYear = yearFilter.value;[span_15](end_span)
     const selectedType = typeFilter.value;
 
     currentFilteredItems = allContent.filter(item => {
@@ -129,22 +120,19 @@ function filterContent() {
         return matchesCategory && matchesYear && matchesType;
     });
 
-    currentPage = 1; // Reinicia a la primera página después de filtrar
+    [span_16](start_span)currentPage = 1;[span_16](end_span)
     displayPaginatedContent();
 }
 
 // --- Event Listeners ---
-
-// Filtros
 categoryFilter.addEventListener('change', filterContent);
 yearFilter.addEventListener('change', filterContent);
 typeFilter.addEventListener('change', filterContent);
 
-// Botones de paginación
 prevButton.addEventListener('click', () => {
     if (currentPage > 1) {
         currentPage--;
-        displayPaginatedContent();
+        [span_17](start_span)displayPaginatedContent();[span_17](end_span)
     }
 });
 
@@ -152,15 +140,13 @@ nextButton.addEventListener('click', () => {
     const totalPages = Math.ceil(currentFilteredItems.length / itemsPerPage);
     if (currentPage < totalPages) {
         currentPage++;
-        displayPaginatedContent();
+        [span_18](start_span)displayPaginatedContent();[span_18](end_span)
     }
 });
 
-// Ajuste responsivo al cambiar el tamaño de la ventana
 window.addEventListener('resize', () => {
     setItemsPerPage();
-    // Vuelve a mostrar el contenido para ajustar el número de elementos por página
-    displayPaginatedContent();
+    [span_19](start_span)displayPaginatedContent();[span_19](end_span)
 });
 
 // --- Inicialización ---
