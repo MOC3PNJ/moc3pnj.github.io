@@ -2,31 +2,36 @@ import { peliculas } from 'https://raw.githack.com/MOC3PNJ/moc3pnj.github.io/ref
 
 // --- Elementos del DOM ---
 const contentGrid = document.getElementById('content-grid');
+const categoryFilter = document.getElementById('category-filter');
+const yearFilter = document.getElementById('year-filter');
+const typeFilter = document.getElementById('type-filter');
 const prevButton = document.getElementById('prev-button');
 const nextButton = document.getElementById('next-button');
 const paginationControls = document.querySelector('.pagination-controls');
 
 // --- Estado de la aplicación ---
 let allContent = [];
-let horrorContent = [];
+let currentFilteredItems = [];
 let currentPage = 1;
-let itemsPerPage = 21; // Número de elementos a mostrar por página
+let itemsPerPage = 20; // Valor por defecto
 
 // --- Funciones ---
 
-// Función principal para obtener y mostrar los datos de terror/horror
+// Determina cuántos elementos mostrar por página según el ancho de la pantalla
+const setItemsPerPage = () => {
+    // El punto de quiebre 768px coincide con el CSS para vistas de teléfono/tableta
+    itemsPerPage = window.innerWidth <= 768 ? 21 : 20;
+};
+
+// Función principal para obtener y mostrar datos iniciales
 async function initializeApp() {
     try {
-        // Ordena todo el contenido por año de forma descendente
+        // Ordena el contenido por año descendente desde el principio
         allContent = peliculas.sort((a, b) => b.año - a.año);
+        currentFilteredItems = [...allContent];
 
-        // Filtra solo el contenido que incluye 'Terror' u 'Horror' en sus categorías
-        horrorContent = allContent.filter(item => {
-            const categories = item.categoria.toLowerCase().split(',').map(cat => cat.trim());
-            return categories.includes('terror') || categories.includes('horror');
-        });
-
-        // Muestra la primera página del contenido filtrado
+        setItemsPerPage();
+        populateFilters();
         displayPaginatedContent();
     } catch (error) {
         console.error('Error al cargar la base de datos:', error);
@@ -34,30 +39,47 @@ async function initializeApp() {
     }
 }
 
+// Rellena los menús desplegables de los filtros
+function populateFilters() {
+    // --- CAMBIO APLICADO AQUÍ: Se añaden las categorías manualmente ---
+    categoryFilter.innerHTML = `
+        <option value="all">Todas</option>
+        <option value="Terror">Terror</option>
+        <option value="Horror">Horror</option>
+    `;
+    // --- FIN DEL CAMBIO ---
+
+    const years = new Set(allContent.map(item => item.año));
+    yearFilter.innerHTML = '<option value="all">Todos</option>';
+    years.forEach(year => {
+        const option = document.createElement('option');
+        option.value = year;
+        option.textContent = year;
+        yearFilter.appendChild(option);
+    });
+}
+
 // Muestra el contenido de la página actual
 function displayPaginatedContent() {
     contentGrid.innerHTML = '';
-    
-    [span_0](start_span)// Si no hay resultados, muestra un mensaje y oculta la paginación[span_0](end_span)
-    if (horrorContent.length === 0) {
-        contentGrid.innerHTML = '<p>No se encontraron películas o series de terror/horror.</p>';
-        paginationControls.style.display = 'none';
+    if (currentFilteredItems.length === 0) {
+        contentGrid.innerHTML = '<p>No se encontraron resultados para los filtros seleccionados.</p>';
+        paginationControls.style.display = 'none'; // Oculta los controles si no hay resultados
         return;
     }
 
-    paginationControls.style.display = 'flex'; [span_1](start_span)// Muestra los botones de paginación[span_1](end_span)
+    paginationControls.style.display = 'flex'; // Muestra los controles
 
-    [span_2](start_span)// Calcula qué elementos mostrar en la página actual[span_2](end_span)
+    // Calcula los índices de inicio y fin para la página actual
     const startIndex = (currentPage - 1) * itemsPerPage;
-    const paginatedItems = horrorContent.slice(startIndex, startIndex + itemsPerPage);
+    const endIndex = startIndex + itemsPerPage;
+    const paginatedItems = currentFilteredItems.slice(startIndex, endIndex);
 
-    [span_3](start_span)// Crea y añade cada tarjeta de película a la cuadrícula[span_3](end_span)
     paginatedItems.forEach(item => {
         const contentItem = document.createElement('div');
         contentItem.classList.add('content-item');
         
-        // Usa una imagen por defecto si la portada no está disponible
-        const imageUrl = item.portada && item.portada.startsWith('http') ? item.portada : 'https://i.ibb.co/vjC0p14/placeholder.png';
+        const imageUrl = item.portada && item.portada.startsWith('http') ? item.portada : 'https://i.ibb.co/MkfkNDtT/Sin-t-tulo-3.png';
 
         contentItem.innerHTML = `
             <div class="image-container">
@@ -66,7 +88,6 @@ function displayPaginatedContent() {
             <h3>${item.nombre}</h3>
         `;
         
-        // Añade el evento para abrir el enlace en una nueva pestaña
         contentItem.addEventListener('click', () => {
             if (item.link) {
                 window.open(item.link, '_blank');
@@ -81,13 +102,13 @@ function displayPaginatedContent() {
     updatePaginationButtons();
 }
 
-// Actualiza el estado de los botones de paginación
+// Actualiza el estado (habilitado/deshabilitado) de los botones de paginación
 function updatePaginationButtons() {
-    const totalPages = Math.ceil(horrorContent.length / itemsPerPage);
-    prevButton.disabled = currentPage === 1; [span_4](start_span)// Deshabilita "anterior" si estás en la página 1[span_4](end_span)
-    nextButton.disabled = currentPage === totalPages || totalPages === 0; // Deshabilita "siguiente" en la última página
-    
-    [span_5](start_span)// Oculta los controles si solo hay una página o menos[span_5](end_span)
+    const totalPages = Math.ceil(currentFilteredItems.length / itemsPerPage);
+    prevButton.disabled = currentPage === 1;
+    nextButton.disabled = currentPage === totalPages || totalPages === 0;
+
+    // Oculta los controles si solo hay una página o menos
     if (totalPages <= 1) {
         paginationControls.style.display = 'none';
     } else {
@@ -95,26 +116,52 @@ function updatePaginationButtons() {
     }
 }
 
-// --- Event Listeners para la Paginación ---
+// Filtra el contenido basado en la selección del usuario
+function filterContent() {
+    const selectedCategory = categoryFilter.value;
+    const selectedYear = yearFilter.value;
+    const selectedType = typeFilter.value;
 
-// Botón "Anterior"
+    currentFilteredItems = allContent.filter(item => {
+        const matchesCategory = selectedCategory === 'all' || item.categoria.split(',').map(cat => cat.trim()).includes(selectedCategory);
+        const matchesYear = selectedYear === 'all' || item.año.toString() === selectedYear;
+        const matchesType = selectedType === 'all' || item.tipo === selectedType;
+        return matchesCategory && matchesYear && matchesType;
+    });
+
+    currentPage = 1; // Reinicia a la primera página después de filtrar
+    displayPaginatedContent();
+}
+
+// --- Event Listeners ---
+
+// Filtros
+categoryFilter.addEventListener('change', filterContent);
+yearFilter.addEventListener('change', filterContent);
+typeFilter.addEventListener('change', filterContent);
+
+// Botones de paginación
 prevButton.addEventListener('click', () => {
     if (currentPage > 1) {
         currentPage--;
         displayPaginatedContent();
-        window.scrollTo(0, 0); // Sube al inicio de la página
     }
 });
 
-// Botón "Siguiente"
 nextButton.addEventListener('click', () => {
-    const totalPages = Math.ceil(horrorContent.length / itemsPerPage);
+    const totalPages = Math.ceil(currentFilteredItems.length / itemsPerPage);
     if (currentPage < totalPages) {
         currentPage++;
         displayPaginatedContent();
-        window.scrollTo(0, 0); // Sube al inicio de la página
     }
 });
 
-// --- Inicialización de la App ---
+// Ajuste responsivo al cambiar el tamaño de la ventana
+window.addEventListener('resize', () => {
+    setItemsPerPage();
+    // Vuelve a mostrar el contenido para ajustar el número de elementos por página
+    displayPaginatedContent();
+});
+
+// --- Inicialización ---
 initializeApp();
