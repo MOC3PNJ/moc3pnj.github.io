@@ -35,7 +35,7 @@ async function initializeApp() {
 function populateFilters() {
     // No se necesita categoryFilter, ya que el filtro es forzado
     const years = new Set(allContent.map(item => item.año));
-    yearFilter.innerHTML = '<option value="all">Todos</option>';
+    yearFilter.innerHTML =
     years.forEach(year => {
         const option = document.createElement('option');
         option.value = year;
