@@ -142,38 +142,38 @@ main {
 
 /* === TÍTULO DE LA PELÍCULA === */
 .content-item h3 {
-  font-size: 0.95rem;
-  font-weight: 500;
-  margin: 0.5rem;
-  color: var(--text-color);
-  text-align: center;
-  line-height: 1.4em;
-  height: 2.8em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  word-break: break-word;
+  font-size: 0.75rem; [span_0](start_span)/* Changed from 0.95rem to make text smaller */[span_0](end_span)
+  [span_1](start_span)font-weight: 500;[span_1](end_span)
+  [span_2](start_span)margin: 0.5rem;[span_2](end_span)
+  [span_3](start_span)color: var(--text-color);[span_3](end_span)
+  [span_4](start_span)text-align: center;[span_4](end_span)
+  line-height: 1.2em; [span_5](start_span)/* Changed from 1.4em for more compact lines */[span_5](end_span)
+  height: 2.4em; [span_6](start_span)/* Adjusted height to accommodate 2 lines of smaller text */[span_6](end_span)
+  [span_7](start_span)overflow: hidden;[span_7](end_span)
+  [span_8](start_span)text-overflow: ellipsis;[span_8](end_span)
+  [span_9](start_span)display: -webkit-box;[span_9](end_span)
+  -[span_10](start_span)webkit-line-clamp: 2;[span_10](end_span)
+  -[span_11](start_span)webkit-box-orient: vertical;[span_11](end_span)
+  [span_12](start_span)word-break: break-word;[span_12](end_span)
 }
 
 /* === PAGINACIÓN === */
 .pagination-controls {
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing);
-  margin-top: calc(var(--spacing) * 2);
+  [span_13](start_span)display: flex;[span_13](end_span)
+  [span_14](start_span)justify-content: center;[span_14](end_span)
+  [span_15](start_span)gap: var(--spacing);[span_15](end_span)
+  [span_16](start_span)margin-top: calc(var(--spacing) * 2);[span_16](end_span)
 }
 
 .pagination-controls button {
-  background-color: var(--accent-color);
-  color: white;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: var(--radius);
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color var(--transition);
+  [span_17](start_span)background-color: var(--accent-color);[span_17](end_span)
+  [span_18](start_span)color: white;[span_18](end_span)
+  [span_19](start_span)border: none;[span_19](end_span)
+  [span_20](start_span)padding: 0.6rem 1.2rem;[span_20](end_span)
+  [span_21](start_span)border-radius: var(--radius);[span_21](end_span)
+  [span_22](start_span)font-size: 1rem;[span_22](end_span)
+  [span_23](start_span)cursor: pointer;[span_23](end_span)
+  [span_24](start_span)transition: background-color var(--transition);[span_24](end_span)
   min-width: 50px;
 }
 
@@ -182,20 +182,20 @@ main {
 }
 
 .pagination-controls button:disabled {
-  background-color: #555;
-  cursor: not-allowed;
-  opacity: 0.6;
+  [span_25](start_span)background-color: #555;[span_25](end_span)
+  [span_26](start_span)cursor: not-allowed;[span_26](end_span)
+  [span_27](start_span)opacity: 0.6;[span_27](end_span)
 }
 
 /* === RESPONSIVO === */
 @media (max-width: 480px) {
   .content-grid {
-    grid-template-columns: repeat(2, 1fr);
+    [span_28](start_span)grid-template-columns: repeat(2, 1fr);[span_28](end_span)
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
   .content-grid {
-    grid-template-columns: repeat(3, 1fr);
+    [span_29](start_span)grid-template-columns: repeat(3, 1fr);[span_29](end_span)
   }
 }
 @media (min-width: 769px) {
