@@ -3,46 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="data-chain-auth" content="dGhpcyBpcyBhIHZlcnkgc2VjcmV0IHRva2Vu">
-    <title>Directorio de Contenido</title>
-    <link rel="stylesheet" href="https://raw.githack.com/MOC3PNJ/moc3pnj.github.io/refs/heads/main/bd/style.css">
+    <title>Películas de Terror y Horror</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>DIRECTORIO</h1>
+        <h1>Películas de Terror y Horror</h1>
     </header>
-
     <main>
-        <section class="filters">
-            <label for="category-filter">Categoría:</label>
-            <select id="category-filter">
-                <option value="all">Todas</option>
-            </select>
-
-            <label for="year-filter">Año:</label>
-            <select id="year-filter">
-                <option value="all">Todos</option>
-            </select>
-
-            <label for="type-filter">Tipo:</label>
-            <select id="type-filter">
-                <option value="all">Todos</option>
-                <option value="Película">Película</option>
-                <option value="Serie">Serie</option>
-            </select>
-        </section>
-
-        <section class="content-grid" id="content-grid">
-            </section>
-
-        <div class="pagination-controls">
-            <button id="prev-button" title="Página Anterior">&lt;</button>
-            <button id="next-button" title="Página Siguiente">&gt;</button>
+        <div class="carousel-container">
+            <button class="carousel-button prev">▲</button>
+            <div class="carousel-wrapper">
+                <div class="carousel">
+                    </div>
+            </div>
+            <button class="carousel-button next">▼</button>
         </div>
-
     </main>
-        <script type="module" src="https://raw.githack.com/MOC3PNJ/moc3pnj.github.io/refs/heads/main/bd/script.js"></script>
-        <script type="module" src="https://raw.githack.com/MOC3PNJ/moc3pnj.github.io/refs/heads/main/bd/seg.js"></script>
-    
+    <script src="script.js"></script>
 </body>
 </html>
