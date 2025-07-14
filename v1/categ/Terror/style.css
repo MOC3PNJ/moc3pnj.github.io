@@ -1,0 +1,206 @@
+/* style.css */
+/* === VARIABLES BASE === */
+:root {
+  --primary-bg-color: #0c0c0c;
+  --secondary-bg-color: #1c1c1c;
+  --text-color: #f0f0f0;
+  --accent-color: #e50914;
+  --accent-hover: #ff3d47;
+  --border-color: #333;
+  --card-shadow: rgba(0, 0, 0, 0.7);
+  --spacing: 1rem;
+  --radius: 10px;
+  --poster-ratio: 0.67;
+  --transition: 0.3s ease;
+  --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* === BODY GENERAL === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  background-color: var(--primary-bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* === ENCABEZADO === */
+header {
+  background-color: var(--secondary-bg-color);
+  padding: var(--spacing) calc(var(--spacing) * 2);
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 2px 12px var(--card-shadow);
+}
+header h1 {
+  color: var(--accent-color);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* === CONTENIDO PRINCIPAL === */
+main {
+  max-width: 1400px;
+  margin: auto;
+  padding: var(--spacing);
+}
+
+/* === FILTROS === */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing);
+  justify-content: center;
+  background-color: var(--secondary-bg-color);
+  padding: var(--spacing);
+  border-radius: var(--radius);
+  box-shadow: 0 3px 6px var(--card-shadow);
+}
+
+.filters label {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-right: 0.5rem;
+}
+
+.filters select {
+  padding: 0.5rem 1rem;
+  background-color: #2a2a2a;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23f0f0f0" height="24" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 0.7rem center;
+  background-size: 1.2em;
+  padding-right: 2.5rem;
+  cursor: pointer;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.filters select:hover,
+.filters select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.3);
+}
+
+/* === REJILLA DE CONTENIDO === */
+.content-grid {
+  display: grid;
+  gap: calc(var(--spacing) * 1.2);
+  padding: var(--spacing);
+}
+
+/* === TARJETA INDIVIDUAL === */
+.content-item {
+  background-color: var(--secondary-bg-color);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 8px var(--card-shadow);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+  cursor: pointer;
+  padding-bottom: 0.5rem;
+}
+
+.content-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px var(--card-shadow);
+}
+
+.content-item:hover img {
+  transform: scale(1.08);
+  transition: transform var(--transition);
+}
+
+/* === CONTENEDOR DE IMAGEN === */
+.image-container {
+  width: 100%;
+  padding-top: calc(100% / var(--poster-ratio));
+  position: relative;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition);
+}
+
+/* === TÍTULO DE LA PELÍCULA === */
+.content-item h3 {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0.5rem;
+  color: var(--text-color);
+  text-align: center;
+  line-height: 1.4em;
+  height: 2.8em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-word;
+}
+
+/* === PAGINACIÓN === */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing);
+  margin-top: calc(var(--spacing) * 2);
+}
+
+.pagination-controls button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color var(--transition);
+  min-width: 50px;
+}
+
+.pagination-controls button:hover:not(:disabled) {
+  background-color: var(--accent-hover);
+}
+
+.pagination-controls button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 480px) {
+  .content-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 769px) {
+  .content-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
