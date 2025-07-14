@@ -1,22 +1,25 @@
- <!DOCTYPE html>
- <html lang="es">
- <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Películas de Terror</title>
-     <link rel="stylesheet" href="style.css">
- </head>
- <body>
-     <div class="container">
-         <header>
-             <h1>Terror</h1>
-             <div class="search-bar">
-                 <input type="text" id="searchInput" placeholder="Buscar películas de terror...">
-             </div>
-         </header>
-         <div class="movie-grid" id="movieGrid">
-             </div>
-     </div>
-     <script src="script.js"></script>
- </body>
- </html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directorio de Terror y Horror</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Terror / Horror</h1>
+    </header>
+
+    <main>
+        <section class="content-grid" id="content-grid"></section>
+
+        <div class="pagination-controls">
+            <button id="prev-button" title="Página Anterior">&lt;</button>
+            <button id="next-button" title="Página Siguiente">&gt;</button>
+        </div>
+    </main>
+    
+    <script type="module" src="script.js"></script>
+</body>
+</html>
