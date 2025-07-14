@@ -146,13 +146,13 @@ main {
 
 /* --- TÍTULO DE LA PELÍCULA --- */
 .content-item h3 {
-  font-size: 0.75rem; /* Adjusted for minimal text */
+  font-size: 1.15rem;
   font-weight: 600;
   margin: 0.75rem 0.5rem 1rem;
   color: var(--text-color);
   white-space: normal;
-  height: 2.4em; /* Adjusted height for 2 lines of smaller text */
-  line-height: 1.2em; /* Adjusted for more compact lines */
+  height: 3.2em;
+  line-height: 1.6em;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
