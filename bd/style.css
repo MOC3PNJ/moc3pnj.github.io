@@ -1,4 +1,4 @@
-/* === VARIABLES BASE === */
+/* --- VARIABLES BASE --- */
 :root {
   --primary-bg-color: #0c0c0c;
   --secondary-bg-color: #1c1c1c;
@@ -7,14 +7,15 @@
   --accent-hover: #ff3d47;
   --border-color: #333;
   --card-shadow: rgba(0, 0, 0, 0.7);
-  --spacing: 1rem;
+  --spacing: 1.2rem;
   --radius: 10px;
   --poster-ratio: 0.67;
-  --transition: 0.3s ease;
+  --transition-fast: 0.3s ease;
+  --transition-medium: 0.5s ease;
   --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-/* === BODY GENERAL === */
+/* --- RESET + BODY --- */
 body {
   margin: 0;
   padding: 0;
@@ -26,7 +27,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* === ENCABEZADO === */
+/* --- ENCABEZADO --- */
 header {
   background-color: var(--secondary-bg-color);
   padding: var(--spacing) calc(var(--spacing) * 2);
@@ -36,53 +37,53 @@ header {
 }
 header h1 {
   color: var(--accent-color);
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   text-transform: uppercase;
-  font-weight: 700;
   letter-spacing: 2px;
+  font-weight: 700;
   margin: 0;
 }
 
-/* === CONTENIDO PRINCIPAL === */
+/* --- CONTENEDOR PRINCIPAL --- */
 main {
   max-width: 1400px;
   margin: auto;
   padding: var(--spacing);
 }
 
-/* === FILTROS === */
+/* --- FILTROS --- */
 .filters {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing);
   justify-content: center;
-  background-color: var(--secondary-bg-color);
+  align-items: center;
+  gap: var(--spacing);
   padding: var(--spacing);
+  background-color: var(--secondary-bg-color);
   border-radius: var(--radius);
   box-shadow: 0 3px 6px var(--card-shadow);
 }
 
 .filters label {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--text-color);
-  margin-right: 0.5rem;
 }
 
 .filters select {
-  padding: 0.5rem 1rem;
-  background-color: #2a2a2a;
-  color: var(--text-color);
+  padding: 0.6rem 1rem;
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
+  background-color: #2a2a2a;
+  color: var(--text-color);
   font-size: 1rem;
   appearance: none;
+  cursor: pointer;
+  transition: var(--transition-fast);
   background-image: url('data:image/svg+xml;utf8,<svg fill="%23f0f0f0" height="24" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
   background-repeat: no-repeat;
   background-position: right 0.7rem center;
   background-size: 1.2em;
   padding-right: 2.5rem;
-  cursor: pointer;
-  transition: border-color var(--transition), box-shadow var(--transition);
 }
 
 .filters select:hover,
@@ -91,35 +92,38 @@ main {
   box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.3);
 }
 
-/* === REJILLA DE CONTENIDO === */
+/* --- REJILLA DE PELÍCULAS --- */
 .content-grid {
   display: grid;
   gap: calc(var(--spacing) * 1.2);
-  padding: var(--spacing);
+  padding: var(--spacing) 0;
 }
 
-/* === TARJETA INDIVIDUAL === */
+/* --- TARJETA DE CONTENIDO --- */
 .content-item {
   background-color: var(--secondary-bg-color);
   border-radius: var(--radius);
-  box-shadow: 0 4px 8px var(--card-shadow);
   overflow: hidden;
-  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 6px 12px var(--card-shadow);
+  transition: var(--transition-medium);
   cursor: pointer;
-  padding-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .content-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 16px var(--card-shadow);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px var(--card-shadow);
 }
 
 .content-item:hover img {
   transform: scale(1.08);
-  transition: transform var(--transition);
+  transition: transform var(--transition-fast);
 }
 
-/* === CONTENEDOR DE IMAGEN === */
+/* --- IMAGEN Y ASPECT RATIO --- */
 .image-container {
   width: 100%;
   padding-top: calc(100% / var(--poster-ratio));
@@ -128,6 +132,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .image-container img {
@@ -137,44 +142,42 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--transition);
 }
 
-/* === TÍTULO DE LA PELÍCULA === */
+/* --- TÍTULO DE LA PELÍCULA --- */
 .content-item h3 {
-  font-size: 0.75rem; [span_0](start_span)/* Changed from 0.95rem to make text smaller */[span_0](end_span)
-  [span_1](start_span)font-weight: 500;[span_1](end_span)
-  [span_2](start_span)margin: 0.5rem;[span_2](end_span)
-  [span_3](start_span)color: var(--text-color);[span_3](end_span)
-  [span_4](start_span)text-align: center;[span_4](end_span)
-  line-height: 1.2em; [span_5](start_span)/* Changed from 1.4em for more compact lines */[span_5](end_span)
-  height: 2.4em; [span_6](start_span)/* Adjusted height to accommodate 2 lines of smaller text */[span_6](end_span)
-  [span_7](start_span)overflow: hidden;[span_7](end_span)
-  [span_8](start_span)text-overflow: ellipsis;[span_8](end_span)
-  [span_9](start_span)display: -webkit-box;[span_9](end_span)
-  -[span_10](start_span)webkit-line-clamp: 2;[span_10](end_span)
-  -[span_11](start_span)webkit-box-orient: vertical;[span_11](end_span)
-  [span_12](start_span)word-break: break-word;[span_12](end_span)
+  font-size: 0.75rem; /* Adjusted for minimal text */
+  font-weight: 600;
+  margin: 0.75rem 0.5rem 1rem;
+  color: var(--text-color);
+  white-space: normal;
+  height: 2.4em; /* Adjusted height for 2 lines of smaller text */
+  line-height: 1.2em; /* Adjusted for more compact lines */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* === PAGINACIÓN === */
+/* --- PAGINACIÓN --- */
 .pagination-controls {
-  [span_13](start_span)display: flex;[span_13](end_span)
-  [span_14](start_span)justify-content: center;[span_14](end_span)
-  [span_15](start_span)gap: var(--spacing);[span_15](end_span)
-  [span_16](start_span)margin-top: calc(var(--spacing) * 2);[span_16](end_span)
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing);
+  margin-top: calc(var(--spacing) * 2);
 }
 
 .pagination-controls button {
-  [span_17](start_span)background-color: var(--accent-color);[span_17](end_span)
-  [span_18](start_span)color: white;[span_18](end_span)
-  [span_19](start_span)border: none;[span_19](end_span)
-  [span_20](start_span)padding: 0.6rem 1.2rem;[span_20](end_span)
-  [span_21](start_span)border-radius: var(--radius);[span_21](end_span)
-  [span_22](start_span)font-size: 1rem;[span_22](end_span)
-  [span_23](start_span)cursor: pointer;[span_23](end_span)
-  [span_24](start_span)transition: background-color var(--transition);[span_24](end_span)
-  min-width: 50px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.4rem;
+  border-radius: var(--radius);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: var(--transition-fast);
 }
 
 .pagination-controls button:hover:not(:disabled) {
@@ -182,20 +185,20 @@ main {
 }
 
 .pagination-controls button:disabled {
-  [span_25](start_span)background-color: #555;[span_25](end_span)
-  [span_26](start_span)cursor: not-allowed;[span_26](end_span)
-  [span_27](start_span)opacity: 0.6;[span_27](end_span)
+  background-color: #555;
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 
-/* === RESPONSIVO === */
+/* --- RESPONSIVO --- */
 @media (max-width: 480px) {
   .content-grid {
-    [span_28](start_span)grid-template-columns: repeat(2, 1fr);[span_28](end_span)
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-width: 481px) and (max-width: 768px) {
+@media (max-width: 768px) {
   .content-grid {
-    [span_29](start_span)grid-template-columns: repeat(3, 1fr);[span_29](end_span)
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (min-width: 769px) {
