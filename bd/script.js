@@ -20,8 +20,7 @@ let itemsPerPage = 20; // Valor por defecto
 // Determina cuántos elementos mostrar por página según el ancho de la pantalla
 const setItemsPerPage = () => {
     // El punto de quiebre 768px coincide con el CSS para vistas de teléfono/tableta
-    itemsPerPage = window.innerWidth <= 768 ?
-        21 : 20;
+    itemsPerPage = window.innerWidth <= 768 ? 21 : 20;
 };
 
 // Función principal para obtener y mostrar datos iniciales
@@ -82,7 +81,8 @@ function displayPaginatedContent() {
     paginatedItems.forEach(item => {
         const contentItem = document.createElement('div');
         contentItem.classList.add('content-item');
-        
+        contentItem.setAttribute('data-link', item.link); // Añade el enlace como un atributo de datos
+
         const imageUrl = item.portada && item.portada.startsWith('http') ? item.portada : 'https://i.ibb.co/MkfkNDtT/Sin-t-tulo-3.png';
 
         // --- CAMBIO APLICADO AQUÍ: Envuelve la imagen en un div con clase 'image-container' ---
@@ -93,15 +93,15 @@ function displayPaginatedContent() {
             <h3>${item.nombre}</h3>
         `;
         // --- FIN DEL CAMBIO ---
-        
+
         contentItem.addEventListener('click', () => {
             if (item.link) {
-                window.open(item.link, '_blank');
+                fetchAndPlayVideo(item.link);
             } else {
                 alert('Lo siento, no hay un enlace disponible para este contenido.');
             }
         });
-       
+
         contentGrid.appendChild(contentItem);
     });
 
@@ -168,3 +168,100 @@ window.addEventListener('resize', () => {
 
 // --- Inicialización ---
 initializeApp();
+
+// Nueva función para fetch y reproducir video
+async function fetchAndPlayVideo(link) {
+    try {
+        const response = await fetch(link);
+        const data = await response.text();
+        const nextData = JSON.parse(data.match(/<script id="__NEXT_DATA__" type="application\/json">(.*?)<\/script>/s)[1]);
+
+        const mediaInfoList = nextData.props.pageProps.vestData.mediaInfoList;
+        const qualityLinks = mediaInfoList.map(info => ({
+            quality: info.currentDefinition,
+            url: info.mediaUrl
+        }));
+
+        createPlayer(nextData.props.pageProps.vestData.title, qualityLinks);
+    } catch (error) {
+        console.error('Error al obtener los datos del video:', error);
+    }
+}
+
+function createPlayer(title, qualityLinks) {
+    const playerContainer = document.createElement('div');
+    playerContainer.style.position = 'fixed';
+    playerContainer.style.top = '0';
+    playerContainer.style.left = '0';
+    playerContainer.style.width = '100%';
+    playerContainer.style.height = '100%';
+    playerContainer.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+    playerContainer.style.zIndex = '1000';
+    playerContainer.style.display = 'flex';
+    playerContainer.style.justifyContent = 'center';
+    playerContainer.style.alignItems = 'center';
+    playerContainer.style.flexDirection = 'column';
+
+    const player = document.createElement('video');
+    player.controls = true;
+    player.style.width = '80%';
+    player.style.height = '80%';
+    player.style.backgroundColor = 'black';
+
+    const closeButton = document.createElement('div');
+    closeButton.style.position = 'absolute';
+    closeButton.style.top = '10px';
+    closeButton.style.left = '10px';
+    closeButton.style.width = '30px';
+    closeButton.style.height = '30px';
+    closeButton.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
+    closeButton.style.borderRadius = '50%';
+    closeButton.style.cursor = 'pointer';
+    closeButton.style.display = 'flex';
+    closeButton.style.justifyContent = 'center';
+    closeButton.style.alignItems = 'center';
+    closeButton.style.fontSize = '20px';
+    closeButton.style.color = 'black';
+    closeButton.textContent = '✕';
+
+    const titleElement = document.createElement('h2');
+    titleElement.style.position = 'absolute';
+    titleElement.style.top = '10px';
+    titleElement.style.left = '50px';
+    titleElement.style.color = 'white';
+    titleElement.textContent = title;
+
+    playerContainer.appendChild(closeButton);
+    playerContainer.appendChild(titleElement);
+    playerContainer.appendChild(player);
+
+    document.body.appendChild(playerContainer);
+
+    // Agregar opciones de calidad
+    const qualitySelect = document.createElement('select');
+    qualitySelect.style.position = 'absolute';
+    qualitySelect.style.top = '10px';
+    qualitySelect.style.right = '10px';
+    qualitySelect.style.color = 'white';
+    qualitySelect.style.backgroundColor = 'black';
+    qualitySelect.style.border = 'none';
+    qualitySelect.style.padding = '5px';
+
+    qualityLinks.forEach(link => {
+        const option = document.createElement('option');
+        option.value = link.url;
+        option.textContent = link.quality;
+        qualitySelect.appendChild(option);
+    });
+
+    playerContainer.appendChild(qualitySelect);
+
+    qualitySelect.addEventListener('change', function() {
+        player.src = qualitySelect.value;
+    });
+
+    // Cerrar el reproductor
+    closeButton.addEventListener('click', function() {
+        document.body.removeChild(playerContainer);
+    });
+}
