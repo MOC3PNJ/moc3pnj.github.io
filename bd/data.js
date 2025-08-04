@@ -6,7 +6,7 @@ const peliculas = [
   categoria: "Drama",
   tipo: "Película",
   portada: "https://img.onfilom.com/cover/20250626/1750904539638_ab8aa265f1b4639cca11f9bb996fcb66%E4%B8%8B%E8%BD%BD.jpg",
-  link: "https://flysiste.unaux.com/ver.php?contenido=https://h5.onfilom.com/es/detail/drama/oDnwlGWTFq8CW18zjyd8C-Squid-Game-Season-3/1"
+  link: "http://coralinepoll1.zya.me/newver.php?contenido=https://h5.onfilom.com/es/detail/drama/oDnwlGWTFq8CW18zjyd8C-Squid-Game-Season-3/1"
 },
   {
   id: "0002",
@@ -15,7 +15,7 @@ const peliculas = [
   categoria: "Horror",
   tipo: "Película",
   portada: "https://img.onfilom.com/cover/20250410/1744273562545_37289de07017d297262e891c659f80f2%E6%AD%BB%E7%A5%9E1.jpg",
-  link: "https://h5.onfilom.com/es/detail/movie/UsNJzqxwgH0onKw3tlHJT-Final-Destination-Bloodlines"
+  link: "http://coralinepoll1.zya.me/newver.php?contenido=https://h5.onfilom.com/es/detail/movie/UsNJzqxwgH0onKw3tlHJT-Final-Destination-Bloodlines"
 },
   {
   id: "0003",
