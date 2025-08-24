@@ -446,7 +446,7 @@ const peliculas = [
   año: 2023,
   categoria: "Terror, Suspense",
   tipo: "Película",
-  portada: "https://img.onfilom.com/cover/20210831/o_1630396292934.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
+  portada: "https://img.onfilom.com/cover/20230915/1694748869031_c36c47005a96ccbd2c51c4e2bf0b07c03VGfYYIyYyJcsjRajBT0FwEMv9J.jpg",
   link: "https://serviciosgenerales.zya.me/service.php?i=https://h5.onfilom.com/es/detail/movie/DfzV7OvLOIircWsQloVIB-Elevator-Game"
 }
 
