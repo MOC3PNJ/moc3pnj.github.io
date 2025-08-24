@@ -302,7 +302,7 @@ const peliculas = [
   año: 2014,
   categoria: "Aventura, Animación, Fantasía",
   tipo: "Película",
-  portada: "https://img.onfilom.com/cover/20211216/1639645649175_79ed6b766b1ba2ac55a597ebffbb4f4c1yC7mlAGPBCrMlnXpgqvWA8ObII.jpg",
+  portada: "https://img.onfilom.com/cover/20211216/1639645649175_79ed6b766b1ba2ac55a597ebffbb4f4c1yC7mlAGPBCrMlnXpgqvWA8ObII.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
   link: "https://serviciosgenerales.zya.me/service.php?i=https://h5.onfilom.com/es/detail/movie/65337-How-to-Train-Your-Dragon-2"
 },
   {
@@ -311,7 +311,7 @@ const peliculas = [
   año: 2010,
   categoria: "Aventura, Animación, Fantasía",
   tipo: "Película",
-  portada: "https://img.onfilom.com/cover/20250107/1736217561430_b38a170eeaf861918fc4d17ef869229exoXFmWtnavKcGxUHy62Q97cbqS1.jpg",
+  portada: "https://img.onfilom.com/cover/20250107/1736217561430_b38a170eeaf861918fc4d17ef869229exoXFmWtnavKcGxUHy62Q97cbqS1.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
   link: "https://serviciosgenerales.zya.me/service.php?i=https://h5.onfilom.com/es/detail/movie/i2chBKJMZyRDnQQAICa3L-How-to-Train-Your-Dragon"
 },
   {
@@ -446,7 +446,7 @@ const peliculas = [
   año: 2023,
   categoria: "Terror, Suspense",
   tipo: "Película",
-  portada: "https://img.onfilom.com/cover/20230915/1694748869031_c36c47005a96ccbd2c51c4e2bf0b07c03VGfYYIyYyJcsjRajBT0FwEMv9J.jpg",
+  portada: "https://img.onfilom.com/cover/20230915/1694748869031_c36c47005a96ccbd2c51c4e2bf0b07c03VGfYYIyYyJcsjRajBT0FwEMv9J.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
   link: "https://serviciosgenerales.zya.me/service.php?i=https://h5.onfilom.com/es/detail/movie/DfzV7OvLOIircWsQloVIB-Elevator-Game"
 }
 
