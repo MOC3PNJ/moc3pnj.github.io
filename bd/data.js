@@ -447,7 +447,7 @@ const peliculas = [
   categoria: "Terror, Suspense",
   tipo: "Película",
   portada: "https://img.onfilom.com/cover/20210831/o_1630396292934.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
-  link: "https://serviciosgenerales.zya.me/service.php?i=https://h5.onfilom.com/es/detail/drama/Sfqu3ZBmffVwOm9Dv6YEe-Money-Heist-Season-1"
+  link: "https://serviciosgenerales.zya.me/service.php?i=https://h5.onfilom.com/es/detail/movie/DfzV7OvLOIircWsQloVIB-Elevator-Game"
 }
 
 ];
