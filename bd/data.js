@@ -225,15 +225,6 @@ const peliculas = [
   link: "https://serviciosgenerales.zya.me/service.php?i=https://h5.onfilom.com/es/detail/movie/pHO6pykCvPU4HQqX7dWz4-Captain-America-Brave-New-World"
 },
   {
-  id: "0026",
-  nombre: "Rescate Implacable (X)",
-  año: 2025,
-  categoria: "Acción, Thriller",
-  tipo: "Película",
-  portada: "https://img.onfilom.com/cover/20250331/1743402358443_c06909fd283c7b9bf0ed0d2c13c1d3dfyy.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
-  link: "https://serviciosgenerales.zya.me/service.php?i=#Buscar#"
-},
-  {
   id: "0027",
   nombre: "Warfare: Tiempo de guerra",
   año: 2025,
