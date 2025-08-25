@@ -154,7 +154,7 @@ const peliculas = [
 },
   {
   id: "0018",
-  nombre: "Kraven el cazador (⚠️Grabada)",
+  nombre: "Kraven el cazador",
   año: 2024,
   categoria: "Acción, Suspense, Grabada en cines",
   tipo: "Película",
@@ -253,7 +253,7 @@ const peliculas = [
 },
   {
   id: "0030",
-  nombre: "Ballerina (⚠️ Grabada)",
+  nombre: "Ballerina",
   año: 2025,
   categoria: "Acción, Thriller",
   tipo: "Película",
