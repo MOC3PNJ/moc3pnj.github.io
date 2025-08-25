@@ -207,15 +207,6 @@ const peliculas = [
   link: "https://serviciosgenerales.zya.me/service.php?i=https://h5.onfilom.com/es/detail/movie/rDsRksl88pPaM6o3LQUZ2-The-Electric-State"
 },
   {
-  id: "0024",
-  nombre: "El mono (X)",
-  año: 2025,
-  categoria: "Comedia, Horror",
-  tipo: "Película",
-  portada: "https://img.onfilom.com/cover/20250408/1744097375221_e220ef4f5254fd953d2651eaa64cd9fa1742972859207_aafc798846d61177403f37085d1691b1yYa8Onk9ow7ukcnfp2QWVvjWYel.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
-  link: "https://serviciosgenerales.zya.me/service.php?i=#Buscar#"
-},
-  {
   id: "0025",
   nombre: "Capitan America: Un nuevo Mundo",
   año: 2025,
