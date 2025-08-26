@@ -460,10 +460,10 @@ const peliculas = [
 },
   {
   id: "0055",
-  nombre: "Alien: Earth Temporada 1",
+  nombre: "Alien: Earth T1",
   año: 2025,
   categoria: "Horror",
-  tipo: "Película",
+  tipo: "Serie",
   portada: "https://img.onfilom.com/cover/20250813/1755064354706_9c773f302efe1b9d9b603fcdb7646db71747639532222_dcf29655f6c7c9c0ed81ac30f2cea58foNWaBgCDqACEP6SHLpjOUJiYLDw.png",
   link: "https://h5.onfilom.com/es/detail/drama/M9ZTUyTPqlwLKVKKKyX6A-Alien-Earth-Season-1"
 },
@@ -484,6 +484,42 @@ const peliculas = [
   tipo: "Película",
   portada: "https://img.onfilom.com/cover/20250620/1750403951917_1a912ad0e30135abf28c1b8f855b13341749701936568_f7d6523dd725a3ff347060c8c3efd527zT7Lhw3BhJbMkRqm9Zlx2YGMsY0.png",
   link: "https://h5.onfilom.com/es/detail/movie/dUcNtPZ10VrGovtl6Ei4Q-KPop-Demon-Hunters"
+},
+  {
+  id: "0058",
+  nombre: "The Fantastic Four: First Steps",
+  año: 2025,
+  categoria: "Acción",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20250725/1753430038511_c080de25c634cf5ccee49854d5470af31751882927590_db47a7e6046573c8e351cb929f95a3c0hZBLnKCSrlE3Yq2g3y5PYEhcAjR.png",
+  link: "https://h5.onfilom.com/es/detail/movie/KRWRvrFKmRbgrShjm4xTl-The-Fantastic-Four-First-Steps"
+},
+  {
+  id: "0059",
+  nombre: "Zootopía",
+  año: 2018,
+  categoria: "Aventura",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20250710/1752125226933_54536952116ca1680385234cff648b00i3WnZpJkQYXXbSGplEGmyoyeskM.webp",
+  link: "https://h5.onfilom.com/es/detail/movie/jRl0KAhfahrrLF6BsGgfT-Zootopia"
+},
+  {
+  id: "0060",
+  nombre: "Venganza en llamas",
+  año: 2025,
+  categoria: "Drama",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20250821/1755767107496_0c29077bdfabc649b18a22a2f6a35d4f下载 (4).jpg",
+  link: "https://h5.onfilom.com/es/detail/drama/nSS3yO3Y5u37pMBF3v8bw-Venganza-en-llamas"
+},
+  {
+  id: "0061",
+  nombre: "En el barro",
+  año: 2025,
+  categoria: "Crimen",
+  tipo: "Serie",
+  portada: "https://img.onfilom.com/cover/20250814/1755156238735_ee9547310f7b6d946f1b6dd2e16355a6xJCzIdSHV0d5lwbhaCWldlikKdU.webp",
+  link: "https://h5.onfilom.com/es/detail/drama/5Q5iOQfq4tSgewLu9xfEf-In-the-Mud"
 }
 ];
 
