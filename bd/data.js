@@ -448,6 +448,42 @@ const peliculas = [
   tipo: "Película",
   portada: "https://img.onfilom.com/cover/20211201/1638349547955_22e8424ec961baf7f153a5d6d548ba21gwMbDrDJpNpuStPUFUxM8onQHBp.jpg",
   link: "https://h5.onfilom.com/es/detail/movie/80292-The-Meg"
+},
+  {
+  id: "0054",
+  nombre: "Los tipos malos 2",
+  año: 2025,
+  categoria: "Aventura",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20250801/1754034765955_a88b9b7efb653985a4ed3d2bcc40692f西语.webp",
+  link: "https://h5.onfilom.com/es/detail/movie/QzGJ44ZaPnmMJVe3ilqyJ-The-Bad-Guys-2"
+},
+  {
+  id: "0055",
+  nombre: "Alien: Earth Temporada 1",
+  año: 2025,
+  categoria: "Horror",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20250813/1755064354706_9c773f302efe1b9d9b603fcdb7646db71747639532222_dcf29655f6c7c9c0ed81ac30f2cea58foNWaBgCDqACEP6SHLpjOUJiYLDw.png",
+  link: "https://h5.onfilom.com/es/detail/drama/M9ZTUyTPqlwLKVKKKyX6A-Alien-Earth-Season-1"
+},
+  {
+  id: "0056",
+  nombre: "La Hora De La Desaparición",
+  año: 2025,
+  categoria: "Drama",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20250811/1754884317249_3674b9056d35366fdcf054a7e249dac7cwjNSLj5FCkwFsTx7g57ybWQDcp.webp",
+  link: "https://h5.onfilom.com/es/detail/movie/wpuCeNQdlW1wReQEJRkrb-Weapons"
+},
+  {
+  id: "0057",
+  nombre: "Las guerreras k-pop",
+  año: 2025,
+  categoria: "Acción",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20250620/1750403951917_1a912ad0e30135abf28c1b8f855b13341749701936568_f7d6523dd725a3ff347060c8c3efd527zT7Lhw3BhJbMkRqm9Zlx2YGMsY0.png",
+  link: "https://h5.onfilom.com/es/detail/movie/dUcNtPZ10VrGovtl6Ei4Q-KPop-Demon-Hunters"
 }
 ];
 
