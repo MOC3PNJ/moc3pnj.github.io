@@ -430,6 +430,24 @@ const peliculas = [
   tipo: "Película",
   portada: "https://img.onfilom.com/cover/20230915/1694748869031_c36c47005a96ccbd2c51c4e2bf0b07c03VGfYYIyYyJcsjRajBT0FwEMv9J.jpg?imageView2/1/w/300/h/400/format/webp/interlace/1/ignore-error/1/q/90!",
   link: "https://serviciosgenerales.zya.me/service.php?i=https://h5.onfilom.com/es/detail/movie/DfzV7OvLOIircWsQloVIB-Elevator-Game"
+},
+  {
+  id: "0052",
+  nombre: "Super Mario Bros: La Película",
+  año: 2023,
+  categoria: "Aventura",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20250414/1744616190823_78a39a83c7a95c1c07821b6b19195bbfs.webp",
+  link: "https://h5.onfilom.com/es/detail/movie/85859-The-Super-Mario-Bros-Movie"
+},
+  {
+  id: "0053",
+  nombre: "Megalodón",
+  año: 2018,
+  categoria: "Acción",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20211201/1638349547955_22e8424ec961baf7f153a5d6d548ba21gwMbDrDJpNpuStPUFUxM8onQHBp.jpg",
+  link: "https://h5.onfilom.com/es/detail/movie/80292-The-Meg"
 }
 ];
 
