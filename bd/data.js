@@ -529,6 +529,15 @@ const peliculas = [
     'tipo': 'Pel\u00edcula',
     'portada': 'https://img.onfilom.com/cover/20211020/1634715293869_56d3201ed84407397d4832b26f4d16e7w9kR8qbmQ01HwnvK4alvnQ2ca0L.jpg',
     'link': 'https://h5.onfilom.com/es/detail/movie/3900-Toy-Story-4'
+,
+  
+    'id': '0001',
+    'nombre': 'La ciudad de las estrellas (La La Land) (Solicitud 28-08 1:40 AM)',
+    'a\u00f1o': 2025,
+    'categoria': 'Solicitud',
+    'tipo': 'Pel\u00edcula',
+    'portada': 'https://img.onfilom.com/cover/20210928/1632798893294_5b4267e4e5301c3d775a62d546a1856buDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg',
+    'link': 'https://h5.onfilom.com/es/detail/movie/2762-La-La-Land'
 ];
 
 export { peliculas };
