@@ -521,6 +521,15 @@ const peliculas = [
   portada: "https://img.onfilom.com/cover/20250814/1755156238735_ee9547310f7b6d946f1b6dd2e16355a6xJCzIdSHV0d5lwbhaCWldlikKdU.webp",
   link: "https://h5.onfilom.com/es/detail/drama/5Q5iOQfq4tSgewLu9xfEf-In-the-Mud"
 }
-];
+,
+  {
+    "id": "0001",
+    "nombre": "Moana: Un mar de aventuras (Solicitud 28-08 2:15 AM)",
+    "año": 2025,
+    "categoria": "Solicitud",
+    "tipo": "Película",
+    "portada": "https://img.onfilom.com/cover/20250619/1750314796151_3c0fdb46c4827b2f63ffd57da55f19881666059717999_62d8288899b652513586dea90e9599f61631781085995_f0d85e0f3f8419f908fd4c4117613808vNJFiwtsl7Twww7C0uM4qPnygNw.png",
+    "link": "https://h5.onfilom.com/es/detail/movie/26331-Moana"
+  }];
 
 export { peliculas };
