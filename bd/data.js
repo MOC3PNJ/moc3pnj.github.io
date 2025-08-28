@@ -520,8 +520,7 @@ const peliculas = [
   tipo: "Serie",
   portada: "https://img.onfilom.com/cover/20250814/1755156238735_ee9547310f7b6d946f1b6dd2e16355a6xJCzIdSHV0d5lwbhaCWldlikKdU.webp",
   link: "https://h5.onfilom.com/es/detail/drama/5Q5iOQfq4tSgewLu9xfEf-In-the-Mud"
-}
-,
+},
   
     'id': '0001',
     'nombre': 'Toy Story 4 (Solicitud 28-08 1:37 AM)',
