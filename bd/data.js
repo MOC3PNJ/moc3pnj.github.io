@@ -520,6 +520,132 @@ const peliculas = [
   tipo: "Serie",
   portada: "https://img.onfilom.com/cover/20250814/1755156238735_ee9547310f7b6d946f1b6dd2e16355a6xJCzIdSHV0d5lwbhaCWldlikKdU.webp",
   link: "https://h5.onfilom.com/es/detail/drama/5Q5iOQfq4tSgewLu9xfEf-In-the-Mud"
+},
+  {
+  id: "0062",
+  nombre: "Sin Senos No Hay Paraíso",
+  año: 2008,
+  categoria: "Acción",
+  tipo: "Serie",
+  portada: "https://img.onfilom.com/cover/20250210/1739183067538_dfe90fb47dd70eeb27171c004ccfc710wG5uwLPMfHlYmXiVk9W88cV9llR.jpg",
+  link: "https://h5.onfilom.com/es/detail/drama/p8SdgbVHH15i3gnPRioFx-Sin-Senos-No-Hay-Para%C3%ADso"
+},
+  {
+  id: "0063",
+  nombre: "Sin Senos Sí Hay Paraíso T4",
+  año: 2019,
+  categoria: "Acción",
+  tipo: "Serie",
+  portada: "https://img.onfilom.com/cover/20250211/1739239207751_66aae2705ad4a4e1c902fc402341bc5c3TannrPRVtPrwogyfDvUISdDFPB.jpg",
+  link: "https://h5.onfilom.com/es/detail/drama/q5IEEIKmggtcPm8Cv5nv5-Sin-Senos-S%C3%AD-Hay-Para%C3%ADso-Season-4"
+},
+  {
+  id: "0064",
+  nombre: "Sin Senos Sí Hay Paraíso T1",
+  año: 2016,
+  categoria: "Drama",
+  tipo: "Serie",
+  portada: "https://img.onfilom.com/cover/20250210/1739155355579_4ae216c7ac424f3e34ba6db3fcb34cacSScKAir65gMZtgCT1zeGrydVH1.jpg",
+  link: "https://h5.onfilom.com/es/detail/drama/n1xlOzQEvsdedmaGGNl4O-Sin-Senos-S%C3%AD-Hay-Para%C3%ADso-Season-1"
+},
+  {
+  id: "0065",
+  nombre: "Sin Senos Sí Hay Paraíso T2",
+  año: 2017,
+  categoria: "Acción",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20250210/1739156144090_7224d41522f7ece03971d638f646c7faguCwu17uoxG6ADCcUmlQx86t16V.jpg",
+  link: "https://h5.onfilom.com/es/detail/drama/0488OmaFglNeNTmLmpjLY-Sin-Senos-S%C3%AD-Hay-Para%C3%ADso-Season-2"
+},
+  {
+  id: "0066",
+  nombre: "Sin Senos Sí Hay Paraíso T3",
+  año: 2018,
+  categoria: "Acción",
+  tipo: "Anime",
+  portada: "https://img.onfilom.com/cover/20250210/1739157018159_7fc4215eb7f7ac091625f83056ec3421ufKLrkgwj5rfCvi7GIbhyf8U77o.jpg",
+  link: "https://h5.onfilom.com/es/detail/drama/JU3Et790HjqFNx1CaE6sJ-Sin-Senos-S%C3%AD-Hay-Para%C3%ADso-Season-3"
+},
+  {
+  id: "0067",
+  nombre: "La Venganza de Analía",
+  año: 2020,
+  categoria: "Drama",
+  tipo: "Serie",
+  portada: "https://img.onfilom.com/cover/20240511/1715416964315_3c88144bae517b1f87d3ae7c56dada87竖.jpg",
+  link: "https://h5.onfilom.com/es/detail/drama/O4lwjRYDhBpIoymWXDUbQ-La-Venganza-de-Anal%C3%ADa"
+},
+  {
+  id: "0068",
+  nombre: "Good Boy",
+  año: 2025,
+  categoria: "Acción",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20250610/1749534640027_c7bca70d51d2fc189a705d54078f6759xx.webp",
+  link: "https://h5.onfilom.com/es/detail/drama/QDbUuOvw088BfUcNPa7a1-Good-Boy"
+},
+  {
+  id: "0069",
+  nombre: "Estamos muertos",
+  año: 2022,
+  categoria: "Acción",
+  tipo: "Serie",
+  portada: "https://img.onfilom.com/cover/20250724/1753349041072_37da1dd83cc6412225d7b2974784dad9z8uCc246KwiODy1M4Jc7MeimB96.webp",
+  link: "https://h5.onfilom.com/es/detail/drama/u53JNv8F1FAZcoNWUUSe9-All-of-Us-Are-Dead"
+},
+  {
+  id: "0070",
+  nombre: "One Piece",
+  año: 1999,
+  categoria: "Acción",
+  tipo: "Anime",
+  portada: "https://img.onfilom.com/cover/20250815/1755222695396_44a8fb802153b21e0dd6744c3eec7fe11.webp",
+  link: "https://h5.onfilom.com/es/detail/drama/MdpUkP2oMneAfFppRBkY4-One-Piece"
+},
+  {
+  id: "0071",
+  nombre: "Demon Slayer: Kimetsu no Yaiba - Swordsmith Village Arc",
+  año: 2023,
+  categoria: "Acción",
+  tipo: "Anime",
+  portada: "https://img.onfilom.com/cover/20230410/1681095261658_6f86c46db9f03a8a5dbb4fd93f6f0cfasInwzmBFgCiaaMnOEiPoz9L3Ieq.jpg",
+  link: "https://h5.onfilom.com/es/detail/drama/cd3dN3Pygpn9LvaZwV2sh-Demon-Slayer-Kimetsu-no-Yaiba-Swordsmith-Village-A"
+},
+  {
+  id: "0072",
+  nombre: "Demon Slayer: Kimetsu no Yaiba Hashira Training Arc",
+  año: 2024,
+  categoria: "Animación",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20240513/1715565828250_055c44ea4dfe45549738f9a5f1bc1f788rWeMJTPMHnttbyU2em5kIGB1q7.jpg",
+  link: "https://h5.onfilom.com/es/detail/drama/DOJGpSbx27EwrRhBramsz-Demon-Slayer-Kimetsu-no-Yaiba-Hashira-Training-Arc"
+},
+  {
+  id: "0073",
+  nombre: "Demon Slayer: Kimetsu no Yaiba Entertainment District Arc",
+  año: 2021,
+  categoria: "Acción",
+  tipo: "Anime",
+  portada: "https://img.onfilom.com/cover/20250729/1753771453150_a2bbddc60c239af70167db2ab8ea9a7d1748502651111_9c30a5cf4373d6bd90cce7ca916421d81638757536248_fd6e9095310c2f4d390379f368a3ac95zBE8JVe17h2vdBoltS5agKzYCCw (1).png",
+  link: "https://h5.onfilom.com/es/detail/drama/qyKUqVQsvnDb7Kor1Kb4w-Demon-Slayer-Kimetsu-no-Yaiba-Entertainment-Distri"
+},
+  {
+  id: "0074",
+  nombre: "Demon Slayer: Kimetsu no Yaiba T1",
+  año: 2019,
+  categoria: "Acción",
+  tipo: "Anime",
+  portada: "https://img.onfilom.com/cover/20250729/1753771565142_ca9d3f56b4532a918ce4c15f8a03c2cc1666848831243_e7151fbc1eef9718e75962e0e68bda0d1636113042733_e7151fbc1eef9718e75962e0e68bda0dtaT33NroOl2Fn8bUGj8bwdmNw3G.png",
+  link: "https://h5.onfilom.com/es/detail/drama/fLlJJ08QFlnGTLNPD9uFs-Demon-Slayer-Kimetsu-no-Yaiba"
+},
+  {
+  id: "0075",
+  nombre: "Demon Slayer: Kimetsu no Yaiba Mugen Train Arc",
+  año: 2020,
+  categoria: "Acción",
+  tipo: "Anime",
+  portada: "https://img.onfilom.com/cover/20250729/1753771154501_82dbdd8d51e55577f473f34db12e77531644832845895_0a1d494a5a5d42a1d307b4d9ce4b92c9AaAu9VT8KgByXRKJhlmqMRvixy0.png",
+  link: "https://h5.onfilom.com/es/detail/drama/aNaEm15IbIZQ4joCRosQg-Demon-Slayer-Kimetsu-no-Yaiba-Mugen-Train-Arc"
 }
 ];
 
