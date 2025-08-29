@@ -521,15 +521,6 @@ const peliculas = [
   portada: "https://img.onfilom.com/cover/20250814/1755156238735_ee9547310f7b6d946f1b6dd2e16355a6xJCzIdSHV0d5lwbhaCWldlikKdU.webp",
   link: "https://h5.onfilom.com/es/detail/drama/5Q5iOQfq4tSgewLu9xfEf-In-the-Mud"
 }
-,
-{
-    id: "0062",
-    nombre: "Una noche en el museo",
-    año: 0,
-    categoria: "Aventura",
-    tipo: "Película",
-    portada: "https://img.onfilom.com/cover/20250724/1753344015958_1828ab79acbe9412fee86f65fcb6db0c博物馆奇妙夜1.webp",
-    link: "https://h5.onfilom.com/es/detail/movie/99978-Night-at-the-Museum"
-}];
+];
 
 export { peliculas };
