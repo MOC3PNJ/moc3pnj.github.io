@@ -646,6 +646,15 @@ const peliculas = [
   tipo: "Anime",
   portada: "https://img.onfilom.com/cover/20250729/1753771154501_82dbdd8d51e55577f473f34db12e77531644832845895_0a1d494a5a5d42a1d307b4d9ce4b92c9AaAu9VT8KgByXRKJhlmqMRvixy0.png",
   link: "https://h5.onfilom.com/es/detail/drama/aNaEm15IbIZQ4joCRosQg-Demon-Slayer-Kimetsu-no-Yaiba-Mugen-Train-Arc"
+},
+  {
+  id: "0076",
+  nombre: "Tougen Anki",
+  año: 2025,
+  categoria: "Animación",
+  tipo: "Anime",
+  portada: "https://img.onfilom.com/cover/20250714/1752483576128_a52e99c82b8a99beed18b100b0cee6bb1752131021120_307c9f55e73728b3da9d8f64967c3f9aoDkYJlUVMLXEM4v2s6y4CrkD9Jn.png",
+  link: "https://h5.onfilom.com/es/detail/drama/4nw3c40KjANLxASvu0cuV-Tougen-Anki"
 }
 ];
 
