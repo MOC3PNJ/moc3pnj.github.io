@@ -655,6 +655,78 @@ const peliculas = [
   tipo: "Anime",
   portada: "https://img.onfilom.com/cover/20250714/1752483576128_a52e99c82b8a99beed18b100b0cee6bb1752131021120_307c9f55e73728b3da9d8f64967c3f9aoDkYJlUVMLXEM4v2s6y4CrkD9Jn.png",
   link: "https://h5.onfilom.com/es/detail/drama/4nw3c40KjANLxASvu0cuV-Tougen-Anki"
+},
+  {
+  id: "0077",
+  nombre: "Alien, el octavo pasajero",
+  año: 2025,
+  categoria: "Horror",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20211025/1635131155886_cdc7354b7196516c8c21a4668727c1f5vfrQk5IPloGg1v9Rzbh2Eg3VGyM (1).jpg",
+  link: "https://h5.onfilom.com/es/detail/movie/LfCv46VioXdnV23cA2mE5-Alien"
+},
+  {
+  id: "0078",
+  nombre: "John Wick",
+  año: 2025,
+  categoria: "Acción",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20210916/1631777749726_4efbeeb00a656b3c0ad3bf2ae8031283fZPSd91yGE9fCcCe6OoQr6E3Bev.jpg",
+  link: "https://h5.onfilom.com/es/detail/movie/LKBiguWOfzNtZxygYhAIK-John-Wick"
+},
+  {
+  id: "0079",
+  nombre: "John Wick: Chapter 2",
+  año: 2025,
+  categoria: "Acción",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20210916/1631777880227_7d30a6d066e1036007e3f7aa94606f90hXWBc0ioZP3cN4zCu6SN3YHXZVO.jpg",
+  link: "https://h5.onfilom.com/es/detail/movie/yurlLUnJnWO6nLWToG7Xy-John-Wick-Chapter-2"
+},
+  {
+  id: "0080",
+  nombre: "John Wick 3: Parabellum",
+  año: 2025,
+  categoria: "Acción",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20250623/1750649136969_72d0c8fe934a0c45f23811a1feabe3c1aKw7oqYdfn4pkKYvp18Gd1YhK6m.webp",
+  link: "https://h5.onfilom.com/es/detail/movie/SANA1KANOQrs17tJndLEc-John-Wick-Chapter-3---Parabellum"
+},
+  {
+  id: "0081",
+  nombre: "John Wick 4",
+  año: 2025,
+  categoria: "Acción",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20250715/1752563775027_1c8b83ff1b83df0a2f7b4ff4412021f5mj2Z9HnRSIEk3n7yVPoOY4Uzzfh.webp",
+  link: "https://h5.onfilom.com/es/detail/movie/AR4U4wyZ9jz6XZBVZq22j-John-Wick-Chapter-4"
+},
+  {
+  id: "0082",
+  nombre: "Iron Man",
+  año: 2025,
+  categoria: "Acción",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20250412/1744447262745_c3673078efdf7bc788854ace55c52f181672129942632_283f40aa9f5545a9d46ab58af01016076.jpg",
+  link: "https://h5.onfilom.com/es/detail/movie/ySmK3WRAZhY9VQR4m8BRw-Iron-Man"
+},
+  {
+  id: "0083",
+  nombre: "Hannibal: El origen del mal",
+  año: 2025,
+  categoria: "Aventura",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20250724/1753344464177_ab4d6a68b449597d21f1b3cec2ac068d少年汉尼拔1.webp",
+  link: "https://h5.onfilom.com/es/detail/movie/oCxU3XBaKtZFnmctp8qWS-Hannibal-Rising"
+},
+  {
+  id: "0084",
+  nombre: "El silencio de los corderos",
+  año: 2025,
+  categoria: "Crimen",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20220218/1645155011666_c6cd34118dd8a85861890fd4b7e33bf5rplLJ2hPcOQmkFhTqUte0MkEaO2.jpg",
+  link: "https://h5.onfilom.com/es/detail/movie/XHyfuHKbPyaP3fCW4e1I7-The-Silence-of-the-Lambs"
 }
 ];
 
