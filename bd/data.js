@@ -727,6 +727,15 @@ const peliculas = [
   tipo: "Película",
   portada: "https://img.onfilom.com/cover/20220218/1645155011666_c6cd34118dd8a85861890fd4b7e33bf5rplLJ2hPcOQmkFhTqUte0MkEaO2.jpg",
   link: "https://h5.onfilom.com/es/detail/movie/XHyfuHKbPyaP3fCW4e1I7-The-Silence-of-the-Lambs"
+},
+  {
+  id: "0085",
+  nombre: "Tangeum",
+  año: 2025,
+  categoria: "Drama",
+  tipo: "K-Drama",
+  portada: "https://img.onfilom.com/cover/20250516/1747374206888_bcb0a7d1b23a5d0bddddb5d13c884b4c1.png",
+  link: "https://h5.onfilom.com/es/detail/drama/nBpt5LrDrBfaBK1QzLOu1-Dear-Hongrang"
 }
 ];
 
