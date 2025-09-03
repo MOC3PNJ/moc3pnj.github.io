@@ -562,7 +562,7 @@ const peliculas = [
   nombre: "Sin Senos Sí Hay Paraíso T3",
   año: 2018,
   categoria: "Acción",
-  tipo: "Anime",
+  tipo: "Serie",
   portada: "https://img.onfilom.com/cover/20250210/1739157018159_7fc4215eb7f7ac091625f83056ec3421ufKLrkgwj5rfCvi7GIbhyf8U77o.jpg",
   link: "https://h5.onfilom.com/es/detail/drama/JU3Et790HjqFNx1CaE6sJ-Sin-Senos-S%C3%AD-Hay-Para%C3%ADso-Season-3"
 },
