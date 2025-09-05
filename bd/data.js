@@ -736,6 +736,24 @@ const peliculas = [
   tipo: "K-Drama",
   portada: "https://img.onfilom.com/cover/20250516/1747374206888_bcb0a7d1b23a5d0bddddb5d13c884b4c1.png",
   link: "https://h5.onfilom.com/es/detail/drama/nBpt5LrDrBfaBK1QzLOu1-Dear-Hongrang"
+},
+  {
+  id: "0086",
+  nombre: "Dandadan Temporada 2",
+  año: 2025,
+  categoria: "Acción",
+  tipo: "Anime",
+  portada: "https://img.onfilom.com/cover/20250708/1751944560169_b43d954e16f9b01cda92d2c97bb0d0641748594668037_b43d954e16f9b01cda92d2c97bb0d0641748339173769_503de20c16a70d6d04403fc17912c9bdqU12CrNOYdxwlx7wvrhpgo2q1XQ.png",
+  link: "https://h5.onfilom.com/es/detail/drama/UKWSmBKaa5jnlaPR6GepC-DAN-DA-DAN-season-2"
+},
+  {
+  id: "0087",
+  nombre: "Dandadan Temporada 1",
+  año: 2024,
+  categoria: "Acción",
+  tipo: "Anime",
+  portada: "https://img.onfilom.com/cover/20250408/1744120012127_9ed9afe51c89b856222272278fd097251727256235322_5fccc6353fc915ec8c849df517498a946qfZAOEUFIrbUH3JvePclx1nXzz.jpg",
+  link: "https://h5.onfilom.com/es/detail/drama/Ncr9i1UXv7ITzZPXlplib-Dandadan"
 }
 ];
 
