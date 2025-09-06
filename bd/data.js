@@ -754,6 +754,15 @@ const peliculas = [
   tipo: "Anime",
   portada: "https://img.onfilom.com/cover/20250408/1744120012127_9ed9afe51c89b856222272278fd097251727256235322_5fccc6353fc915ec8c849df517498a946qfZAOEUFIrbUH3JvePclx1nXzz.jpg",
   link: "https://h5.onfilom.com/es/detail/drama/Ncr9i1UXv7ITzZPXlplib-Dandadan"
+},
+  {
+  id: "0088",
+  nombre: "Más de la cuenta",
+  año: 2025,
+  categoria: "Comedia",
+  tipo: "Película",
+  portada: "https://img.onfilom.com/cover/20250515/1747286587261_57f29865804ae3b5c73e5126503a67409g5QRUSPBK4ABLzhO9D8ooir6tS.webp",
+  link: "https://h5.onfilom.com/es/detail/drama/u1FZBVSSovaQU5zWt1yHw-Overcompensating"
 }
 ];
 
